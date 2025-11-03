@@ -2,7 +2,7 @@ const _ = Canva.width = Canva.height = innerWidth < innerHeight ? innerWidth : i
 
 const $ = Canva.getContext("2d")
 $.path()
-mapload(10,3)
+mapLoad(10,3)
 
 function mapLoad(size,need) {
     globalSize = size
