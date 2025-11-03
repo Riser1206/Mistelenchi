@@ -26,7 +26,7 @@ function eventCanvas(x, y, z) {
     $.fillRect(X0, Y0, _ / globalSize, _ / globalSize)
 }
 
-function COLOR(latter) {
+function pickColor(latter) {
     if (window.former != undefined) former.background = latter.background
     latter.background = latter.color
     former = latter
