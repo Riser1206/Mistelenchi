@@ -1,9 +1,9 @@
 const _ = Canva.width = Canva.height = innerWidth < innerHeight ? innerWidth : innerHeight
 const $ = Canva.getContext("2d")
 //$.path()
-mapLoad(10,3)
+loadMap(10,3)
 
-function mapLoad(size,need) {
+function loadMap(size,need) {
     globalSize = size
     globalNeed = need
     const Board = []
