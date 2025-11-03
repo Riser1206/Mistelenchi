@@ -2,13 +2,14 @@ const _ = Canva.width = Canva.height = innerWidth < innerHeight ? innerWidth : i
 
 const $ = Canva.getContext("2d")
 $.path()
+mapload(10,3)
 
-function mapLoad() {
-    const Size = 10
-    const Need = 3
+function mapLoad(size,need) {
+    globalSize = size
+    globalNeed = need
     const Board = []
-    for (let y = 0; y < Size; y++) {
-        for (let x = 0; x < Size; x++) {
+    for (let y = 0; y < size; y++) {
+        for (let x = 0; x < size; x++) {
             Board[10 * y + x] = 10 * x + y
         }
     }
@@ -23,7 +24,7 @@ function eventCanvas(x, y, z) {
     const X0 = x - Canva.getBoundingClientRect().x;
     const Y0 = y - Canva.getBoundingClientRect().y;
     if (window.former != undefined) $.fillStyle = former.color
-    $.fillRect(X0, Y0, _ / Size, _ / Size)
+    $.fillRect(X0, Y0, _ / globalSize, _ / globalSize)
 }
 
 function COLOR(latter) {
