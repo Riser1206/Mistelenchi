@@ -10,7 +10,7 @@ function mapLoad(size,need) {
     const Board = []
     for (let y = 0; y < size; y++) {
         for (let x = 0; x < size; x++) {
-            Board[10 * y + x] = 10 * x + y
+            Board[size * y + x] = size * x + y
         }
     }
     Qnumber.innerText = Board
