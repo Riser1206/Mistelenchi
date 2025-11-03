@@ -7,7 +7,12 @@
 <script>
 
 	const _=Canva.width=Canva.height=innerWidth<innerHeight?innerWidth:innerHeight;
-	const Size = 10;
+	
+	$=Canva.getContext("2d")
+			$.path()
+
+	function mapLoad() {
+		const Size = 10;
 	const Need = 3;
 	const Board = [];
     for (let y = 0; y < Size; y++) {
@@ -16,8 +21,7 @@
 		}
 	}
 	Qnumber.innerText=Board
-	$=Canva.getContext("2d")
-			$.path()
+	}
 			
 			function clickCanvas(event) {
 						eventCanvas(event.pageX, event.pageY, true);
