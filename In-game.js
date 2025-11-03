@@ -1,12 +1,12 @@
 const _ = Canva.width = Canva.height = innerWidth < innerHeight ? innerWidth : innerHeight;
 
-$ = Canva.getContext("2d")
+const $ = Canva.getContext("2d")
 $.path()
 
 function mapLoad() {
-    const Size = 10;
-    const Need = 3;
-    const Board = [];
+    const Size = 10
+    const Need = 3
+    const Board = []
     for (let y = 0; y < Size; y++) {
         for (let x = 0; x < Size; x++) {
             Board[10 * y + x] = 10 * x + y
