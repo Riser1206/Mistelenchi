@@ -1,7 +1,7 @@
 const _ = Canva.width = Canva.height = innerWidth < innerHeight ? innerWidth : innerHeight;
 
 const $ = Canva.getContext("2d")
-$.path()
+//$.path()
 alert(0)
 mapLoad(10,3)
 alert(1)
