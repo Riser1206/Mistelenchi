@@ -7,7 +7,7 @@ const B = "blue"
 fetch('Levels/' + 'Level' + '.json').then(res => res.json()).then(data => loadMap(data)).catch($ => alert($))
 
 function loadMap(Q) {
-    let txt
+    let txt = ""
     Board = Q.Board
     Target = Q.Target
     for (let y = 0; y < Board.length; y++) {
@@ -20,6 +20,7 @@ function loadMap(Q) {
             $.arc(_*(x+1/2)/Board.length,_*(y+1/2)/Board.length,_/3/Board.length,0,7)
             $.fill()
             $.closePath()
+            txt += x == 0 ? '#' : '$'
         }
     }
     Qnumber.innerText = txt
