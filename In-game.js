@@ -7,7 +7,6 @@ function loadMap(size,need) {
     globalSize = size
     globalNeed = need
     try{const Board = [[,,,,,,,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,,,'B',,'R',,'G']]
-       }catch(_){alert(_)}
     for (let y = 0; y < size; y++) {
         for (let x = 0; x < size; x++) {
             switch (Board[y][x]) {
@@ -16,7 +15,8 @@ function loadMap(size,need) {
                 case 'Y': $.fillStyle = 'Gold'; break
                 case 'B': $.fillStyle = 'Blue'; break
                 default: $.fillStyle = 'Black'
-            }
+            }       }catch(_){alert(_)}
+
             //try{$.fillStyle = }catch(_){alert(_)}"rgb(" + x*3*x + "," + x*3*y + "," + y*3*y + ")"
             $.fillRect(_*x/globalSize+3,_*y/globalSize+3,_/globalSize-6,_/globalSize-6)
         }
