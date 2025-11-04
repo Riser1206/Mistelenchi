@@ -9,6 +9,7 @@ fetch('Levels/' + 'Level' + '.json').then(res => res.json()).then(data => loadMa
 function loadMap(Q) {
     Board = Q.Board
     Target = Q.Target
+    Solve = [][]
     for (let y = 0; y < Board.length; y++) {
         for (let x = 0; x < Board.length; x++) {
             $.fillStyle = Board[y][x] ? "black" : "white"
@@ -40,8 +41,6 @@ function eventCanvas(x, y) {
 
 function addSquare(x,y) {
     $.fillRect(_*x/Board.length+3,_*y/Board.length+3,_/Board.length-6,_/Board.length-6)
-    //Solve = $.fillStyle
-    //Qnumber.innerText = Solve
 }
 
 function pickColor(latter) {
