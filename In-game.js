@@ -6,7 +6,8 @@ loadMap(10,3)
 function loadMap(size,need) {
     globalSize = size
     globalNeed = need
-    const Board = [[,,,,,,,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,,,B,,R,,G]]
+    try{const Board = [[,,,,,,,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,,,B,,R,,G]]
+       }catch(_){alert(_)}
     for (let y = 0; y < size; y++) {
         for (let x = 0; x < size; x++) {
             switch (Board[y][x]) {
