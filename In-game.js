@@ -27,12 +27,12 @@ function loadMap(Q) {
 }
 
 function clickCanvas(event) {
-    eventCanvas(event.pageX, event.pageY, true);
+    eventCanvas(event.pageX, event.pageY, true)
 }
 
 function eventCanvas(x, y, z) {
-    const X0 = x - Canva.getBoundingClientRect().x;
-    const Y0 = y - Canva.getBoundingClientRect().y;
+    x -= Canva.getBoundingClientRect().x
+    y -= Canva.getBoundingClientRect().y
     if (window.former != undefined) $.fillStyle = former.color
     $.fillRect(X0, Y0, _ / Board.length, _ / Board.length)
 }
