@@ -37,12 +37,12 @@ function eventCanvas(x, y) {
         const X = Math.round(x*Board.length/_-1/2)
         const Y = Math.round(y*Board.length/_-1/2)
         $.fillStyle = former.color
-        if (!Board[X][Y]) addNumber(X,Y)
+        if (!Board[X][Y]) addColor(X,Y)
     }
     // $.fillRect(x, y, _/Board.length, _/Board.length)
 }
 
-function addNumber(X,Y) {
+function addColor(X,Y) {
     alert(X, Y)
 }
 
