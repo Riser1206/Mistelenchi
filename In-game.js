@@ -7,7 +7,6 @@ const B = "blue"
 fetch('Levels/' + 'Level' + '.json').then(res => res.json()).then(data => loadMap(data)).catch($ => alert($))
 
 function loadMap(Q) {
-    alert([_,Canva.width,Canva.height])
     Board = Q.Board
     Target = Q.Target
     Solve = Array(Q.Board.length)
@@ -38,6 +37,10 @@ function eventCanvas(x, y) {
         $.fillStyle = former.color
         if (!Board[X][Y]) addSquare(X,Y)
     }
+}
+
+function check() {
+    alert([_,Canva.width,Canva.height])
 }
 
 function addSquare(x,y) {
