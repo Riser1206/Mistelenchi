@@ -14,7 +14,7 @@ function loadMap(Q) {
         for (let x = 0; x < Board.length; x++) {
             $.fillStyle = Board[y][x] ? "black" : "white"
             $.fillStyle = eval(Board[y][x])
-            addSquare()
+            addSquare(x,y)
             $.fillStyle = "#fff7"
             $.beginPath()
             $.arc(_*(x+1/2)/Board.length,_*(y+1/2)/Board.length,_/3/Board.length,0,7)
@@ -42,7 +42,7 @@ function eventCanvas(x, y) {
     // $.fillRect(x, y, _/Board.length, _/Board.length)
 }
 
-function addSquare(X,Y) {
+function addSquare(x,y) {
    $.fillRect(_*x/Board.length+3,_*y/Board.length+3,_/Board.length-6,_/Board.length-6)
 }
 
