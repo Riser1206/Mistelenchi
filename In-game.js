@@ -9,7 +9,9 @@ function loadMap(size,need) {
     const Board = []
     for (let y = 0; y < size;) {
         for (let x = 0; x < size;) {
+            try{
             $.fillStyle = rgb(x*3*x,x*3*y,y*3*y)
+            }catch(_){alert(_)}
             $.fillRect(_* x++ /globalSize,_* y++ /globalSize,_*_/globalSize,_*_/globalSize)
             Board[size * y + x] = size * x + y
         }
