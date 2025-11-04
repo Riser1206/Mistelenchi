@@ -1,6 +1,6 @@
 const _ = Canva.width = Canva.height = innerWidth < innerHeight ? innerWidth : innerHeight
 const $ = Canva.getContext("2d")
-const O = "white"
+const X = "black"
 const R = "maroon"
 const Y = "olive"
 const B = "navy"
@@ -10,9 +10,10 @@ function loadMap(size,need) {
     globalSize = size
     globalNeed = need
     try{
-        const Board = [[,,,,,,,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,,,B,,R,,G]]
+        const Board = [[,,,,,,,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,,,B,,Y,,G]]
     for (let y = 0; y < size; y++) {
         for (let x = 0; x < size; x++) {
+            $.fillStyle = "white"
             $.fillStyle = Board[y][x]
 
             //try{$.fillStyle = }catch(_){alert(_)}"rgb(" + x*3*x + "," + x*3*y + "," + y*3*y + ")"
