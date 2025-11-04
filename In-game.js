@@ -4,23 +4,20 @@ const X = "black"
 const R = "maroon"
 const Y = "olive"
 const B = "navy"
-
 fetch('Levels/' + 'Level' + '.json').then(res => res.json()).then(data => loadMap(data)).catch($ => alert($))
 
 
 function loadMap(Q) {
+    Board = Q.Board
 alert(Q.Target)
-alert(eval(Q.Board[0][0]))
-alert(Q.Board.length)
-    const high = sgx;
     for (let y = 0; y < size; y++) {
         for (let x = 0; x < size; x++) {
             $.fillStyle = "white"
-            $.fillStyle = eval(Q.Board[y][x])
-            $.fillRect(_*x/globalSize+3,_*y/globalSize+3,_/globalSize-6,_/globalSize-6)
+            $.fillStyle = eval(Board[y][x])
+            $.fillRect(_*x/Board.length+3,_*y/Board.length+3,_/Board.length-6,_/Board.length-6)
         }
     }
-    Qnumber.innerText = Board
+    Qnumber.innerText = "_"
 }
 
 function clickCanvas(event) {
@@ -31,7 +28,7 @@ function eventCanvas(x, y, z) {
     const X0 = x - Canva.getBoundingClientRect().x;
     const Y0 = y - Canva.getBoundingClientRect().y;
     if (window.former != undefined) $.fillStyle = former.color
-    $.fillRect(X0, Y0, _ / globalSize, _ / globalSize)
+    $.fillRect(X0, Y0, _ / Board.length, _ / Board.length)
 }
 
 function pickColor(latter) {
