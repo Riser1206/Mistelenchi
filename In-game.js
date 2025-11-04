@@ -1,4 +1,4 @@
-const _ = Canva.width = Canva.height = 2500 // (innerWidth < innerHeight ? innerWidth : innerHeight) - 25
+const _ = Canva.width = Canva.height = 2500
 const $ = Canva.getContext("2d")
 const R = "red"
 const Y = "gold"
@@ -9,7 +9,7 @@ fetch('Levels/' + 'Level' + '.json').then(res => res.json()).then(data => loadMa
 function loadMap(Q) {
     Board = Q.Board
     Target = Q.Target
-    Solve = Array(Q.Target)
+    Solve = Array(Q.Board)
     for (let y = 0; y < Board.length; y++) {
         for (let x = 0; x < Board.length; x++) {
             $.fillStyle = Board[y][x] ? "black" : "white"
