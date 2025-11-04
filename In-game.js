@@ -5,12 +5,14 @@ const R = "maroon"
 const Y = "olive"
 const B = "navy"
 loadMap(10,3)
+// fetch('Levels/' + Level[1] + '/' + Level[2] + '.json').then(res => res.json()).then(data => initMap(data)).catch($ => exception($));
+
 
 function loadMap(size,need) {
     globalSize = size
     globalNeed = need
     try{
-        const Board = [[,,,,X,,,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,,,,,,,]]
+        const Board = [[R,,,,,,,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,Y,,,,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,,,,B,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,,,,,,,X]]
     for (let y = 0; y < size; y++) {
         for (let x = 0; x < size; x++) {
             $.fillStyle = "white"
