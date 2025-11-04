@@ -10,7 +10,7 @@ function loadMap(size,need) {
     for (let y = 0; y < size; y++) {
         for (let x = 0; x < size; x++) {
             $.fillStyle = "rgb(" + x*3*x + "," + x*3*y + "," + y*3*y + ")"
-            $.fillRect(_*x/globalSize+5,_*y/globalSize+5,_/globalSize-5,_/globalSize-5)
+            $.fillRect(_*x/globalSize+3,_*y/globalSize+3,_/globalSize-6,_/globalSize-6)
         }
     }
     Qnumber.innerText = Board
