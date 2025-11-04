@@ -41,6 +41,7 @@ function eventCanvas(x, y) {
 
 function check() {
     alert([_,Canva.width,Canva.height])
+        alert(Solve)
 }
 
 function addSquare(x,y) {
