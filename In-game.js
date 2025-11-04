@@ -9,6 +9,9 @@ fetch('Levels/' + 'Level' + '.json').then(res => res.json()).then(data => loadMa
 
 
 function loadMap(Q) {
+alert(Q.Target)
+alert(Q.Board)
+alert(Q.Board.length)
     const high = sgx;
     for (let y = 0; y < size; y++) {
         for (let x = 0; x < size; x++) {
