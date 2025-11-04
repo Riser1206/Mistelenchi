@@ -34,8 +34,10 @@ function eventCanvas(x, y) {
     x -= Canva.getBoundingClientRect().x
     y -= Canva.getBoundingClientRect().y
     if (window.former != undefined) {
+        /*
         Const X = Math.round(x*Board.length/_-1/2)
         Const Y = Math.round(y*Board.length/_-1/2)
+        */
         $.fillStyle = former.color
         //if (Board[X][Y]) addNumber(X,Y)
     }
