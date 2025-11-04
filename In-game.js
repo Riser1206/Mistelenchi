@@ -1,12 +1,12 @@
+const _ = Canva.width = Canva.height = innerWidth < innerHeight ? innerWidth : innerHeight
 const $ = Canva.getContext("2d")
 const R = "red"
 const Y = "gold"
 const B = "blue"
+
 fetch('Levels/' + 'Level' + '.json').then(res => res.json()).then(data => loadMap(data)).catch($ => alert($))
 
 function loadMap(Q) {
-    alert([innerWidth,innerHeight])
-    _ = Canva.width = Canva.height = innerWidth < innerHeight ? innerWidth : innerHeight
     Board = Q.Board
     Target = Q.Target
     for (let y = 0; y < Board.length; y++) {
