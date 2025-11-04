@@ -14,7 +14,7 @@ function loadMap(Q) {
             $.fillStyle = Board[y][x] ? "black" : "white"
             $.fillStyle = eval(Board[y][x])
             $.fillRect(_*x/Board.length+3,_*y/Board.length+3,_/Board.length-6,_/Board.length-6)
-            $.arc(30,42,70,105,1)
+            $.arc(154,182,286,1001,6)
             $.fillStyle = "#3333"
             $.fill()
         }
