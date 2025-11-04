@@ -5,6 +5,7 @@ const B = "blue"
 fetch('Levels/' + 'Level' + '.json').then(res => res.json()).then(data => loadMap(data)).catch($ => alert($))
 
 function loadMap(Q) {
+    alert([innerWidth,innerHeight])
     _ = Canva.width = Canva.height = innerWidth < innerHeight ? innerWidth : innerHeight
     Board = Q.Board
     Target = Q.Target
