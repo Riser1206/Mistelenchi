@@ -37,13 +37,13 @@ function eventCanvas(x, y) {
         const X = Math.round(x*Board.length/_-1/2)
         const Y = Math.round(y*Board.length/_-1/2)
         $.fillStyle = former.color
-        if (!Board[X][Y]) addColor(X,Y)
+        if (!Board[X][Y]) addSquare(X,Y)
     }
     // $.fillRect(x, y, _/Board.length, _/Board.length)
 }
 
-function addColor(X,Y) {
-    alert(X, Y)
+function addSquare(X,Y) {
+   $.fillRect(_*x/Board.length+3,_*y/Board.length+3,_/Board.length-6,_/Board.length-6)
 }
 
 function pickColor(latter) {
