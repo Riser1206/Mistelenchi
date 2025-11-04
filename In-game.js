@@ -4,11 +4,12 @@ const X = "black"
 const R = "maroon"
 const Y = "olive"
 const B = "navy"
-loadMap(10,3)
-// fetch('Levels/' + Level[1] + '/' + Level[2] + '.json').then(res => res.json()).then(data => initMap(data)).catch($ => exception($));
+
+fetch('Levels/' + 'Level' + '.json').then(res => res.json()).then(data => loadMap(data)).catch($ => alert($))
 
 
-function loadMap(size,need) {
+function loadMap(Q) {
+    const high = sgx;
     globalSize = size
     globalNeed = need
     try{
