@@ -16,7 +16,7 @@ alert(Q.Board.length)
     for (let y = 0; y < size; y++) {
         for (let x = 0; x < size; x++) {
             $.fillStyle = "white"
-            $.fillStyle = Board[y][x]
+            $.fillStyle = eval(Q.Board[y][x])
             $.fillRect(_*x/globalSize+3,_*y/globalSize+3,_/globalSize-6,_/globalSize-6)
         }
     }
