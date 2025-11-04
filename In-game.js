@@ -39,11 +39,12 @@ function eventCanvas(x, y) {
         $.fillStyle = former.color
         if (!Board[X][Y]) addSquare(X,Y)
     }
-    // $.fillRect(x, y, _/Board.length, _/Board.length)
 }
 
 function addSquare(x,y) {
-   $.fillRect(_*x/Board.length+3,_*y/Board.length+3,_/Board.length-6,_/Board.length-6)
+    $.fillRect(_*x/Board.length+3,_*y/Board.length+3,_/Board.length-6,_/Board.length-6)
+    Solve = $.fillStyle
+    //Qnumber.innerText = Solve
 }
 
 function pickColor(latter) {
