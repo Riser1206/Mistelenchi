@@ -1,18 +1,18 @@
 const _ = Canva.width = Canva.height = innerWidth < innerHeight ? innerWidth : innerHeight
 const $ = Canva.getContext("2d")
-const X = "black"
 const R = "maroon"
 const Y = "olive"
 const B = "navy"
-fetch('Levels/' + 'Level' + '.json').then(res => res.json()).then(data => loadMap(data)).catch($ => alert($))
 
+fetch('Levels/' + 'Level' + '.json').then(res => res.json()).then(data => loadMap(data)).catch($ => alert($))
 
 function loadMap(Q) {
     Board = Q.Board
     Target = Q.Target
     for (let y = 0; y < Board.length; y++) {
         for (let x = 0; x < Board.length; x++) {
-            $.fillStyle = "white"
+            $.fillStyle = Board[y][x] ? "white" : "black"
+            alert('samyug oppositer')
             $.fillStyle = eval(Board[y][x])
             $.fillRect(_*x/Board.length+3,_*y/Board.length+3,_/Board.length-6,_/Board.length-6)
         }
