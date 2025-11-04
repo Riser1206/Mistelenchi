@@ -24,11 +24,7 @@ function loadMap(Q) {
     }
 }
 
-function clickCanvas(event) {
-    eventCanvas()
-}
-
-function eventCanvas() {
+function clickCanvas() {
             const x = event.clientX - $.canvas.offsetLeft;
             const y = event.clientY - $.canvas.offsetTop;
     if (window.former != undefined) {
