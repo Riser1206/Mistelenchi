@@ -1,8 +1,8 @@
 const _ = Canva.width = Canva.height = innerWidth < innerHeight ? innerWidth : innerHeight
 const $ = Canva.getContext("2d")
-const R = "maroon"
-const Y = "olive"
-const B = "navy"
+const R = "red"
+const Y = "gold"
+const B = "blue"
 
 fetch('Levels/' + 'Level' + '.json').then(res => res.json()).then(data => loadMap(data)).catch($ => alert($))
 
@@ -14,6 +14,7 @@ function loadMap(Q) {
             $.fillStyle = Board[y][x] ? "black" : "white"
             $.fillStyle = eval(Board[y][x])
             $.fillRect(_*x/Board.length+3,_*y/Board.length+3,_/Board.length-6,_/Board.length-6)
+            $.arcTo()
         }
     }
     Qnumber.innerText = Board
