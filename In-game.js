@@ -1,4 +1,4 @@
-const _ = Canva.width = Canva.height = innerWidth < innerHeight ? innerWidth : innerHeight
+const _ = Canva.width = Canva.height = (innerWidth < innerHeight ? innerWidth : innerHeight) - 25
 const $ = Canva.getContext("2d")
 const R = "red"
 const Y = "gold"
