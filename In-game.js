@@ -7,6 +7,7 @@ const B = "blue"
 fetch('Levels/' + 'Level' + '.json').then(res => res.json()).then(data => loadMap(data)).catch($ => alert($))
 
 function loadMap(Q) {
+    let txt
     Board = Q.Board
     Target = Q.Target
     for (let y = 0; y < Board.length; y++) {
@@ -21,7 +22,7 @@ function loadMap(Q) {
             $.closePath()
         }
     }
-    Qnumber.innerText = Board
+    Qnumber.innerText = txt
 }
 
 function clickCanvas(event) {
