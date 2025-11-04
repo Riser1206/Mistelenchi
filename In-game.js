@@ -14,9 +14,11 @@ function loadMap(Q) {
             $.fillStyle = Board[y][x] ? "black" : "white"
             $.fillStyle = eval(Board[y][x])
             $.fillRect(_*x/Board.length+3,_*y/Board.length+3,_/Board.length-6,_/Board.length-6)
-            $.arc(_*(x+1/2)/Board.length,_*(y+1/2)/Board.length,_/3/Board.length,0,2*Math.PI)
             $.fillStyle = "#3333"
+            $.beginPath()
+            $.arc(_*(x+1/2)/Board.length,_*(y+1/2)/Board.length,_/3/Board.length,0,2*Math.PI)
             $.fill()
+            $.closePath()
         }
     }
     Qnumber.innerText = Board
