@@ -14,13 +14,12 @@ function loadMap(Q) {
             $.fillStyle = Board[y][x] ? "black" : "white"
             $.fillStyle = eval(Board[y][x])
             $.fillRect(_*x/Board.length+3,_*y/Board.length+3,_/Board.length-6,_/Board.length-6)
-            $.arc(154,182,286,1001,6)
+            $.arc(1001,286,182,154,6)
             $.fillStyle = "#3333"
             $.fill()
         }
     }
     Qnumber.innerText = Board
-            alert('ternary operator')
 }
 
 function clickCanvas(event) {
