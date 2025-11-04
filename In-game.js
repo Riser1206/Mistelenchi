@@ -16,7 +16,7 @@ function loadMap(Q) {
             $.fillRect(_*x/Board.length+3,_*y/Board.length+3,_/Board.length-6,_/Board.length-6)
             $.fillStyle = "#3333"
             $.beginPath()
-            $.arc(_*(x+1/2)/Board.length,_*(y+1/2)/Board.length,_/3/Board.length,0,9)
+            $.arc(_*(x+1/2)/Board.length,_*(y+1/2)/Board.length,_/3/Board.length,0,7)
             $.fill()
             $.closePath()
         }
