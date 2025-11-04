@@ -11,13 +11,13 @@ function loadMap(Q) {
     Target = Q.Target
     for (let y = 0; y < Board.length; y++) {
         for (let x = 0; x < Board.length; x++) {
-            $.fillStyle = Board[y][x] ? "white" : "black"
-            alert('samyug oppositer')
+            $.fillStyle = Board[y][x] ? "black" : "white"
             $.fillStyle = eval(Board[y][x])
             $.fillRect(_*x/Board.length+3,_*y/Board.length+3,_/Board.length-6,_/Board.length-6)
         }
     }
     Qnumber.innerText = Board
+            alert('ternary operator')
 }
 
 function clickCanvas(event) {
