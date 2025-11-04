@@ -15,8 +15,8 @@ function loadMap(Q) {
             $.fillStyle = eval(Board[y][x])
             $.fillRect(_*x/Board.length+3,_*y/Board.length+3,_/Board.length-6,_/Board.length-6)
             $.arc(30,42,70,105,1)
-        ctx.fillStyle = 'blue';
-        ctx.fill();
+            $.fillStyle = "#3333"
+            $.fill()
         }
     }
     Qnumber.innerText = Board
