@@ -18,7 +18,7 @@ alert(Target)
             $.fillRect(_*x/Board.length+3,_*y/Board.length+3,_/Board.length-6,_/Board.length-6)
         }
     }
-    Qnumber.innerText = "_"
+    Qnumber.innerText = Board
 }
 
 function clickCanvas(event) {
