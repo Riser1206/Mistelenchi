@@ -34,7 +34,7 @@ function eventCanvas(x, y, z) {
     x -= Canva.getBoundingClientRect().x
     y -= Canva.getBoundingClientRect().y
     if (window.former != undefined) $.fillStyle = former.color
-    $.fillRect(X0, Y0, _ / Board.length, _ / Board.length)
+    $.fillRect(x, y, _ / Board.length, _ / Board.length)
 }
 
 function pickColor(latter) {
