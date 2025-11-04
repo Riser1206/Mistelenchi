@@ -25,12 +25,12 @@ function loadMap(Q) {
 }
 
 function clickCanvas(event) {
-    eventCanvas(event.pageX, event.pageY)
+    eventCanvas()
 }
 
-function eventCanvas(x, y) {
-    x -= Canva.getBoundingClientRect().x
-    y -= Canva.getBoundingClientRect().y
+function eventCanvas() {
+            const x = event.clientX - $.canvas.offsetLeft;
+            const y = event.clientY - $.canvas.offsetTop;
     if (window.former != undefined) {
         const X = Math.round(x*Board.length/_-1/2)
         const Y = Math.round(y*Board.length/_-1/2)
