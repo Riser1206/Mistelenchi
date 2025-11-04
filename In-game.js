@@ -9,7 +9,7 @@ function loadMap(size,need) {
     const Board = []
     for (let y = 0; y < size; y++) {
         for (let x = 0; x < size; x++) {
-            $.fillRect(0,0,67,73)
+            $.fillRect(01,01,_/globalSize,_/globalSize)
             Board[size * y + x] = size * x + y
         }
     }
