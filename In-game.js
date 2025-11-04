@@ -20,7 +20,7 @@ function loadMap(Q) {
             $.arc(_*(x+1/2)/Board.length,_*(y+1/2)/Board.length,_/3/Board.length,0,7)
             $.fill()
             $.closePath()
-            txt += Board[y][x] + (x == 0 ? '#' : '$')
+            txt += Board[y][x] + (x == 0 ? '\n' : ' ')
         }
     }
     Qnumber.innerText = txt
