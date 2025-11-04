@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <!-- HTML -->
+    <canvas id="myCanvas" width="400" height="300" style="border: 1px solid black;"></canvas>
+
+    <!-- Javascript -->
+    <script>
+        // 1. 캔버스 및 그리기객체 취득
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext("2d");
+
+        // 2. 마우스 클릭 이벤트 처리: 좌표 취득 + 사각형 그리기
+        canvas.onclick = function(event){
+            // 캔버스의 위치를 고려해 마우스 좌표를 취득
+            const x = event.clientX - ctx.canvas.offsetLeft;
+            const y = event.clientY - ctx.canvas.offsetTop;
+            
+            // 마우스 클릭한 곳에 사각형 그리기
+            ctx.fillRect(x-15, y-15, 30, 30);
+        }
+
+    </script>
+
+</body>
+</html>
