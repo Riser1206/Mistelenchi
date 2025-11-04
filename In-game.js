@@ -10,10 +10,6 @@ fetch('Levels/' + 'Level' + '.json').then(res => res.json()).then(data => loadMa
 
 function loadMap(Q) {
     const high = sgx;
-    globalSize = size
-    globalNeed = need
-    try{
-        const Board = [[R,,,,,,,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,Y,,,,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,,,,B,,,],[,,,,,,,,,],[,,,,,,,,,],[,,,,,,,,,X]]
     for (let y = 0; y < size; y++) {
         for (let x = 0; x < size; x++) {
             $.fillStyle = "white"
@@ -21,7 +17,6 @@ function loadMap(Q) {
             $.fillRect(_*x/globalSize+3,_*y/globalSize+3,_/globalSize-6,_/globalSize-6)
         }
     }
-    }catch(_){alert(_)}
     Qnumber.innerText = Board
 }
 
