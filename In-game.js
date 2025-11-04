@@ -9,11 +9,8 @@ function loadMap(size,need) {
     const Board = []
     for (let y = 0; y < size; y++) {
         for (let x = 0; x < size; x++) {
-            try{
-            alert($.fillStyle = "rgb(" + x*3*x + "," + x*3*y + "," + y*3*y + ")")
-            }catch(_){alert(_)}
-            $.fillRect(_*x/globalSize+3,_*y/globalSize+3,_/globalSize-3,_/globalSize-3)
-            Board[size * y + x] = size * x + y
+            $.fillStyle = "rgb(" + x*3*x + "," + x*3*y + "," + y*3*y + ")"
+            $.fillRect(_*x/globalSize+5,_*y/globalSize+5,_/globalSize-5,_/globalSize-5)
         }
     }
     Qnumber.innerText = Board
