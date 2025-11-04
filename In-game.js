@@ -40,7 +40,7 @@ function eventCanvas(x, y) {
 }
 
 function addSquare(x,y) {
-    $.fillRect(_*x/Board.length+3,_*y/Board.length+3,_/Board.length-6,_/Board.length-6)
+    $.fillRect(_*x/Board.length+25,_*y/Board.length+25,_/Board.length-50,_/Board.length-50)
 }
 
 function pickColor(latter) {
