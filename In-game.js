@@ -9,7 +9,7 @@ fetch('Levels/' + 'Level' + '.json').then(res => res.json()).then(data => loadMa
 function loadMap(Q) {
     Board = Q.Board
     Target = Q.Target
-    Solve = [][]
+    Solve = array()
     for (let y = 0; y < Board.length; y++) {
         for (let x = 0; x < Board.length; x++) {
             $.fillStyle = Board[y][x] ? "black" : "white"
