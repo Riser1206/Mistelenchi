@@ -16,7 +16,7 @@ function loadMap(Q) {
             addSquare(x,y)
             $.fillStyle = "#fff7"
             $.beginPath()
-            $.arc(_*(x+1/2)/Board.length,_*(y+1/2)/Board.length,_/3/Board.length,0,7)
+            $.arc(_*(x+1/2)/Board.length,_*(y+1/2)/Board.length,_/5/Board.length,0,7)
             $.fill()
             $.closePath()
         }
