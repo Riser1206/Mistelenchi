@@ -35,7 +35,7 @@ function clickCanvas() {
 }
 
 function check() {
-        alert(JSON.stringify(Solve))
+        Qnumber.innerText =JSON.stringify(Solve)
 }
 
 function addSquare(x,y) {
