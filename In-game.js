@@ -35,7 +35,7 @@ function clickCanvas() {
 }
 
 function check() {
-    Qnumber.style="font-size:5"
+    Qnumber.style="font-size:5;font-family: monospace"
         Qnumber.innerText =JSON.stringify(Solve)
 }
 
