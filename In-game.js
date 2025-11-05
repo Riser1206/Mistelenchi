@@ -27,7 +27,13 @@ function loadMap(Q) {
 function clickCanvas() {
             const x = event.clientX - $.canvas.offsetLeft;
             const y = event.clientY - $.canvas.offsetTop;
-    alert ([x,y])
+    const she = $.canvas
+alert ([
+    she.offsetLeft,
+    she.offsetTop,
+    she.offsetRight,
+    she.offsetBottom
+])
     if (window.former != undefined) {
         const X = Math.round(x*Board.length/_-1/2)
         const Y = Math.round(y*Board.length/_-1/2)
