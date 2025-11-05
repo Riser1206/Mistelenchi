@@ -35,7 +35,7 @@ function clickCanvas() {
 }
 
 function check() {
-    Qnumber.Style="font-size: 5px Gloria"
+    Qnumber.Style="font-size: 5px"
         Qnumber.innerText =JSON.stringify(Solve)
 }
 
