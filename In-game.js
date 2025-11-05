@@ -27,11 +27,9 @@ function loadMap(Q) {
 function clickCanvas() {
             const x = event.clientX - $.canvas.offsetLeft;
             const y = event.clientY - $.canvas.offsetTop;
-// _ -> $.canvas.offsetWidth:$.canvas.offsetHeight
-Qnumber.innerText=[x,y]
     if (window.former != undefined) {
-        const X = Math.round(x*Board.length/_-1/2)
-        const Y = Math.round(y*Board.length/_-1/2)
+        const X = Math.round(x*Board.length/$.canvas.offsetWidth-1/2)
+        const Y = Math.round(y*Board.length/$.canvas.offsetHeight-1/2)
         $.fillStyle = former.color
         if (!Board[X][Y]) addSquare(X,Y)
     }
