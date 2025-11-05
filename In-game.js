@@ -43,7 +43,7 @@ function check() {
         //alert($.fillStyle != Color)
     }
         Qnumber.style="font-size:5;font-family: monospace"
-        Qnumber.innerText =JSON.stringify(Solve)+"\n"+JSON.stringify(Board)
+        Qnumber.innerText =JSON.stringify(Solve)+"\n\n\n"+JSON.stringify(Board)
 }
 
 function addSquare(x,y) {
