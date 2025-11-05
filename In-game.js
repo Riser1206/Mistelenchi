@@ -33,7 +33,7 @@ alert ([
     she.offsetTop+0,
     she.offsetWidth-0,
     she.offsetHeight+0,
-    JSON.stringify(she.offsetParent)
+    x,y,JSON.stringify(she.offsetParent)
 ])
     if (window.former != undefined) {
         const X = Math.round(x*Board.length/_-1/2)
