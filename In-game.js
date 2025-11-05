@@ -11,6 +11,7 @@ function loadMap(Q) {
     Target = Q.Target
     Solve = Array(Q.Board.length)
     for (let y = 0; y < Board.length; y++) {
+        Solve[y] = Array(Q.Board.length)
         for (let x = 0; x < Board.length; x++) {
             $.fillStyle = Board[y][x] ? "black" : "white"
             $.fillStyle = eval(Board[y][x])
