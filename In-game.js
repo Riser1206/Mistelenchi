@@ -29,10 +29,10 @@ function clickCanvas() {
             const y = event.clientY - $.canvas.offsetTop;
     const she = $.canvas
 alert ([
-    she.offsetLeft,
-    she.offsetTop,
-    she.offsetRight,
-    she.offsetBottom
+    she.offsetLeft-0,
+    she.offsetTop+0,
+    she.offsetRight-0,
+    she.offsetBottom+0
 ])
     if (window.former != undefined) {
         const X = Math.round(x*Board.length/_-1/2)
