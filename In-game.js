@@ -36,7 +36,6 @@ function clickCanvas() {
 }
 
 function check() {
-    alert([_,Canva.width,Canva.height])
         alert(Solve)
 }
 
