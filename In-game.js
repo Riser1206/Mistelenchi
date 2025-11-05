@@ -38,7 +38,7 @@ function check() {
 }
 
 function addSquare(x,y) {
-    Solve[y][x] = $.fillStyle
+    //Solve[y][x] = $.fillStyle
     $.fillRect(_*x/Board.length+25,_*y/Board.length+25,_/Board.length-50,_/Board.length-50)
 }
 
