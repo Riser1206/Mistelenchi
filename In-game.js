@@ -35,7 +35,9 @@ function clickCanvas() {
 }
 
 function check() {
-    Qnumber.style="font-size:5;font-family: monospace"
+   // Target 
+    for (let z; z < Board.length; z++) {}
+        Qnumber.style="font-size:5;font-family: monospace"
         Qnumber.innerText =JSON.stringify(Solve)
 }
 
