@@ -36,10 +36,10 @@ function clickCanvas() {
 
 function check() {
    // Target 
-    for (let z; z < Board.length; z++) {
+    for (let z = 0; z < Board.length; z++) {
         alert(Solve[0][z])
     }
-    for (let z; z < Board.length; z++) {
+    for (let z = 0; z < Board.length; z++) {
         alert(Solve[z][0])
     }
         Qnumber.style="font-size:5;font-family: monospace"
