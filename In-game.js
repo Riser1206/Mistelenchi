@@ -30,7 +30,7 @@ function clickCanvas() {
 alert ([
     $.canvas.offsetWidth,
     $.canvas.offsetHeight,
-    Canva.width,Canva.height,_
+    Canva.width,Canva.height,x,y,_
 ])
     if (window.former != undefined) {
         const X = Math.round(x*Board.length/_-1/2)
