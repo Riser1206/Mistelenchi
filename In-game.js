@@ -14,7 +14,7 @@ function loadMap(Q) {
         Solve[y] = Array(Q.Board.length)
         for (let x = 0; x < Board.length; x++) {
             $.fillStyle = Board[y][x] ? "black" : "white"
-            $.fillStyle = eval(Board[y][x])
+            Color = $.fillStyle = eval(Board[y][x])
             addSquare(x,y)
             $.fillStyle = "#fff7"
             $.beginPath()
@@ -37,17 +37,17 @@ function clickCanvas() {
 function check() {
    // Target 
     for (let z = 0; z < Board.length; z++) {
-        alert(typeof alert())
+        alert(Color)
     }
     for (let z = 0; z < Board.length; z++) {
-        alert(typeof alert())
+        alert(Color)
     }
         Qnumber.style="font-size:5;font-family: monospace"
         Qnumber.innerText =JSON.stringify(Solve)
 }
 
 function addSquare(x,y) {
-    Solve[y][x] = $.fillStyle
+    Solve[y][x] = Color
     $.fillRect(_*x/Board.length+25,_*y/Board.length+25,_/Board.length-50,_/Board.length-50)
 }
 
