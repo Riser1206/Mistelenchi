@@ -23,6 +23,7 @@ function loadMap(Q) {
             $.closePath()
         }
     }
+    Color = $.fillStyle = "transparent"
 }
 
 function clickCanvas() {
