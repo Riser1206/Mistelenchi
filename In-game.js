@@ -37,10 +37,10 @@ function clickCanvas() {
 function check() {
    // Target 
     for (let z = 0; z < Board.length; z++) {
-        alert("black" == Solve[0][z])
+        alert(Solve[0][z] == "black")
     }
     for (let z = 0; z < Board.length; z++) {
-        alert("white" == Solve[z][0])
+        alert(Solve[z][0] == "white")
     }
         Qnumber.style="font-size:5;font-family: monospace"
         Qnumber.innerText =JSON.stringify(Solve)
