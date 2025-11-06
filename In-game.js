@@ -3,8 +3,8 @@ const $ = Canva.getContext("2d")
 const R = "red"
 const Y = "gold"
 const B = "blue"
-alert(location.hash.remove('#'))
-fetch('Levels/' + location.search + '.json').then(res => res.json()).then(data => loadMap(data)).catch($ => alert($))
+const Level = location.search.split('?');
+fetch('Levels/' + Level[1] + '.json').then(res => res.json()).then(data => loadMap(data)).catch($ => alert($))
 
 function loadMap(Q) {
     Board = Q.Board
