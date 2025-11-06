@@ -46,7 +46,10 @@ function Check() {
         //alert($.fillStyle == Color)
     }
     for (let z = 0; z < Board.length; z++) {
-        //conut += Solve[z].filter(item => item === Y).length
+        for (let i; i < 3; i++) {
+            conut += " " + Solve[z].filter(item => item === triplet[i]).length
+        }
+        //
     }
         Qnumber.style="font-size:5;font-family: monospace;color:#ccc"
         Qnumber.innerText = triplet
