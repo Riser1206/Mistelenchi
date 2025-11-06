@@ -52,8 +52,8 @@ function Check() {
    // Target 
     for (let i = 0; i < Board.length; i++) {
         for (let j = 0; j < 4; j++) {
-            conut += " vertical " + Solve[z].filter(item => item === triplet[j]).length
-            conut += " horizontal " + Trans[z].filter(item => item === triplet[j]).length
+            conut += " vertical " + Solve[i].filter(item => item === triplet[j]).length
+            conut += " horizontal " + Trans[i].filter(item => item === triplet[j]).length
         }
     }
         Qnumber.style="font-size:10;font-family: monospace;color:#ccc"
