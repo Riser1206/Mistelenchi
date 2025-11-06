@@ -40,7 +40,15 @@ function Clear() {
 
 function Check() {
     const triplet = [undefined,R,Y,B]
-        let conut = "conut"
+    let conut = "conut"
+    
+    let Trans = []
+    for (let i = 0; i < Board.length; i++) {
+        Trans[i] = []
+        for (let j = 0; j < Board.length; j++) {
+            Trans[i][j] = Board[j][i]
+        }
+    }
    // Target 
     for (let z = 0; z < Board.length; z++) {
         //alert($.fillStyle == Color)
@@ -50,17 +58,11 @@ function Check() {
             conut += (i != 0 ? " " : "\n") + Solve[z].filter(item => item === triplet[i]).length
         }
         /*
-        let matrix = [
-  [1, 2, 3],
-  [4, 5, 6],
-  [7, 8, 9]
-];
-
-let transposed = [];
-for (let i = 0; i < matrix[0].length; i++) {
-  transposed[i] = [];
-  for (let j = 0; j < matrix.length; j++) {
-    transposed[i][j] = matrix[j][i];
+let Trans = [];
+for (let i = 0; i < Board.length; i++) {
+  Trans[i] = [];
+  for (let j = 0; j < Board.length; j++) {
+    Trans[i][j] = Board[j][i];
   }
 }
 */
