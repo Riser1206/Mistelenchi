@@ -40,7 +40,7 @@ function Clear() {
 
 function Check() {
     const triplet = [R,Y,B]
-        let conut
+        let conut = "conut"
    // Target 
     for (let z = 0; z < Board.length; z++) {
         //alert($.fillStyle == Color)
