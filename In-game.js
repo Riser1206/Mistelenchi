@@ -46,7 +46,7 @@ function check() {
     for (let z = 0; z < Board.length; z++) {
         //alert($.fillStyle != Color)
     }
-        Qnumber.style="font-size:5;font-family: monospace"
+        Qnumber.style="font-size:5;font-family: monospace;color="#ccc""
         Qnumber.innerText =JSON.stringify(Solve)+"\n\n\n"+JSON.stringify(Board)
 }
 
