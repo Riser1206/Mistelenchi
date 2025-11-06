@@ -56,7 +56,7 @@ function Check() {
             conut += " horizontal " + Trans[i].filter(item => item === triplet[j]).length
         }
     }
-        Qnumber.style="font-size:10;font-family: monospace;color:#ccc"
+        Qnumber.style="font-size:5;font-family: monospace;color:#ccc"
         Qnumber.innerText = conut
 }
 
