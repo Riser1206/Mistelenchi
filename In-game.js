@@ -39,7 +39,7 @@ function Clear() {
 }
 
 function Check() {
-    const triplet = [null,R,Y,B]
+    const triplet = [undefined,R,Y,B]
         let conut = "conut"
    // Target 
     for (let z = 0; z < Board.length; z++) {
