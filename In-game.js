@@ -48,7 +48,7 @@ function Check() {
     }
     // Count(Trans)
    // Target 
-        alert("Count"+Count(Trans)+Count(Solve))
+        alert("Count\n"+Count(Trans)+"\n"+Count(Solve))
 }
 
 function Count(Way) {
