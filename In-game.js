@@ -49,7 +49,7 @@ function Check() {
     // Count(Trans)
    // Target 
         Qnumber.style="font-size:5;font-family: monospace;color:#ccc"
-        Qnumber.innerText = "conut"+Count(Trans)+Count(Solve)
+        Qnumber.innerText = "Count"+Count(Trans)+Count(Solve)
 }
 
 function Count(Way) {
