@@ -34,7 +34,7 @@ function clickCanvas() {
     }
 }
 
-function clear() {
+function clear() {alert(0)
     try {
     Solve=JSON.parse(JSON.stringify(Board))
     }catch(_){alert(_)}
