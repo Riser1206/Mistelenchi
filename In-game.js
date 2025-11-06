@@ -40,7 +40,7 @@ function Clear() {
 
 function Check() {
     const triplet = [undefined,R,Y,B]
-    let conut = "<span style=\"color:lime\">conut</span>"
+    let conut = "conut"
     
     const Trans = []
     for (let i = 0; i < Solve.length; i++) {
@@ -49,13 +49,13 @@ function Check() {
             Trans[i][j] = Solve[j][i]
         }
     }
-    Count(Trans)
+    Count(Trans, conut)
    // Target 
         Qnumber.style="font-size:5;font-family: monospace;color:#ccc"
         Qnumber.innerText = conut
 }
 
-function Count(Way) {
+function Count(Way, conut) {
     for (let i = 0; i < Board.length; i++) {
         for (let j = 0; j < 4; j++) {
             conut += " " + Way[i].filter(item => item === triplet[j]).length
