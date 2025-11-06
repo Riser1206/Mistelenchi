@@ -52,7 +52,7 @@ function Check() {
         //
     }
         Qnumber.style="font-size:5;font-family: monospace;color:#ccc"
-        Qnumber.innerText = conut
+        Qnumber.innerText = conut + "\n\n\n" + Solve
 }
 
 function addSquare(x,y) {
