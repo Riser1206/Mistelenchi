@@ -49,7 +49,21 @@ function Check() {
         for (let i = 0; i < 4; i++) {
             conut += (i != 0 ? " " : "\n") + Solve[z].filter(item => item === triplet[i]).length
         }
-        //
+        /*
+        let matrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
+];
+
+let transposed = [];
+for (let i = 0; i < matrix[0].length; i++) {
+  transposed[i] = [];
+  for (let j = 0; j < matrix.length; j++) {
+    transposed[i][j] = matrix[j][i];
+  }
+}
+*/
     }
         Qnumber.style="font-size:5;font-family: monospace;color:#ccc"
         Qnumber.innerText = conut + "\n\n\n" + Target
