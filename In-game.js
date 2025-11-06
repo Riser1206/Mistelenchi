@@ -42,7 +42,7 @@ function Check() {
     const triplet = [undefined,R,Y,B]
     let conut = "conut"
     
-    let Trans = []
+    const Trans = []
     for (let i = 0; i < Board.length; i++) {
         Trans[i] = []
         for (let j = 0; j < Board.length; j++) {
