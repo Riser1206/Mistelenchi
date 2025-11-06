@@ -36,6 +36,7 @@ function clickCanvas() {
 
 function clear() {
     Solve=JSON.parse(JSON.stringify(Board))
+    alert()
 }
 
 function check() {
