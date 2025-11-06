@@ -9,6 +9,18 @@ fetch('Levels/' + 'Level' + '.json').then(res => res.json()).then(data => loadMa
 function loadMap(Q) {
     Board = Q.Board
     Target = Q.Target
+    clear()
+}
+
+function clickCanvas() {
+    if (window.former != undefined) {
+        const X = Math.round((event.clientX-$.canvas.offsetLeft)*Board.length/$.canvas.offsetWidth-1/2)
+        const Y = Math.round((event.clientY-$.canvas.offsetTop)*Board.length/$.canvas.offsetHeight-1/2)
+        if (!Board[Y][X]) addSquare(X,Y)
+    }
+}
+
+function clear() {
     Solve = Array(Q.Board.length)
     for (let y = 0; y < Board.length; y++) {
         Solve[y] = Array(Q.Board.length)
@@ -24,22 +36,6 @@ function loadMap(Q) {
         }
     }
     Color = $.fillStyle = "transparent"
-}
-
-function clickCanvas() {
-    if (window.former != undefined) {
-        const X = Math.round((event.clientX-$.canvas.offsetLeft)*Board.length/$.canvas.offsetWidth-1/2)
-        const Y = Math.round((event.clientY-$.canvas.offsetTop)*Board.length/$.canvas.offsetHeight-1/2)
-        if (!Board[Y][X]) addSquare(X,Y)
-    }
-}
-
-function clear() {alert(0)
-    try {
-    Solve=JSON.parse(JSON.stringify(Board))
-    }catch(_){alert(_)}
-
-    
 }
 
 function check() {
