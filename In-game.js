@@ -48,8 +48,7 @@ function Check() {
     }
     // Count(Trans)
    // Target 
-        Qnumber.style="font-family:monospace;color:#ccc"
-        Qnumber.innerText = "Count"+Count(Trans)+Count(Solve)
+        alert("Count"+Count(Trans)+Count(Solve))
 }
 
 function Count(Way) {
