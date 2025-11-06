@@ -46,16 +46,16 @@ function Check() {
             Trans[i][j] = Solve[j][i]
         }
     }
-    alert("가로줄: "+Count(Solve)+"\n세로줄: "+Count(Trans))
+    alert(Count(Solve,"번 가로줄: ")+"\n"+Count(Trans,"번 세로줄: "))
 }
 
-function Count(Way) {
+function Count(Way, Language) {
     const triplet = [undefined,R,Y,B]
     for (let i = 0; i < Board.length; i++) {
         for (let j = 0; j < 3;) {
             j++
             const n = Way[i].filter(item => item === triplet[j]).length
-            const msg = i+1+":"+triplet[j]
+            const msg = i+1+Language+triplet[j]
             if (Target < n) return msg+"+"
             if (Target > n) return msg+"-"
         }
