@@ -54,19 +54,14 @@ function Check() {
 
 function Count(Way) {
     const triplet = [undefined,R,Y,B]
-    let conut = "\n\n"
     for (let i = 0; i < Board.length; i++) {
         for (let j = 0; j < 3;) {
             j++
             const n = Way[i].filter(item => item === triplet[j]).length
-            let q
-            if (Target < n) q = "<"
-            if (Target == n) q = "="
-            if (Target > n) q = ">"
-            conut += " " + triplet[j] + i + q
+            if (Target < n) return "+"
+            if (Target > n) return "-"
         }
     }
-    return conut
 }
 
 function addSquare(x,y) {
