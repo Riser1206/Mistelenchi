@@ -20,7 +20,7 @@ function clickCanvas() {
     }
 }
 
-function clear() {
+function Clear() {
     Solve = Array(Board.length)
     for (let y = 0; y < Board.length; y++) {
         Solve[y] = Array(Board.length)
@@ -37,7 +37,7 @@ function clear() {
     }
 }
 
-function check() {
+function Check() {
    // Target 
     for (let z = 0; z < Board.length; z++) {
         //alert($.fillStyle == Color)
