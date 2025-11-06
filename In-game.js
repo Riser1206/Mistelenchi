@@ -40,7 +40,7 @@ function Clear() {
 
 function Check() {
     const triplet = [undefined,R,Y,B]
-    let conut = "<span style='color: lime'>conut</span>"
+    let conut = "<span style=\"color:lime\">conut</span>"
     
     const Trans = []
     for (let i = 0; i < Solve.length; i++) {
