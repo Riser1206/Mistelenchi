@@ -9,7 +9,7 @@ fetch('Levels/' + 'Level' + '.json').then(res => res.json()).then(data => loadMa
 function loadMap(Q) {
     Board = Q.Board
     Target = Q.Target
-    clear()
+    Clear()
 }
 
 function clickCanvas() {
