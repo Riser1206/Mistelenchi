@@ -3,7 +3,7 @@ const $ = Canva.getContext("2d")
 const R = "red"
 const Y = "gold"
 const B = "blue"
-const Level = location.search.split('?'); alert(Level)
+
 fetch('Levels/' + Level[1] + '.json').then(res => res.json()).then(data => loadMap(data)).catch($ => alert($))
 
 function loadMap(Q) {
