@@ -46,7 +46,7 @@ function Check() {
             Trans[i][j] = Solve[j][i]
         }
     }
-    alert(Count(Solve,"번 가로줄: ")+"\n"+Count(Trans,"번 세로줄: "))
+    alert(Count(Solve,"번 가로줄에 ")+"\n"+Count(Trans,"번 세로줄에 "))
 }
 
 function Count(Way, Language) {
@@ -56,8 +56,8 @@ function Count(Way, Language) {
             j++
             const n = Way[i].filter(item => item === triplet[j]).length
             const msg = i+1+Language+triplet[j]
-            if (Target < n) return msg+"+"
-            if (Target > n) return msg+"-"
+            if (Target < n) return msg+"초과"
+            if (Target > n) return msg+"부족"
         }
     }
 }
