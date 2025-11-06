@@ -35,6 +35,7 @@ function Clear() {
             $.closePath()
         }
     }
+    Color = $.fillStyle = window.former != undefined ? former.background : "tan"
 }
 
 function Check() {
