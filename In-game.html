@@ -25,6 +25,10 @@
         font-size: 3em;
         font-family: monospace;
     }
+    button dialog {
+        background-color: tan;
+        color: aqua;
+    }
     canvas {
         border: 5px solid;
         width: 100%;
@@ -49,7 +53,7 @@
 <dialog id="dia_log">
     <center>
         <h1>Clear?</h1>
-        <button width="500px" onclick="dia_log.close()" class="action">No</button>
-        <button width="500px" onclick="dia_log.close(Clear())" class="action">Yes</button>
+        <button onclick="dia_log.close()" class="action">No</button>
+        <button onclick="dia_log.close(Clear())" class="action">Yes</button>
     </center>
 </dialog>
