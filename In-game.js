@@ -55,6 +55,7 @@ function Check() {
             conut += (i != 0 ? " " : "\n") + Solve[z].filter(item => item === triplet[i]).length
         }
     }
+    conut += "\n"
     for (let z = 0; z < Board.length; z++) {
         for (let i = 0; i < 4; i++) {
             conut += (i != 0 ? " " : "\n") + Trans[z].filter(item => item === triplet[i]).length
