@@ -21,9 +21,9 @@ function clickCanvas() {
 }
 
 function clear() {
-    Solve = Array(Q.Board.length)
+    Solve = Array(Board.length)
     for (let y = 0; y < Board.length; y++) {
-        Solve[y] = Array(Q.Board.length)
+        Solve[y] = Array(Board.length)
         for (let x = 0; x < Board.length; x++) {
             $.fillStyle = Board[y][x] ? "black" : "white"
             Color = $.fillStyle = eval(Board[y][x])
