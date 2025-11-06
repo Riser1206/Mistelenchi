@@ -52,7 +52,7 @@ function Check() {
         //
     }
         Qnumber.style="font-size:5;font-family: monospace;color:#ccc"
-        Qnumber.innerText = triplet
+        Qnumber.innerText = conut
 }
 
 function addSquare(x,y) {
