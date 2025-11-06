@@ -48,7 +48,7 @@ function Check() {
     }
     // Count(Trans)
    // Target 
-        Qnumber.style="font-size:5;font-family: monospace;color:#ccc"
+        Qnumber.style="font-family:monospace;color:#ccc"
         Qnumber.innerText = "Count"+Count(Trans)+Count(Solve)
 }
 
@@ -58,8 +58,9 @@ function Count(Way) {
         for (let j = 0; j < 3;) {
             j++
             const n = Way[i].filter(item => item === triplet[j]).length
-            if (Target < n) return "+"
-            if (Target > n) return "-"
+            const msg i+1+":"+j
+            if (Target < n) return msg+"+"
+            if (Target > n) return msg+"-"
         }
     }
 }
