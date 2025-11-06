@@ -57,10 +57,11 @@ function Count(Way, Language) {
             j++
             const n = Way[i].filter(item => item === triplet[j]).length
             const msg = i+1+Language+triplet[j]
-            if (Target < n) return msg+"초과"
-            if (Target > n) return msg+"부족"
+            if (Target < n) return msg+" 초과"
+            if (Target > n) return msg+" 부족"
         }
     }
+    return ""
 }
 
 function addSquare(x,y) {
