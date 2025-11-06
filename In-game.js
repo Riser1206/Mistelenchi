@@ -57,7 +57,7 @@ function Count(Way) {
     let conut = "\n"
     for (let i = 0; i < Board.length; i++) {
         for (let j = 0; j < 4; j++) {
-            conut += " " + Way[i].filter(item => item === triplet[j]).length
+            conut += " " + triplet + " " + Way[i].filter(item => item === triplet[j]).length
         }
     }
     return conut
