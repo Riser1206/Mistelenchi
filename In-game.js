@@ -59,7 +59,7 @@ function Check() {
         }
     }
         Qnumber.style="font-size:5;font-family: monospace;color:#ccc"
-        Qnumber.innerText = conut + "\n\n\n" + Target
+        Qnumber.innerText = conut + "\n\n\n" + Trans
 }
 
 function addSquare(x,y) {
