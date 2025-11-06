@@ -49,12 +49,12 @@ function Check() {
     // Count(Trans)
    // Target 
         Qnumber.style="font-size:5;font-family: monospace;color:#ccc"
-        Qnumber.innerText = Count(Solve)
+        Qnumber.innerText = "conut"+Count(Trans)+Count(Solve)
 }
 
 function Count(Way) {
     const triplet = [undefined,R,Y,B]
-    let conut = "conut"
+    let conut = "\n"
     for (let i = 0; i < Board.length; i++) {
         for (let j = 0; j < 4; j++) {
             conut += " " + Way[i].filter(item => item === triplet[j]).length
