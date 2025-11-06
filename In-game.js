@@ -58,7 +58,7 @@ function Count(Way) {
         for (let j = 0; j < 3;) {
             j++
             const n = Way[i].filter(item => item === triplet[j]).length
-            const msg = i+1+":"+j
+            const msg = i+1+":"+triplet[j]
             if (Target < n) return msg+"+"
             if (Target > n) return msg+"-"
         }
