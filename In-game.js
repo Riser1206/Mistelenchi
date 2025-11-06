@@ -60,6 +60,7 @@ function Count(Way) {
             conut += " " + Way[i].filter(item => item === triplet[j]).length
         }
     }
+    return conut
 }
 
 function addSquare(x,y) {
