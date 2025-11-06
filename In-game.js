@@ -39,15 +39,17 @@ function Clear() {
 }
 
 function Check() {
+    const triplet = [R,Y,B]
+        let conut
    // Target 
     for (let z = 0; z < Board.length; z++) {
         //alert($.fillStyle == Color)
     }
     for (let z = 0; z < Board.length; z++) {
-        alert(Solve[z].filter(item => item === Y).length)
+        //conut += Solve[z].filter(item => item === Y).length
     }
         Qnumber.style="font-size:5;font-family: monospace;color:#ccc"
-        Qnumber.innerText =JSON.stringify(Solve)+"\n"+Color+"\n"+JSON.stringify(Board)
+        Qnumber.innerText = triplet
 }
 
 function addSquare(x,y) {
