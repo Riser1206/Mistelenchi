@@ -46,7 +46,7 @@ function Check() {
             Trans[i][j] = Solve[j][i]
         }
     }
-    alert("Count\n가로줄: "+Count(Solve)+"\n세로줄: "+Count(Trans))
+    alert("가로줄: "+Count(Solve)+"\n세로줄: "+Count(Trans))
 }
 
 function Count(Way) {
