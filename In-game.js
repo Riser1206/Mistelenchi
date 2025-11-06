@@ -47,7 +47,8 @@ function Check() {
             Trans[i][j] = Solve[j][i]
         }
     }
-    alert(Count(Solve,"번 가로줄에 ")+Count(Trans,"번 세로줄에 "))
+    const massage = Count(Solve,"번 가로줄에 ")+Count(Trans,"번 세로줄에 ")
+    alert(massage ? 0 : 1)
 }
 
 function Count(Way, Language) {
