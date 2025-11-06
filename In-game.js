@@ -4,7 +4,7 @@ const R = "red"
 const Y = "gold"
 const B = "blue"
 
-fetch('Levels/' + 'Level' + '.json').then(res => res.json()).then(data => loadMap(data)).catch($ => alert($))
+fetch('Levels/' + location.search + '.json').then(res => res.json()).then(data => loadMap(data)).catch($ => alert($))
 
 function loadMap(Q) {
     Board = Q.Board
