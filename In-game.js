@@ -58,7 +58,7 @@ function Check() {
             conut += (i != 0 ? " " : "\n") + Solve[z].filter(item => item === triplet[i]).length
         }
     }
-        Qnumber.style="font-size:5;font-family: monospace;color:#ccc"
+        Qnumber.style="font-size:10;font-family: monospace;color:#ccc"
         Qnumber.innerText = conut + "\n\n\n" + JSON.stringify(Solve) + "\n\n\n" + JSON.stringify(Trans)
 }
 
