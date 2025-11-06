@@ -35,7 +35,7 @@ function Clear() {
             $.closePath()
         }
     }
-    Color = $.fillStyle = window.former != undefined ? former.background : "tan"
+    Color = $.fillStyle = window.former != undefined ? former.background : "transparent"
 }
 
 function Check() {
@@ -47,7 +47,7 @@ function Check() {
         //alert($.fillStyle != Color)
     }
         Qnumber.style="font-size:5;font-family: monospace;color:#ccc"
-        Qnumber.innerText =JSON.stringify(Solve)+"\n\n\n"+JSON.stringify(Board)
+        Qnumber.innerText =JSON.stringify(Solve)+"\n"+Color+"\n"+JSON.stringify(Board)
 }
 
 function addSquare(x,y) {
