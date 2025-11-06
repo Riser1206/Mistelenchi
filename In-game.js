@@ -57,15 +57,6 @@ function Check() {
         for (let i = 0; i < 4; i++) {
             conut += (i != 0 ? " " : "\n") + Solve[z].filter(item => item === triplet[i]).length
         }
-        /*
-let Trans = [];
-for (let i = 0; i < Board.length; i++) {
-  Trans[i] = [];
-  for (let j = 0; j < Board.length; j++) {
-    Trans[i][j] = Board[j][i];
-  }
-}
-*/
     }
         Qnumber.style="font-size:5;font-family: monospace;color:#ccc"
         Qnumber.innerText = conut + "\n\n\n" + Target
