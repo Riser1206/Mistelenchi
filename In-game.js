@@ -52,7 +52,7 @@ function Check() {
    // Target 
     for (let i = 0; i < Board.length; i++) {
         for (let j = 0; j < 4; j++) {
-            conut += "\nvertical " + Solve[i].filter(item => item === triplet[j]).length
+            conut += (j==0 ? "\n" : " ") + "vertical " + Solve[i].filter(item => item === triplet[j]).length
             conut += " horizontal " + Trans[i].filter(item => item === triplet[j]).length
         }
     }
