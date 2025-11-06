@@ -63,7 +63,7 @@ function Count(Way) {
             if (Target < n) q = "<"
             if (Target == n) q = "="
             if (Target > n) q = ">"
-            conut += " " + triplet[j] + i + " " + q
+            conut += " " + triplet[j] + i + q
         }
     }
     return conut
