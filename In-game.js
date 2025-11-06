@@ -7,6 +7,7 @@ const Level = location.search.split('?')
 fetch('Levels/' + Level[1] + '.json').then(res => res.json()).then(data => loadMap(data)).catch($ => alert($))
 
 function loadMap(Q) {
+    Qnumber.innerText = Level[2]
     Board = Q.Board
     Target = Q.Target
     Clear()
