@@ -48,7 +48,7 @@ function Check() {
         }
     }
     const massage = Count(Solve,"번 가로줄에 ")+Count(Trans,"번 세로줄에 ")
-    alert(massage ? massage : "완료!")
+    alert(massage ? massage : location.assign("https://www.bonuslevel.org")+"완료!")
 }
 
 function Count(Way, Language) {
