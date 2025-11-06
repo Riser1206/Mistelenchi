@@ -46,7 +46,7 @@ function Check() {
         //alert($.fillStyle == Color)
     }
     for (let z = 0; z < Board.length; z++) {
-        for (let i; i < 3; i++) {
+        for (let i = 0; i < 3; i++) {
             conut += " " + Solve[z].filter(item => item === triplet[i]).length
         }
         //
