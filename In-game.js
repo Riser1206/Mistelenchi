@@ -58,7 +58,7 @@ function Count(Way) {
     for (let i = 0; i < Board.length; i++) {
         for (let j = 0; j < 3;) {
             j++
-            const n = Way[i].filter(item => item === triplet[j]).length;
+            const n = Way[i].filter(item => item === triplet[j]).length
             let q
             if (Target < n) q = "<"
             if (Target == n) q = "="
