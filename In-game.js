@@ -52,12 +52,12 @@ function Check() {
    // Target 
     for (let i = 0; i < Board.length; i++) {
         for (let j = 0; j < 4; j++) {
-            conut += " vertical " + Solve[i].filter(item => item === triplet[j]).length
+            conut += "\nvertical " + Solve[i].filter(item => item === triplet[j]).length
             conut += " horizontal " + Trans[i].filter(item => item === triplet[j]).length
         }
     }
         Qnumber.style="font-size:10;font-family: monospace;color:#ccc"
-        Qnumber.innerText = conut + "\n\n\n" + JSON.stringify(Solve) + "\n\n\n" + JSON.stringify(Trans)
+        Qnumber.innerText = conut
 }
 
 function addSquare(x,y) {
