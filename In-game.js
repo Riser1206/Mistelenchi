@@ -26,8 +26,7 @@ function Clear() {
         Solve[y] = Array(Board.length)
         for (let x = 0; x < Board.length; x++) {
             $.fillStyle = Board[y][x] ? "black" : "white"
-            alert(Board[y][x][0])
-            Color = $.fillStyle = eval(Board[y][x])
+            Color = $.fillStyle = eval(Board[y][x][0])
             addSquare(x,y)
             $.fillStyle = "#fff7"
             $.beginPath()
