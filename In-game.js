@@ -39,9 +39,6 @@ function Clear() {
 }
 
 function Check() {
-    const triplet = [undefined,R,Y,B]
-    let conut = "conut"
-    
     const Trans = []
     for (let i = 0; i < Solve.length; i++) {
         Trans[i] = []
@@ -49,13 +46,15 @@ function Check() {
             Trans[i][j] = Solve[j][i]
         }
     }
-    Count(Trans, conut)
+    // Count(Trans)
    // Target 
         Qnumber.style="font-size:5;font-family: monospace;color:#ccc"
-        Qnumber.innerText = conut
+        Qnumber.innerText = Count(Trans)
 }
 
-function Count(Way, conut) {
+function Count(Way) {
+    const triplet = [undefined,R,Y,B]
+    let conut = "conut"
     for (let i = 0; i < Board.length; i++) {
         for (let j = 0; j < 4; j++) {
             conut += " " + Way[i].filter(item => item === triplet[j]).length
