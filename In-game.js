@@ -34,6 +34,10 @@ function clickCanvas() {
     }
 }
 
+function clear() {
+    Solve=JSON.parse(JSON.stringify(Board))
+}
+
 function check() {
    // Target 
     for (let z = 0; z < Board.length; z++) {
