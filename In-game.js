@@ -39,14 +39,14 @@ function Clear() {
 }
 
 function Check() {
-    const triplet = [R,Y,B]
+    const triplet = [null,R,Y,B]
         let conut = "conut"
    // Target 
     for (let z = 0; z < Board.length; z++) {
         //alert($.fillStyle == Color)
     }
     for (let z = 0; z < Board.length; z++) {
-        for (let i = 0; i < 3; i++) {
+        for (let i = 0; i < 4; i++) {
             conut += (i != 0 ? " " : "\n") + Solve[z].filter(item => item === triplet[i]).length
         }
         //
