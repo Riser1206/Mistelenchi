@@ -43,10 +43,10 @@ function Check() {
     let conut = "conut"
     
     const Trans = []
-    for (let i = 0; i < Board.length; i++) {
+    for (let i = 0; i < Solve.length; i++) {
         Trans[i] = []
-        for (let j = 0; j < Board.length; j++) {
-            Trans[i][j] = Board[j][i]
+        for (let j = 0; j < Solve.length; j++) {
+            Trans[i][j] = Solve[j][i]
         }
     }
    // Target 
@@ -59,7 +59,7 @@ function Check() {
         }
     }
         Qnumber.style="font-size:5;font-family: monospace;color:#ccc"
-        Qnumber.innerText = conut + "\n\n\n" + Trans
+        Qnumber.innerText = conut + "\n\n\n" + JSON.stringify(Solve) + "\n\n\n" + JSON.stringify(Trans)
 }
 
 function addSquare(x,y) {
