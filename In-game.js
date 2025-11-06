@@ -35,7 +35,7 @@ function clear() {
             $.closePath()
         }
     }
-    Color = $.fillStyle = "transparent"
+    Color = $.fillStyle = former.background
 }
 
 function check() {
