@@ -49,6 +49,7 @@ function Check() {
             Trans[i][j] = Solve[j][i]
         }
     }
+    Count(Trans)
    // Target 
         Qnumber.style="font-size:5;font-family: monospace;color:#ccc"
         Qnumber.innerText = conut
