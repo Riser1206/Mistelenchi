@@ -68,15 +68,14 @@ function Count(Way, Language) {
 }
 
 function hintPaths() {
-    alert(0)
+    // _*7/Board.length
     $.beginPath()
-    $.moveTo(100, 100)
-    $.lineTo(1000, 1500)
+    $.moveTo(_*3/Board.length, _*5/Board.length)
+    $.lineTo(_*7/Board.length, _*9/Board.length)
     $.lineWidth = 100
     $.strokeStyle = "red"
     $.lineCap = "round"
     $.stroke()
-    alert(1)
 }
 
 function addSquare(x,y) {
