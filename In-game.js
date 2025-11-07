@@ -72,14 +72,16 @@ function hintPaths() {
     const moveY = 5.5
     const lineX = 6.5
     const lineY = 7.5
+    try{
     $.beginPath()
-    $.moveTo(_*moveX/Board.length, _*moveY/Board.length)
-    $.lineTo(_*lineX/Board.length, _*lineY/Board.length)
-    $.lineTo(_*2.5/Board.length, _*8.5/Board.length)
+    $.moveTo(_*X/Board.length, _*Y/Board.length)
+    $.lineTo(_*X/Board.length, _*Y/Board.length)
+    $.lineTo(_*X/Board.length, _*Y/Board.length)
     $.lineWidth = _/3.5/Board.length
     $.strokeStyle = "silver"
     $.lineCap = "round"
     $.stroke()
+    }catch(_){_.alert()}
 }
 
 function addSquare(x,y) {
