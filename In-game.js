@@ -70,7 +70,7 @@ function Count(Way, Language) {
 function hintPaths() {
     const lineX = 1.5
     const lineY = 5.5
-    const moveX = 3.5
+    const moveX = 9.5
     const moveY = 7.5
     $.beginPath()
     $.moveTo(_*lineX/Board.length, _*lineY/Board.length)
