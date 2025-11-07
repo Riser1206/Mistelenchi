@@ -77,6 +77,7 @@ function hintPaths(X,Y,PathArray) {
     $.strokeStyle = "silver"
     $.lineCap = "round"
     $.stroke()
+        alert([136,65,41])
     }catch(_){alert(_)}
 }
 
