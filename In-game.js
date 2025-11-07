@@ -8,6 +8,45 @@ const Level = location.search.split('?')
 
 fetch('Levels/' + Level[1] + '.json').then(res => res.json()).then(data => loadMap(data)).catch($ => alert($))
 
+function hhhhhhh() {
+    context=$
+        //just to show the top level 
+        context.beginPath();
+        context.moveTo(10,40);
+        context.lineTo(480,40);
+        context.stroke();
+       
+        //just to show the bottom level
+        context.beginPath();
+        context.moveTo(10,180);
+        context.lineTo(480,180);
+        context.stroke();
+       
+        context.beginPath();
+        context.moveTo(40,180);
+        context.lineTo(40,40);
+        context.lineTo(140,180);
+        context.lineWidth = 20;
+        context.lineJoin = "miter";
+        context.stroke();
+       
+        context.beginPath();
+        context.moveTo(180,180);
+        context.lineTo(180,40);
+        context.lineTo(280,180);
+        context.lineWidth = 20;
+        context.lineJoin = "round";
+        context.stroke();
+       
+        context.beginPath();
+        context.moveTo(320,180);
+        context.lineTo(320,40);
+        context.lineTo(420,180);
+        context.lineWidth = 20;
+        context.lineJoin = "bevel";
+        context.stroke();
+}
+
 function loadMap(Q) {
     Qnumber.innerText = Level[2]
     Board = Q.Board
