@@ -51,6 +51,7 @@ function Clear() {
     }
     Color = $.fillStyle = window.former != undefined ? former.background : "transparent"
     Given = 1
+    for (const Path of Paths) hintPaths(Path)
 }
 
 function Check() {
