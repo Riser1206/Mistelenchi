@@ -11,6 +11,7 @@ fetch('Levels/' + Level[1] + '.json').then(res => res.json()).then(data => loadM
 function spurn(Note) {
     alert(Note)
     location.assign("https://www.bonuslevel.org")
+    $ = $
 }
 
 function loadMap(Q) {
