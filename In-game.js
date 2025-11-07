@@ -79,8 +79,8 @@ function Count(Way, Language) {
 
 function hintPaths(Object) {
     if (!Number.isInteger(Object.X) || !Number.isInteger(Object.Y)) spurn(JSON.stringify(Object))
-    const x = Object.X - 0.5
-    const y = Object.Y - 0.5
+    let x = Object.X
+    let y = Object.Y
     $.beginPath()
     $.moveTo(_*x/Board.length, _*y/Board.length)
     for (const pursuit of Object.Array) {
