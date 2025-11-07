@@ -82,9 +82,9 @@ function hintPaths(Object) {
     const y = Object.Y - 0.5
     try{
     $.beginPath()
-    $.moveTo(_*Object.x/Board.length, _*Object.y/Board.length)
-    $.lineTo(_*(Object.x+1)/Board.length, _*(Object.y+2)/Board.length)
-    $.lineTo(_*(Object.x+2)/Board.length, _*(Object.y+1)/Board.length)
+    $.moveTo(_*x/Board.length, _*y/Board.length)
+    $.lineTo(_*(x+1)/Board.length, _*(y+2)/Board.length)
+    $.lineTo(_*(x+2)/Board.length, _*(y+1)/Board.length)
     $.strokeStyle = Object.Color
     $.stroke()
     }catch(_){alert(_)}
