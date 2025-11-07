@@ -68,6 +68,7 @@ function Count(Way, Language) {
 }
 
 function hintPaths() {
+    alert(0)
     $.beginPath()
     $.moveTo(10, 10)
     $.lineTo(100, 150)
@@ -75,6 +76,7 @@ function hintPaths() {
     $.strokeStyle = "red"
     $.lineCap = "round"
     $.stroke()
+    alert(1)
 }
 
 function addSquare(x,y) {
