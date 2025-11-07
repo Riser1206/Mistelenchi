@@ -20,7 +20,7 @@ function loadMap(Q) {
     Paths = Q.Paths
     //$.lineCap = "round"
     $.lineJoin = "round"
-    $.lineWidth = 100//_/3.5/Board.length
+    $.lineWidth = _/3.5/Board.length
     Clear()
 }
 
