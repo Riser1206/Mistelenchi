@@ -119,6 +119,7 @@ function hintPaths(X,Y,PathArray,PathColor) {
     $.lineWidth = _/3.5/Board.length
     $.strokeStyle = PathColor
     $.lineJoin = "round"
+    $.lineCap = "round"
     $.stroke()
         alert([136,65,41])
     }catch(_){alert(_)}
