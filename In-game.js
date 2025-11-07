@@ -28,6 +28,7 @@ function hhhhhhh() {
         context.lineTo(140,180);
         context.lineWidth = 20;
         context.lineJoin = "miter";
+    $.strokeStyle = "red"
         context.stroke();
        
         context.beginPath();
@@ -36,6 +37,7 @@ function hhhhhhh() {
         context.lineTo(280,180);
         context.lineWidth = 20;
         context.lineJoin = "round";
+    $.strokeStyle = "gold"
         context.stroke();
        
         context.beginPath();
@@ -44,6 +46,7 @@ function hhhhhhh() {
         context.lineTo(420,180);
         context.lineWidth = 20;
         context.lineJoin = "bevel";
+    $.strokeStyle = "blue"
         context.stroke();
 }
 
