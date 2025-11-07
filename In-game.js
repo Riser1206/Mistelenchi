@@ -75,6 +75,7 @@ function hintPaths() {
     $.beginPath()
     $.moveTo(_*moveX/Board.length, _*moveY/Board.length)
     $.lineTo(_*lineX/Board.length, _*lineY/Board.length)
+    $.lineTo(_*2.5/Board.length, _*8.5/Board.length)
     $.lineWidth = _/3.5/Board.length
     $.strokeStyle = "silver"
     $.lineCap = "round"
