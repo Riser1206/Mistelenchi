@@ -67,14 +67,14 @@ function Count(Way, Language) {
     return ""
 }
 
-function hintPaths(X,Y,PathArray) {
+function hintPaths(X,Y,PathArray,PathColor) {
     try{
     $.beginPath()
     $.moveTo(_*X/Board.length, _*Y/Board.length)
     $.lineTo(_*X/Board.length, _*Y/Board.length)
     $.lineTo(_*X/Board.length, _*Y/Board.length)
     $.lineWidth = _/3.5/Board.length
-    $.strokeStyle = "silver"
+    $.strokeStyle = PathColor
     $.lineCap = "round"
     $.stroke()
         alert([136,65,41])
