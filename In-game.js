@@ -104,6 +104,7 @@ function hintPaths(Object) {
 function addSquare(x,y) {
     Solve[y][x] = Color
     $.fillRect(_*x/Board.length+25,_*y/Board.length+25,_/Board.length-50,_/Board.length-50)
+    hintPaths(Paths[3])
 }
 
 function pickColor(latter) {
