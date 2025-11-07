@@ -68,11 +68,11 @@ function Count(Way, Language) {
 }
 
 function hintPaths() {
-    // _*7/Board.length
+    // _*Board.length
     $.beginPath()
     $.moveTo(_*2.5/Board.length, _*3.5/Board.length)
     $.lineTo(_*7.5/Board.length, _*8.5/Board.length)
-    $.lineWidth = _/Board.length
+    $.lineWidth = _/7/Board.length
     $.strokeStyle = "red"
     $.lineCap = "round"
     $.stroke()
