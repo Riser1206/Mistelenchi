@@ -69,6 +69,8 @@ function Count(Way, Language) {
 }
 
 function hintPaths(Object) {
+    if (Number.isInteger(Object.X)) $=null
+    if (Number.isInteger(Object.Y)) $=null
     alert(JSON.stringify(Object.Array))
     try{
     $.lineCap = "round"
