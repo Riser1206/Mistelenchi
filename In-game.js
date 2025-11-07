@@ -80,16 +80,17 @@ function hintPaths(Object) {
     if (!Number.isInteger(Object.X) || !Number.isInteger(Object.Y)) spurn(JSON.stringify(Object))
     const x = Object.X - 0.5
     const y = Object.Y - 0.5
-    try{
     $.beginPath()
     $.moveTo(_*x/Board.length, _*y/Board.length)
-        for (const pursuit of Object.Array) {
-            alert(pursuit)
-            $.lineTo(_*(x /*pursuit*/)/Board.length, _*(y /*pursuit*/)/Board.length)
+    for (const pursuit of Object.Array) {
+        alert(pursuit)
+        switch (pursuit) {
+            default: spurn(pursuit)
         }
+        $.lineTo(_*(x)/Board.length, _*(y)/Board.length)
+    }
     $.strokeStyle = Object.Color
     $.stroke()
-    }catch(_){alert(_)}
 }
 
 function addSquare(x,y) {
