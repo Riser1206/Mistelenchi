@@ -101,7 +101,6 @@ function hintPaths(Object) {
     }
     $.strokeStyle = Object.Color
     $.stroke()
-    $.closePath()
 }
 
 function addSquare(x,y) {
