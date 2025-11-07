@@ -49,6 +49,7 @@ function Clear() {
         }
     }
     Color = $.fillStyle = window.former != undefined ? former.background : "transparent"
+    Given = 0
 }
 
 function Check() {
