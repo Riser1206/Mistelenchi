@@ -1,4 +1,4 @@
-if (innerWidth > innerHeight) spurn()
+if (innerWidth > innerHeight) spurn("가로 화면입니다. 세로 화면으로 바꿔주세요.")
 const _ = Canva.width = Canva.height = 2500
 const $ = Canva.getContext("2d")
 const R = "red"
@@ -74,7 +74,7 @@ function Count(Way, Language) {
 }
 
 function hintPaths(Object) {
-    if (!Number.isInteger(Object.X*Object.Y)) spurn()
+    if (!Number.isInteger(Object.X*Object.Y)) spurn(Object.X*Object.Y)
     alert(JSON.stringify(Object.Array))
     try{
     $.lineCap = "round"
