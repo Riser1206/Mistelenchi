@@ -12,6 +12,7 @@ function loadMap(Q) {
     Qnumber.innerText = Level[2]
     Board = Q.Board
     Target = Q.Target
+    Paths = Q.Paths
     Clear()
 }
 
