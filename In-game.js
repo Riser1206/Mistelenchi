@@ -69,7 +69,7 @@ function Count(Way, Language) {
 }
 
 function hintPaths() {
-    alert(JSON.stringify(Paths))
+    alert(JSON.stringify(Paths[2].Array))
     try{
     $.beginPath()
     $.moveTo(_*X/Board.length, _*Y/Board.length)
