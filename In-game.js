@@ -1,4 +1,4 @@
-if (innerWidth > innerHeight) alert(location.assign("https://www.bonuslevel.org"))
+if (innerWidth > innerHeight) spurn()
 const _ = Canva.width = Canva.height = 2500
 const $ = Canva.getContext("2d")
 const R = "red"
@@ -7,6 +7,11 @@ const B = "blue"
 const Level = location.search.split('?')
 
 fetch('Levels/' + Level[1] + '.json').then(res => res.json()).then(data => loadMap(data)).catch($ => alert($))
+
+function spurn(Note) {
+    alert(Note)
+    location.assign("https://www.bonuslevel.org")
+}
 
 function loadMap(Q) {
     Qnumber.innerText = Level[2]
@@ -69,8 +74,8 @@ function Count(Way, Language) {
 }
 
 function hintPaths(Object) {
-    if (Number.isInteger(Object.X)) $=null
-    if (Number.isInteger(Object.Y)) $=null
+    if (Number.isInteger(Object.X)) spurn()
+    if (Number.isInteger(Object.Y)) spurn()
     alert(JSON.stringify(Object.Array))
     try{
     $.lineCap = "round"
