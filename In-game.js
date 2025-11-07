@@ -18,7 +18,7 @@ function loadMap(Q) {
     Board = Q.Board
     Target = Q.Target
     Paths = Q.Paths
-    //$.lineCap = "round"
+    $.lineCap = "round"
     $.lineJoin = "round"
     $.lineWidth = _/3.5/Board.length
     Clear()
@@ -78,6 +78,8 @@ function Count(Way, Language) {
 
 function hintPaths(Object) {
     if (!Number.isInteger(Object.X) || !Number.isInteger(Object.Y)) spurn(JSON.stringify(Object))
+    X -= 0.5
+    Y -= 0.5
     try{
     $.beginPath()
     $.moveTo(_*Object.X/Board.length, _*Object.Y/Board.length)
