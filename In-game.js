@@ -78,13 +78,13 @@ function Count(Way, Language) {
 
 function hintPaths(Object) {
     if (!Number.isInteger(Object.X) || !Number.isInteger(Object.Y)) spurn(JSON.stringify(Object))
-    X -= 0.5
-    Y -= 0.5
+    const x = Object.X - 0.5
+    const y = Object.Y - 0.5
     try{
     $.beginPath()
-    $.moveTo(_*Object.X/Board.length, _*Object.Y/Board.length)
-    $.lineTo(_*(Object.X+1)/Board.length, _*(Object.Y+2)/Board.length)
-    $.lineTo(_*(Object.X+2)/Board.length, _*(Object.Y+1)/Board.length)
+    $.moveTo(_*Object.x/Board.length, _*Object.y/Board.length)
+    $.lineTo(_*(Object.x+1)/Board.length, _*(Object.y+2)/Board.length)
+    $.lineTo(_*(Object.x+2)/Board.length, _*(Object.y+1)/Board.length)
     $.strokeStyle = Object.Color
     $.stroke()
     }catch(_){alert(_)}
