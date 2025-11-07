@@ -5,9 +5,6 @@ const R = "red"
 const Y = "gold"
 const B = "blue"
 const Level = location.search.split('?')
-$.lineCap = "round"
-$.lineJoin = "round"
-$.lineWidth = _/3.5/Board.length
 
 fetch('Levels/' + Level[1] + '.json').then(res => res.json()).then(data => loadMap(data)).catch($ => spurn($))
 
