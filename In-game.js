@@ -75,7 +75,6 @@ function Count(Way, Language) {
 
 function hintPaths(Object) {
     if (!Number.isInteger(Object.X) || !Number.isInteger(Object.Y)) spurn(JSON.stringify(Object))
-    alert(JSON.stringify(Object.Array))
     try{
     $.lineCap = "round"
     $.lineJoin = "round"
@@ -86,7 +85,6 @@ function hintPaths(Object) {
     $.lineTo(_*(Object.X+2)/Board.length, _*(Object.Y+1)/Board.length)
     $.strokeStyle = Object.Color
     $.stroke()
-        alert([136,65,41])
     }catch(_){alert(_)}
 }
 
