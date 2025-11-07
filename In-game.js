@@ -76,9 +76,6 @@ function Count(Way, Language) {
 function hintPaths(Object) {
     if (!Number.isInteger(Object.X) || !Number.isInteger(Object.Y)) spurn(JSON.stringify(Object))
     try{
-    $.lineCap = "round"
-    $.lineJoin = "round"
-    $.lineWidth = _/3.5/Board.length
     $.beginPath()
     $.moveTo(_*Object.X/Board.length, _*Object.Y/Board.length)
     $.lineTo(_*(Object.X+1)/Board.length, _*(Object.Y+2)/Board.length)
