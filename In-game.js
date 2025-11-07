@@ -68,14 +68,14 @@ function Count(Way, Language) {
 }
 
 function hintPaths() {
-    const lineA = 1.5
-    const lineB = 5.5
-    const lineC = 3.5
-    const lineD = 7.5
+    const lineX = 1.5
+    const lineY = 5.5
+    const moveX = 3.5
+    const moveY = 7.5
     $.beginPath()
-    $.moveTo(_*A/Board.length, _*B/Board.length)
-    $.lineTo(_*C/Board.length, _*D/Board.length)
-    $.lineWidth = _/7/Board.length
+    $.moveTo(_*lineX/Board.length, _*lineY/Board.length)
+    $.lineTo(_*moveX/Board.length, _*moveY/Board.length)
+    $.lineWidth = _/15/Board.length
     $.strokeStyle = "silver"
     $.lineCap = "round"
     $.stroke()
