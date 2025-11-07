@@ -82,20 +82,20 @@ function hintPaths(Object) {
     let x = Object.X
     let y = Object.Y
     $.beginPath()
-    $.moveTo(_*x/Board.length, _*y/Board.length)
+    $.moveTo(_*(x-.5)/Board.length, _*(y-.5)/Board.length)
     for (const pursuit of Object.Array) {
         switch (pursuit) {
-            case 0: y++; break
-            case 1: x++; y++; break
+            case 0: y--; break
+            case 1: x++; y--; break
             case 2: x++; break
-            case 3: x++; y--; break
-            case 4: y--; break
-            case 5: x--; y--; break
+            case 3: x++; y++; break
+            case 4: y++; break
+            case 5: x--; y++; break
             case 6: x--; break
-            case 7: x--; y++; break
+            case 7: x--; y--; break
             default: spurn(pursuit)
         }
-        $.lineTo(_*x/Board.length, _*y/Board.length)
+        $.lineTo(_*(x-.5)/Board.length, _*(y-.5)/Board.length)
     }
     $.strokeStyle = Object.Color
     $.stroke()
