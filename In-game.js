@@ -68,13 +68,13 @@ function Count(Way, Language) {
     return ""
 }
 
-function hintPaths() {
-    alert(JSON.stringify(Paths[2].Array))
+function hintPaths(Object) {
+    alert(JSON.stringify(Object.Array))
     try{
     $.beginPath()
-    $.moveTo(_*X/Board.length, _*Y/Board.length)
-    $.lineTo(_*X/Board.length, _*Y/Board.length)
-    $.lineTo(_*X/Board.length, _*Y/Board.length)
+    $.moveTo(_*Object.X/Board.length, _*Object.Y/Board.length)
+    $.lineTo(_*(Object.X+1)/Board.length, _*(Object.Y+2)/Board.length)
+    $.lineTo(_*(Object.X+2)/Board.length, _*(Object.Y+1)/Board.length)
     $.lineWidth = _/3.5/Board.length
     $.strokeStyle = PathColor
     $.lineJoin = "round"
