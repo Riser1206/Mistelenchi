@@ -67,7 +67,7 @@ function Count(Way, Language) {
     return ""
 }
 
-function hinting() {
+function hintPaths() {
     $.beginPath()
     $.moveTo(10, 10)
     $.lineTo(100, 150)
