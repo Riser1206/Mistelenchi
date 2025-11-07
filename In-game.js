@@ -81,7 +81,7 @@ function hintPaths() {
     $.strokeStyle = "silver"
     $.lineCap = "round"
     $.stroke()
-    }catch(_){_.alert()}
+    }catch(_){alert(_)}
 }
 
 function addSquare(x,y) {
