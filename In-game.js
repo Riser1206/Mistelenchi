@@ -70,9 +70,9 @@ function Count(Way, Language) {
 function hintPaths() {
     alert(0)
     $.beginPath()
-    $.moveTo(10, 10)
-    $.lineTo(100, 150)
-    $.lineWidth = 10
+    $.moveTo(100, 100)
+    $.lineTo(1000, 1500)
+    $.lineWidth = 100
     $.strokeStyle = "red"
     $.lineCap = "round"
     $.stroke()
