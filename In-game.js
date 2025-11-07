@@ -76,7 +76,7 @@ function hintPaths(Object) {
     $.lineTo(_*(Object.X+1)/Board.length, _*(Object.Y+2)/Board.length)
     $.lineTo(_*(Object.X+2)/Board.length, _*(Object.Y+1)/Board.length)
     $.lineWidth = _/3.5/Board.length
-    $.strokeStyle = PathColor
+    $.strokeStyle = Object.Color
     $.lineJoin = "round"
     $.stroke()
         alert([136,65,41])
