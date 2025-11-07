@@ -71,13 +71,14 @@ function Count(Way, Language) {
 function hintPaths(Object) {
     alert(JSON.stringify(Object.Array))
     try{
+    $.lineCap = "round"
+    $.lineJoin = "round"
+    $.lineWidth = _/3.5/Board.length
     $.beginPath()
     $.moveTo(_*Object.X/Board.length, _*Object.Y/Board.length)
     $.lineTo(_*(Object.X+1)/Board.length, _*(Object.Y+2)/Board.length)
     $.lineTo(_*(Object.X+2)/Board.length, _*(Object.Y+1)/Board.length)
-    $.lineWidth = _/3.5/Board.length
     $.strokeStyle = Object.Color
-    $.lineJoin = "round"
     $.stroke()
         alert([136,65,41])
     }catch(_){alert(_)}
