@@ -34,6 +34,7 @@ function clickCanvas() {
 }
 
 function Clear() {
+    Given = 0
     Solve = Array(Board.length)
     for (let y = 0; y < Board.length; y++) {
         Solve[y] = Array(Board.length)
