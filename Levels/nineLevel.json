@@ -30,6 +30,42 @@
             "X": 3,
             "Y": 5,
             "Array": [0, 1, 2]
+        },
+        {
+            "Color": "Primary",
+            "X": 4,
+            "Y": 6,
+            "Array": [0, 1, 2]
+        },
+        {
+            "Color": "Secondary",
+            "X": 5,
+            "Y": 7,
+            "Array": [0, 1, 2]
+        },
+        {
+            "Color": "Tertiary",
+            "X": 6,
+            "Y": 8,
+            "Array": [0, 1, 2]
+        },
+        {
+            "Color": "Purple",
+            "X": 7,
+            "Y": 9,
+            "Array": [0, 1, 2]
+        },
+        {
+            "Color": "Orange",
+            "X": 8,
+            "Y": 10,
+            "Array": [0, 1, 2]
+        },
+        {
+            "Color": "Green",
+            "X": 9,
+            "Y": 11,
+            "Array": [0, 1, 2]
         }
     ]
 }
