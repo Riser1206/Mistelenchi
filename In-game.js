@@ -127,7 +127,7 @@ function hintPaths(Object) {
         }
         $.lineTo(_*(x-.5)/Board.length, _*(y-.5)/Board.length)
     }
-    if (Results == "falsefalsefalse") $.strokeStyle = "#ccc"
+    if (Results == "falsefalsefalse") $.strokeStyle = "White"
     if (Results == "truefalsetrue") $.strokeStyle = "Purple"
     if (Results == "truefalsefalse") $.strokeStyle = "Red"
     if (Results == "truetruefalse") $.strokeStyle = "Orange"
