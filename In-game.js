@@ -133,7 +133,7 @@ function addSquare(x,y) {
     if (Given) {
         let TXT = "^^^"
         for (const Path of Paths) {
-            TXT.concat(" , " + hintPaths(Path))
+            TXT=TXT.concat(" , " + hintPaths(Path))
         }
         Qnumber.innerText = TXT
     }
