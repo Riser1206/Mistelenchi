@@ -63,6 +63,7 @@ function Check() {
         }
     }
     const massage = Count(Solve,"번 가로줄에 ")+Count(Trans,"번 세로줄에 ")
+    for (const Path of Paths) massage += hintPaths(Path)
     alert(massage ? massage : location.assign("https://www.bonuslevel.org")+"완료!")
 }
 
