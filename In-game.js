@@ -121,7 +121,7 @@ function hintPaths(Object) {
         case "Blue": Results = "ㅑ"; break
         default: spurn(Object.Color)
     }
-    return Qnumber.innerText = Results == Mix
+    return Qnumber.innerText = Results.equals(Mix)
 }
 
 function addSquare(x,y) {
