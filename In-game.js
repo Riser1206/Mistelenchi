@@ -109,6 +109,30 @@ function hintPaths(Object) {
     if ("Tertiary" == Object.Color) $.strokeStyle = "#666"
     $.stroke()
     const Results = ""+Group.includes(R)+Group.includes(Y)+Group.includes(B)
+
+    $.moveTo(_*(x-.5)/Board.length, _*(y-.5)/Board.length)
+    for (const pursuit of Object.Array) {
+        switch (pursuit) {
+            case 0: y--; break
+            case 1: x++; y--; break
+            case 2: x++; break
+            case 3: x++; y++; break
+            case 4: y++; break
+            case 5: x--; y++; break
+            case 6: x--; break
+            case 7: x--; y--; break
+            default: spurn(pursuit)
+        }
+        Group.push(Solve[y-1][x-1])
+        $.lineTo(_*(x-.5)/Board.length, _*(y-.5)/Board.length)
+    }
+    $.strokeStyle = "#333"
+    if ("Primary" == Object.Color) $.strokeStyle = "#ccc"
+    if ("Secondary" == Object.Color) $.strokeStyle = "#999"
+    if ("Tertiary" == Object.Color) $.strokeStyle = "#666"
+    $.stroke()
+
+
     if (Object.Color == "Purple") return Results == "truefalsetrue"
     if (Object.Color == "Red") return Results == "truefalsefalse"
     if (Object.Color == "Orange") return Results == "truetruefalse"
