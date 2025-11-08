@@ -127,14 +127,14 @@ function hintPaths(Object) {
         }
         $.lineTo(_*(x-.5)/Board.length, _*(y-.5)/Board.length)
     }
-    if (Results == "falsefalsefalse") $.strokeStyle = "White"
+    if (Results == "falsefalsefalse") $.strokeStyle = "Ivory"
     if (Results == "truefalsetrue") $.strokeStyle = "Purple"
     if (Results == "truefalsefalse") $.strokeStyle = "Red"
     if (Results == "truetruefalse") $.strokeStyle = "Orange"
     if (Results == "falsetruefalse") $.strokeStyle = "Gold"
     if (Results == "falsetruetrue") $.strokeStyle = "Green"
     if (Results == "falsefalsetrue") $.strokeStyle = "Blue"
-    if (Results == "truetruetrue") $.strokeStyle = "Black"
+    if (Results == "truetruetrue") $.strokeStyle = "#666"
     $.lineWidth = _/15/Board.length
     if ("Primary" == Object.Color) $.strokeStyle = "#ccc"
     if ("Secondary" == Object.Color) $.strokeStyle = "#999"
