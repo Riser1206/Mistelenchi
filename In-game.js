@@ -7,7 +7,7 @@ const B = "blue"
 const Level = location.search.split('?')
 
 fetch('Levels/' + Level[1] + '.json').then(res => res.json()).then(data => loadMap(data)).catch($ => spurn($))
-alert(""+true+false)
+
 function spurn(Note) {
     alert(Note)
     location.assign("https://www.bonuslevel.org")
@@ -107,7 +107,7 @@ function hintPaths(Object) {
     if ("Secondary" == Object.Color) $.strokeStyle = "#999"
     if ("Tertiary" == Object.Color) $.strokeStyle = "#666"
     $.stroke()
-    const Results = JSON.stringify([Group.includes(R),Group.includes(Y),Group.includes(B)])
+    const Results = ""+Group.includes(R)+Group.includes(Y)+Group.includes(B)
     if (Object.Color == "Purple") return Results == "[true,false,true]"
     if (Object.Color == "Red") return Results == "[true,false,false]"
     if (Object.Color == "Orange") return Results == "[true,true,false]"
