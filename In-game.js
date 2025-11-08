@@ -123,7 +123,6 @@ function hintPaths(Object) {
             case 7: x--; y--; break
             default: spurn(pursuit)
         }
-        Group.push(Solve[y-1][x-1])
         $.lineTo(_*(x-.5)/Board.length, _*(y-.5)/Board.length)
     }
     $.strokeStyle = "#333"
