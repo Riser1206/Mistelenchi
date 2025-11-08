@@ -109,12 +109,12 @@ function hintPaths(Object) {
     $.stroke()
     const Results = JSON.stringify([Group.includes(R),Group.includes(Y),Group.includes(B)])
 
-    if (Results == "Purple") return "[true,true,true]"
-    if (Results == "Red") return "[true,true,true]"
-    if (Results == "Orange") return "[true,true,true]"
-    if (Results == "Gold") return "[true,true,true]"
-    if (Results == "Green") return "[true,true,true]"
-    if (Results == "Blue") return "[true,true,true]"
+    if (Results == "Purple") return "[true,false,true]"
+    if (Results == "Red") return "[true,false,false]"
+    if (Results == "Orange") return "[true,true,false]"
+    if (Results == "Gold") return "[false,true,false]"
+    if (Results == "Green") return "[false,true,true]"
+    if (Results == "Blue") return "[false,false,true]"
     spurn(Object.Color)
     /*
     if (Results == "[true,true,true]") "Tertiary"
