@@ -111,8 +111,14 @@ function hintPaths(Object) {
     switch (Object.Color) {
         case "Primary": Results = "ㅋ"; break
         case "Secondary": Results = "ㅎ"; break
-        case "Tertiary": Results = "ㅑ"; break
-        default: spurn(Object.Color); break
+        case "Tertiary": Results = [1,1,1]; break
+        case "Purple": Results = "ㅋ"; break
+        case "Red": Results = "ㅎ"; break
+        case "Orange": Results = "ㅑ"; break
+        case "Gold": Results = "ㅋ"; break
+        case "Green": Results = "ㅎ"; break
+        case "Blue": Results = "ㅑ"; break
+        default: spurn(Object.Color)
     }
     return Qnumber.innerText = Results
 }
