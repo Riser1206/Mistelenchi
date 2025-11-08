@@ -114,19 +114,10 @@ function hintPaths(Object) {
     if (Object.Color == "Gold") return Results == "[false,true,false]"
     if (Object.Color == "Green") return Results == "[false,true,true]"
     if (Object.Color == "Blue") return Results == "[false,false,true]"
-    if (Object.Color == "Primary") return Results
-    if (Object.Color == "Secondary") return Results
-    if (Object.Color == "Tertiary") return Results
+    if (Object.Color == "Primary") return Results.length == 18
+    if (Object.Color == "Secondary") return Results.length == 17
+    if (Object.Color == "Tertiary") return Results.length == 16
     spurn(Object.Color)
-    /*
-    if (Results == "[true,true,true]") "Tertiary"
-    if (Results == "[true,true,false]") "Orange"
-    if (Results == "[true,false,true]") "Purple"
-    if (Results == "[true,false,false]") "Red"
-    if (Results == "[false,true,true]") "Green"
-    if (Results == "[false,true,false]") "Gold"
-    if (Results == "[false,false,true]") "Blue"
-    */
 }
 
 function addSquare(x,y) {
