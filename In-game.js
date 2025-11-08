@@ -108,15 +108,15 @@ function hintPaths(Object) {
     if ("Tertiary" == Object.Color) $.strokeStyle = "#666"
     $.stroke()
     const Results = ""+Group.includes(R)+Group.includes(Y)+Group.includes(B)
-    if (Object.Color == "Purple") return Results == "[true,false,true]"
-    if (Object.Color == "Red") return Results == "[true,false,false]"
-    if (Object.Color == "Orange") return Results == "[true,true,false]"
-    if (Object.Color == "Gold") return Results == "[false,true,false]"
-    if (Object.Color == "Green") return Results == "[false,true,true]"
-    if (Object.Color == "Blue") return Results == "[false,false,true]"
-    if (Object.Color == "Primary") return Results.length == 18
-    if (Object.Color == "Secondary") return Results.length == 17
-    if (Object.Color == "Tertiary") return Results.length == 16
+    if (Object.Color == "Purple") return Results == "truefalsetrue"
+    if (Object.Color == "Red") return Results == "truefalsefalse"
+    if (Object.Color == "Orange") return Results == "truetruefalse"
+    if (Object.Color == "Gold") return Results == "falsetruefalse"
+    if (Object.Color == "Green") return Results == "falsetruetrue"
+    if (Object.Color == "Blue") return Results == "falsefalsetrue"
+    if (Object.Color == "Primary") return Results.length == 14
+    if (Object.Color == "Secondary") return Results.length == 13
+    if (Object.Color == "Tertiary") return Results.length == 12
     spurn(Object.Color)
 }
 
