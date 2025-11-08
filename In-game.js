@@ -109,8 +109,8 @@ function hintPaths(Object) {
     $.stroke()
     let Results
     switch ([Group.includes(R),Group.includes(Y),Group.includes(B)]) {
-        case [0,0,0]: Results = "#"; break
-        default: break
+        case [0,0,0]: Results = "!"; break
+        default: Results = "?"; break
     }
     return Qnumber.innerText = Results
 }
