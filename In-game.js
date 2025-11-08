@@ -107,7 +107,8 @@ function hintPaths(Object) {
     if ("Secondary" == Object.Color) $.strokeStyle = "#999"
     if ("Tertiary" == Object.Color) $.strokeStyle = "#666"
     $.stroke()
-    let Results = [Group.includes(R),Group.includes(Y),Group.includes(B)]
+    const Mix = [Group.includes(R),Group.includes(Y),Group.includes(B)]
+    let Results
     switch (Object.Color) {
         case "Primary": Results = "ㅋ"; break
         case "Secondary": Results = "ㅎ"; break
@@ -120,7 +121,7 @@ function hintPaths(Object) {
         case "Blue": Results = "ㅑ"; break
         default: spurn(Object.Color)
     }
-    return Qnumber.innerText = Results
+    return Qnumber.innerText = Results == Mix
 }
 
 function addSquare(x,y) {
