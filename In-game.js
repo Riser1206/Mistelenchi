@@ -108,10 +108,18 @@ function hintPaths(Object) {
     if ("Tertiary" == Object.Color) $.strokeStyle = "#666"
     $.stroke()
     const Results = JSON.stringify([Group.includes(R),Group.includes(Y),Group.includes(B)])
-    switch (Object.Color) {
+    if (Results == "[true,true,true]") return
+    if (Results == "[true,true,true]") return
+    if (Results == "[true,true,true]") return
+    if (Results == "[true,true,true]") return
+    if (Results == "[true,true,true]") return
+    if (Results == "[true,true,true]") return
+    if (Results == "[true,true,true]") return
+    
+    /*
         case "Primary": return
         case "Secondary": return
-        case "Tertiary": return Qnumber.innerText = "[true,true,true]" == Results
+        case "Tertiary": return "[true,true,true]" == Results
         case "Purple": return
         case "Red": return
         case "Orange": return
@@ -119,7 +127,7 @@ function hintPaths(Object) {
         case "Green": return
         case "Blue": return
         default: spurn(Object.Color)
-    }
+    */
 }
 
 function addSquare(x,y) {
