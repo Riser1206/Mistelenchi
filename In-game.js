@@ -109,10 +109,10 @@ function hintPaths(Object) {
     $.stroke()
     let Results = [Group.includes(R),Group.includes(Y),Group.includes(B)]
     switch (Object.Color) {
-        case "Primary" Results = "1"; break
-        case "Secondary" Results = "2"; break
-        case "Tertiary" Results = "3"; break
-        default: Results = "0"; break
+        case "Primary": Results = "ㅋ"; break
+        case "Secondary": Results = "ㅎ"; break
+        case "Tertiary": Results = "ㅑ"; break
+        default: spurn(Object.Color); break
     }
     return Qnumber.innerText = Results
 }
