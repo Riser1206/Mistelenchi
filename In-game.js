@@ -7,7 +7,7 @@ const B = "blue"
 const Level = location.search.split('?')
 
 fetch('Levels/' + Level[1] + '.json').then(res => res.json()).then(data => loadMap(data)).catch($ => spurn($))
-alert(true+false)
+alert(false+false+false+true+true+true)
 function spurn(Note) {
     alert(Note)
     location.assign("https://www.bonuslevel.org")
