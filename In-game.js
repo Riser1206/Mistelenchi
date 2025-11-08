@@ -108,25 +108,22 @@ function hintPaths(Object) {
     if ("Tertiary" == Object.Color) $.strokeStyle = "#666"
     $.stroke()
     const Results = JSON.stringify([Group.includes(R),Group.includes(Y),Group.includes(B)])
-    if (Results == "[true,true,true]") return
-    if (Results == "[true,true,true]") return
-    if (Results == "[true,true,true]") return
-    if (Results == "[true,true,true]") return
-    if (Results == "[true,true,true]") return
-    if (Results == "[true,true,true]") return
-    if (Results == "[true,true,true]") return
-    
+
+    if (Results == "Purple") return "[true,true,true]"
+    if (Results == "Red") return "[true,true,true]"
+    if (Results == "Orange") return "[true,true,true]"
+    if (Results == "Gold") return "[true,true,true]"
+    if (Results == "Green") return "[true,true,true]"
+    if (Results == "Blue") return "[true,true,true]"
+    spurn(Object.Color)
     /*
-        case "Primary": return
-        case "Secondary": return
-        case "Tertiary": return "[true,true,true]" == Results
-        case "Purple": return
-        case "Red": return
-        case "Orange": return
-        case "Gold": return
-        case "Green": return
-        case "Blue": return
-        default: spurn(Object.Color)
+    if (Results == "[true,true,true]") "Tertiary"
+    if (Results == "[true,true,false]") "Orange"
+    if (Results == "[true,false,true]") "Purple"
+    if (Results == "[true,false,false]") "Red"
+    if (Results == "[false,true,true]") "Green"
+    if (Results == "[false,true,false]") "Gold"
+    if (Results == "[false,false,true]") "Blue"
     */
 }
 
