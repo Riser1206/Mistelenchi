@@ -110,6 +110,8 @@ function hintPaths(Object) {
     $.stroke()
     const Results = ""+Group.includes(R)+Group.includes(Y)+Group.includes(B)
 
+    x = Object.X
+    y = Object.Y
     $.moveTo(_*(x-.5)/Board.length, _*(y-.5)/Board.length)
     for (const pursuit of Object.Array) {
         switch (pursuit) {
