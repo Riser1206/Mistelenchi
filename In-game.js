@@ -62,7 +62,7 @@ function Check() {
             Trans[i][j] = Solve[j][i]
         }
     }
-    const massage = Count(Solve,"번 가로줄에 ")+Count(Trans,"번 세로줄에 ")
+    let massage = Count(Solve,"번 가로줄에 ")+Count(Trans,"번 세로줄에 ")
     for (const Path of Paths) massage += hintPaths(Path)
     alert(massage ? massage : location.assign("https://www.bonuslevel.org")+"완료!")
 }
@@ -73,9 +73,9 @@ function Count(Way, Language) {
         for (let j = 0; j < 3;) {
             j++
             const n = Way[i].filter(item => item === triplet[j]).length
-            const msg = i+1+Language+triplet[j]
-            if (Target < n) return msg+" 초과\n"
-            if (Target > n) return msg+" 부족\n"
+            const massage = i+1+Language+triplet[j]
+            if (Target < n) return massage+" 초과\n"
+            if (Target > n) return massage+" 부족\n"
         }
     }
     return ""
