@@ -5,7 +5,7 @@ const R = "red"
 const Y = "gold"
 const B = "blue"
 const Level = location.search.split('?')
-alert([0,1]==[0,1])
+spurn([0,1]==[0,1])
 fetch('Levels/' + Level[1] + '.json').then(res => res.json()).then(data => loadMap(data)).catch($ => spurn($))
 
 function spurn(Note) {
