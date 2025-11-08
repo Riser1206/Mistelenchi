@@ -111,7 +111,7 @@ function hintPaths(Object) {
     switch ([Group.includes(0)]) {
         default: break
     }
-    return Qnumber.innerText = Group.includes(0)
+    return Qnumber.innerText = [Group.includes(R),Group.includes(Y),Group.includes(B)]
 }
 
 function addSquare(x,y) {
