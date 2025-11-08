@@ -84,7 +84,7 @@ function hintPaths(Object) {
     if (!Number.isInteger(Object.X) || !Number.isInteger(Object.Y)) spurn(JSON.stringify(Object))
     let x = Object.X
     let y = Object.Y
-    const Group = [Solve[y][x]]
+    const Group = [Solve[y-1][x-1]]
     $.beginPath()
     $.moveTo(_*(x-.5)/Board.length, _*(y-.5)/Board.length)
     for (const pursuit of Object.Array) {
@@ -99,7 +99,7 @@ function hintPaths(Object) {
             case 7: x--; y--; break
             default: spurn(pursuit)
         }
-        Group.push(Solve[y][x])
+        Group.push(Solve[y-1][x-1])
         $.lineTo(_*(x-.5)/Board.length, _*(y-.5)/Board.length)
     }
     $.strokeStyle = Object.Color
