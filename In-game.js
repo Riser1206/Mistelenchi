@@ -128,6 +128,7 @@ function hintPaths(Object) {
         $.lineTo(_*(x-.5)/Board.length, _*(y-.5)/Board.length)
     }
     $.strokeStyle = "#333"
+    $.lineWidth = _/13/Board.length
     if ("Primary" == Object.Color) $.strokeStyle = "#ccc"
     if ("Secondary" == Object.Color) $.strokeStyle = "#999"
     if ("Tertiary" == Object.Color) $.strokeStyle = "#666"
