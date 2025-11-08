@@ -10,19 +10,19 @@
     "Paths": [
         {
             "Color": "Primary",
-            "X": 2,
+            "X": 3,
             "Y": 3,
             "Array": [1, 3, 5]
         },
         {
             "Color": "Secondary",
-            "X": 3,
-            "Y": 3,
+            "X": 2,
+            "Y": 4,
             "Array": [2, 4, 6]
         },
         {
             "Color": "Tertiary",
-            "X": 1,
+            "X": 2,
             "Y": 3,
             "Array": [0, 7]
         }
