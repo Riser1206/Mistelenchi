@@ -111,7 +111,7 @@ function hintPaths(Object) {
     switch (Object.Color) {
         case "Primary": return
         case "Secondary": return
-        case "Tertiary": return Qnumber.innerText = JSON.stringify([true,true,true]) == JSON.stringify(Results)
+        case "Tertiary": return Qnumber.innerText = "true,true,true" == JSON.stringify(Results)
         case "Purple": return
         case "Red": return
         case "Orange": return
