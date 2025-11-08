@@ -107,11 +107,11 @@ function hintPaths(Object) {
     if ("Secondary" == Object.Color) $.strokeStyle = "#999"
     if ("Tertiary" == Object.Color) $.strokeStyle = "#666"
     $.stroke()
-    const Results = [Group.includes(R),Group.includes(Y),Group.includes(B)]
+    const Results = JSON.stringify([Group.includes(R),Group.includes(Y),Group.includes(B)])
     switch (Object.Color) {
         case "Primary": return
         case "Secondary": return
-        case "Tertiary": return Qnumber.innerText = "[true,true,true]" == JSON.stringify(Results)
+        case "Tertiary": return Qnumber.innerText = "[true,true,true]" == Results
         case "Purple": return
         case "Red": return
         case "Orange": return
