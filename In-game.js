@@ -99,7 +99,7 @@ function hintPaths(Object) {
             case 7: x--; y--; break
             default: spurn(pursuit)
         }
-        Group.add(Board[x][y])
+        Group.Add(Board[x][y])
         $.lineTo(_*(x-.5)/Board.length, _*(y-.5)/Board.length)
     }
     $.strokeStyle = Object.Color
@@ -107,7 +107,7 @@ function hintPaths(Object) {
     if ("Secondary" == Object.Color) $.strokeStyle = "#999"
     if ("Tertiary" == Object.Color) $.strokeStyle = "#666"
     $.stroke()
-    return Group
+    return alert(Group)
 }
 
 function addSquare(x,y) {
