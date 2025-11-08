@@ -107,10 +107,12 @@ function hintPaths(Object) {
     if ("Secondary" == Object.Color) $.strokeStyle = "#999"
     if ("Tertiary" == Object.Color) $.strokeStyle = "#666"
     $.stroke()
-    let Results
-    switch ([Group.includes(R),Group.includes(Y),Group.includes(B)]) {
-        case [true,true,true]: Results = "!"; break
-        default: Results = "?"; break
+    let Results = [Group.includes(R),Group.includes(Y),Group.includes(B)]
+    switch (Object.Color) {
+        case "Primary" Results = "1"; break
+        case "Secondary" Results = "2"; break
+        case "Tertiary" Results = "3"; break
+        default: Results = "0"; break
     }
     return Qnumber.innerText = Results
 }
