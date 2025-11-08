@@ -115,9 +115,9 @@ function hintPaths(Object) {
     if (Object.Color == "Gold") return Results == "[false,true,false]"
     if (Object.Color == "Green") return Results == "[false,true,true]"
     if (Object.Color == "Blue") return Results == "[false,false,true]"
-    if (Object.Color == "Primary") return Results == "[false,true,false]"
-    if (Object.Color == "Secondary") return Results == "[false,true,true]"
-    if (Object.Color == "Tertiary") return Results == "[false,false,true]"
+    if (Object.Color == "Primary") return Union == "[false,true,false]"
+    if (Object.Color == "Secondary") return Union == "[false,true,true]"
+    if (Object.Color == "Tertiary") return Union == "[false,false,true]"
     spurn(Object.Color)
     /*
     if (Results == "[true,true,true]") "Tertiary"
