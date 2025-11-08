@@ -1,6 +1,8 @@
 if (innerWidth > innerHeight) spurn("가로 화면입니다. 세로 화면으로 바꿔주세요.")
 const _ = Canva.width = Canva.height = 2500
 const $ = Canva.getContext("2d")
+$.lineCap = "round"
+$.lineJoin = "round"
 const R = "red"
 const Y = "gold"
 const B = "blue"
