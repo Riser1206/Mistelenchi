@@ -107,11 +107,11 @@ function hintPaths(Object) {
     if ("Secondary" == Object.Color) $.strokeStyle = "#999"
     if ("Tertiary" == Object.Color) $.strokeStyle = "#666"
     $.stroke()
-    let results
-    switch (Group) {
+    let Results
+    switch ([Group.contains(0)]) {
         default: break
     }
-    return Qnumber.innerText = results
+    return Qnumber.innerText = Group.contains(0)
 }
 
 function addSquare(x,y) {
