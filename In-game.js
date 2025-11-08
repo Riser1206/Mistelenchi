@@ -130,7 +130,13 @@ function hintPaths(Object) {
 function addSquare(x,y) {
     Solve[y][x] = Color
     $.fillRect(_*x/Board.length+25,_*y/Board.length+25,_/Board.length-50,_/Board.length-50)
-    if (Given) for (const Path of Paths) hintPaths(Path)
+    if (Given) {
+        let TXT = "^^^"
+        for (const Path of Paths) {
+            hintPaths(Path)
+        }
+        Qnumber.innerText = TXT
+    }
 }
 
 function pickColor(latter) {
