@@ -137,7 +137,7 @@ function hintPaths(Object) {
     if (Results == "truetruetrue") $.strokeStyle = "#3f3f3f"
     $.lineWidth = _/15/Board.length
     $.stroke()
-    retrun Target == $.strokeStyle
+    return Target == $.strokeStyle
 }
 
 function addSquare(x,y) {
