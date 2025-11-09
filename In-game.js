@@ -108,7 +108,7 @@ function hintPaths(Object) {
     if ("Tertiary" == Object.Color) $.strokeStyle = "#3f3f3f"
     $.stroke()
     const Results = ""+Group.includes(R)+Group.includes(G)+Group.includes(B)
-
+    Target=$.strokeStyle
     x = Object.X
     y = Object.Y
     $.moveTo(_*(x-.5)/Board.length, _*(y-.5)/Board.length)
@@ -137,7 +137,7 @@ function hintPaths(Object) {
     if (Results == "truetruetrue") $.strokeStyle = "#3f3f3f"
     $.lineWidth = _/15/Board.length
     $.stroke()
-    Qnumber.innerText=$.strokeStyle
+    Qnumber.innerText=Target+$.strokeStyle
 }
 
 function addSquare(x,y) {
