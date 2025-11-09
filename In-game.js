@@ -67,10 +67,9 @@ function Check() {
 }
 
 function Count(Way, Language) {
-    const triplet = [undefined,R,Y,B]
+    const triplet = [R,G,B]
     for (let i = 0; i < Board.length; i++) {
-        for (let j = 0; j < 3;) {
-            j++
+        for (let j = 0; j < 3; j++) {
             const n = Way[i].filter(item => item === triplet[j]).length
             const massage = i+1+Language+triplet[j]
             if (Target < n) return massage+" 초과\n"
