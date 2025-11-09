@@ -129,12 +129,12 @@ function hintPaths(Object) {
     }
     const Achromatic = 6 < Object.Color.length
     if (Results == "falsefalsefalse") $.strokeStyle = "Ivory"
-    if (Results == "truefalsetrue") $.strokeStyle = "Purple"
-    if (Results == "truefalsefalse") $.strokeStyle = "Red"
-    if (Results == "truetruefalse") $.strokeStyle = "Orange"
-    if (Results == "falsetruefalse") $.strokeStyle = "Gold"
-    if (Results == "falsetruetrue") $.strokeStyle = "Green"
-    if (Results == "falsefalsetrue") $.strokeStyle = "Blue"
+    if (Results == "truefalsetrue") $.strokeStyle = Achromatic ? "#7f7f7f" : "Purple"
+    if (Results == "truefalsefalse") $.strokeStyle = Achromatic ? "#bfbfbf" : "Red"
+    if (Results == "truetruefalse") $.strokeStyle = Achromatic ? "#7f7f7f" : "Orange"
+    if (Results == "falsetruefalse") $.strokeStyle = Achromatic ? "#bfbfbf" : "Gold"
+    if (Results == "falsetruetrue") $.strokeStyle = Achromatic ? "#7f7f7f" : "Green"
+    if (Results == "falsefalsetrue") $.strokeStyle = Achromatic ? "#bfbfbf" : "Blue"
     if (Results == "truetruetrue") $.strokeStyle = "#3f3f3f"
     $.lineWidth = _/15/Board.length
     $.stroke()
