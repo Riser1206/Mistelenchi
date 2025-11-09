@@ -87,6 +87,10 @@ function hintPaths(Object) {
     $.beginPath()
     $.moveTo(_*(x-.5)/Board.length, _*(y-.5)/Board.length)
     for (const pursuit of Object.Array) {
+        if (x == 1) spurn(x)
+        if (y == 1) spurn(y)
+        if (x == 1) spurn(x)
+        if (y == 1) spurn(y)
         switch (pursuit) {
             case 0: y--; break
             case 1: x++; y--; break
