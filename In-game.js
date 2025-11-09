@@ -4,7 +4,7 @@ const $ = Canva.getContext("2d")
 $.lineCap = "round"
 $.lineJoin = "round"
 const R = "red"
-const Y = "gold"
+const G = "gold"
 const B = "blue"
 const Level = location.search.split('?')
 
@@ -108,7 +108,7 @@ function hintPaths(Object) {
     if ("Secondary" == Object.Color) $.strokeStyle = "#7f7f7f"
     if ("Tertiary" == Object.Color) $.strokeStyle = "#3f3f3f"
     $.stroke()
-    const Results = ""+Group.includes(R)+Group.includes(Y)+Group.includes(B)
+    const Results = ""+Group.includes(R)+Group.includes(G)+Group.includes(B)
 
     x = Object.X
     y = Object.Y
