@@ -127,6 +127,7 @@ function hintPaths(Object) {
         }
         $.lineTo(_*(x-.5)/Board.length, _*(y-.5)/Board.length)
     }
+    const Achromatic = 6 < Object.Color.length
     if (Results == "falsefalsefalse") $.strokeStyle = "Ivory"
     if (Results == "truefalsetrue") $.strokeStyle = "Purple"
     if (Results == "truefalsefalse") $.strokeStyle = "Red"
@@ -136,7 +137,6 @@ function hintPaths(Object) {
     if (Results == "falsefalsetrue") $.strokeStyle = "Blue"
     if (Results == "truetruetrue") $.strokeStyle = "#3f3f3f"
     $.lineWidth = _/15/Board.length
-    if (6 < Object.Color.length) $.strokeStyle = "PaleGreen"
     $.stroke()
 
 
