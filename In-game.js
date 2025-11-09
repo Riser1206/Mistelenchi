@@ -136,9 +136,7 @@ function hintPaths(Object) {
     if (Results == "falsefalsetrue") $.strokeStyle = "Blue"
     if (Results == "truetruetrue") $.strokeStyle = "#3f3f3f"
     $.lineWidth = _/15/Board.length
-    if ("Primary" == Object.Color) $.strokeStyle = "#bfbfbf"
-    if ("Secondary" == Object.Color) $.strokeStyle = "#7f7f7f"
-    if ("Tertiary" == Object.Color) $.strokeStyle = "#3f3f3f"
+    if (6 < Object.Color.length) $.strokeStyle = "PaleGreen"
     $.stroke()
 
 
