@@ -17,7 +17,7 @@
             "Color": "Lavender",
             "X": 5,
             "Y": 5,
-            "Array": []
+            "Array": [0, 0, 0]
         }
     ]
 }
