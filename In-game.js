@@ -84,8 +84,8 @@ function hintPaths(Object) {
     let x = Object.X
     let y = Object.Y
     if (!("Primary" == Object.Color || "Red" == Object.Color || "Gold" == Object.Color || "Blue" == Object.Color || "Secondary" == Object.Color || "Purple" == Object.Color || "Orange" == Object.Color || "Green" == Object.Color || "Tertiary" == Object.Color)) spurn(Object.Color,3)
-    if (!Number.isInteger(x) || !Number.isInteger(y) || x<1 || y<1 || x>Board.length || y>Board.length) spurn(JSON.stringify(Object),4)
-    if (Object.Array == 0) spurn(JSON.stringify(Object),5)
+    if (!Number.isInteger(x) || !Number.isInteger(y) || x<1 || y<1 || x>Board.length || y>Board.length) spurn([x,y],4)
+    if (Object.Array == 0) spurn(JSON.stringify(Object.Array),5)
     const Group = [Solve[y-1][x-1]]
     $.beginPath()
     $.moveTo(_*(x-.5)/Board.length, _*(y-.5)/Board.length)
@@ -101,7 +101,7 @@ function hintPaths(Object) {
             case 7: x--; y--; break
             default: spurn(pursuit,6)
         }
-        if (x<1 || y<1 || x>Board.length || y>Board.length) spurn(JSON.stringify(Object),7)
+        if (x<1 || y<1 || x>Board.length || y>Board.length) spurn([x,y],7)
         Group.push(Solve[y-1][x-1])
         $.lineTo(_*(x-.5)/Board.length, _*(y-.5)/Board.length)
     }
