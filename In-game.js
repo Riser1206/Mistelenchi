@@ -81,7 +81,7 @@ function Count(Way, Language) {
 }
 
 function hintPaths(Object) {
-    if (!Number.isInteger(Object.X) || !Number.isInteger(Object.Y)) spurn(JSON.stringify(Object))
+    if (!Number.isInteger(Object.X) || !Number.isInteger(Object.Y) || x<1 || y<1 || x>Board.length || y>Board.length) spurn(JSON.stringify(Object))
     let x = Object.X
     let y = Object.Y
     const Group = [Solve[y-1][x-1]]
