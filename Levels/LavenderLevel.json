@@ -1,7 +1,7 @@
 {
     "Target": 3,
     "Board": [
-        ["1", " ", "0", " ", "", "", "Royalblue", "Brown", "Green"],
+        ["1", " ", "0", " ", "", "", " ", "Royalblue", "Brown", "Green"],
         ["", "G", "G", "G", "G", "G", "G", "G", "G", "Green"],
         ["G", "", "G", "G", "G", "G", "G", "G", "Brown", "G"],
         ["G", "G", "", "G", "G", "G", "G", "Royalblue", "G", "G"],
