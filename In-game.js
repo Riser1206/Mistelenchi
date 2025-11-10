@@ -98,10 +98,7 @@ function hintPaths(Object) {
             case 7: x--; y--; break
             default: spurn(pursuit)
         }
-        if (x < 1) spurn(x+"\n(x < 1)")
-        if (y < 1) spurn(y+"\n(y < 1)")
-        if (x > Board.length) spurn(x+"\n(x > %{Board.length}")
-        if (y > Board.length) spurn(y+"\n(y > %{Board.length}")
+        if (x<1 || y<1 || x>Board.length || y>Board.length) spurn(JSON.stringify(Object))
         Group.push(Solve[y-1][x-1])
         $.lineTo(_*(x-.5)/Board.length, _*(y-.5)/Board.length)
     }
