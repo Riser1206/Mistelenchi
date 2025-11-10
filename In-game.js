@@ -81,9 +81,9 @@ function Count(Way, Language) {
 }
 
 function hintPaths(Object) {
-    if (!Number.isInteger(Object.X) || !Number.isInteger(Object.Y)) spurn(JSON.stringify(Object))
-    let x = Object.X
-    let y = Object.Y
+    //if (!Number.isInteger(Object.X) || !Number.isInteger(Object.Y)) spurn(JSON.stringify(Object))
+    let x = Math.round(Object.X)
+    let y = Math.round(Object.Y)
     const Group = [Solve[y-1][x-1]]
     $.beginPath()
     $.moveTo(_*(x-.5)/Board.length, _*(y-.5)/Board.length)
