@@ -10,7 +10,7 @@
         ["", "G", "G", "G", "G", "G", "G", "G", "G", "Green"],
         ["G", "", "G", "G", "G", "G", "G", "G", "Brown", "G"],
         ["G", "G", "", "G", "G", "G", "G", "Royalblue", "G", "G"],
-        ["", "", "{}", "", "", "", "", "Royalblue", "Brown", "Green"]
+        ["", "", "}", "", "", "", "", "Royalblue", "Brown", "Green"]
     ],
     "Paths": [
         {
