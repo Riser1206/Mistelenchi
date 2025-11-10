@@ -9,7 +9,7 @@
         [0, "B", 0, 0, 0, 0, "R", 0, 0, 0],
         [0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, ["spurn(Qnumber.innerText=dia_log.innerText='왭 욉')"], 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, ["spurn(Qnumber.innerText=dia_log.innerText='욉 왭')"], 0, 0, 0, 0],
         [0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
     ],
     "Paths": [
