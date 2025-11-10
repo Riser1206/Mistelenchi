@@ -1,4 +1,4 @@
-if (innerWidth > innerHeight) spurn("가로 화면입니다. 세로 화면으로 바꿔주세요.")
+if (innerWidth > innerHeight) spurn("가로 화면입니다. 세로 화면으로 바꿔주세요.",1)
 const _ = Canva.width = Canva.height = 2500
 const $ = Canva.getContext("2d")
 $.lineCap = "round"
@@ -8,7 +8,7 @@ const G = "gold"
 const B = "blue"
 const Level = location.search.split('?')
 
-fetch('Levels/' + Level[1] + '.json').then(res => res.json()).then(data => loadMap(data)).catch($ => spurn($))
+fetch('Levels/' + Level[1] + '.json').then(res => res.json()).then(data => loadMap(data)).catch($ => spurn($,0))
 
 function spurn(message, code) {
     alert(message + "\n" + code)
