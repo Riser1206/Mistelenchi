@@ -11,7 +11,7 @@ const Level = location.search.split('?')
 fetch('Levels/' + Level[1] + '.json').then(res => res.json()).then(data => loadMap(data)).catch($ => spurn($))
 
 function spurn(message, code) {
-    alert(message + \n + code)
+    alert(message + "\n" + code)
     location.assign(code)
     $ = $
 }
