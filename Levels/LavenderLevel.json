@@ -17,7 +17,31 @@
             "Color": "Lavender",
             "X": 5,
             "Y": 5,
-            "Array": [6, 6, 6, 6, 6]
+            "Array": []
+        },
+        {
+            "Color": "Royalblue",
+            "X": 101010,
+            "Y": 101010,
+            "Array": []
+        },
+        {
+            "Color": "Brown",
+            "X": 101010,
+            "Y": 101010,
+            "Array": []
+        },
+        {
+            "Color": "Green",
+            "X": 101010,
+            "Y": 101010,
+            "Array": []
+        },
+        {
+            "Color": "aQua",
+            "X": 101010,
+            "Y": 101010,
+            "Array": []
         }
     ]
 }
