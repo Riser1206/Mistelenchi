@@ -13,7 +13,6 @@ fetch('Levels/' + Level[1] + '.json').then(res => res.json()).then(data => loadM
 function spurn(message, code) {
     alert(message + "\n" + code)
     location.assign(code)
-    $ = $
 }
 
 function loadMap(Q) {
