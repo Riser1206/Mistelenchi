@@ -10,7 +10,7 @@
         ["", "G", "G", "G", "G", "G", "G", "G", "G", "Green"],
         ["G", "", "G", "G", "G", "G", "G", "G", "Brown", "G"],
         ["G", "G", "", "G", "G", "G", "G", "Royalblue", "G", "G"],
-        ["1", "\u0020", "0", "", "0", "\u000d", "1", "Royalblue", "Brown", "Green"]
+        ["1", "\u0020", "0", "", "0", "\u000a", "1", "Royalblue", "Brown", "Green"]
     ],
     "Paths": [
         {
