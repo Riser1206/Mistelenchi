@@ -7,7 +7,7 @@
         ["G", "G", "", "G", "G", "G", "G", "Royalblue", "G", "G"],
         ["", "G", "G", "G", "G", "G", "G", "G", "G", "Green"],
         ["G", "", "G", "G", "G", "G", "G", "G", "Brown", "G"],
-        ["G", "G", "", "G", "G", "G", "G", "Royalblue", "G", "G"],
+        ["G", "G", "", "G", "G", [3], "G", "Royalblue", "G", "G"],
         ["", "G", "G", "G", "G", "G", "G", "G", "G", "Green"],
         ["G", "", "G", "G", "G", "G", "G", "G", "Brown", "G"],
         ["G", "G", "", "G", "G", "G", "G", "Royalblue", "G", "G"]
