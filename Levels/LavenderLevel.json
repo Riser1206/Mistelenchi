@@ -23,25 +23,25 @@
             "Color": "Royalblue",
             "X": 1,
             "Y": 5,
-            "Array": []
+            "Array": [2]
         },
         {
             "Color": "Brown",
             "X": 5,
             "Y": 1,
-            "Array": []
+            "Array": [4]
         },
         {
             "Color": "Green",
             "X": 10,
             "Y": 5,
-            "Array": []
+            "Array": [6]
         },
         {
             "Color": "aQua",
             "X": 5,
             "Y": 10,
-            "Array": []
+            "Array": [0]
         }
     ]
 }
