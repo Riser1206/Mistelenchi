@@ -38,7 +38,7 @@ function Clear() {
     for (let y = 0; y < Board.length; y++) {
         Solve[y] = Array(Board.length)
         for (let x = 0; x < Board.length; x++) {
-            if (typeof Board[y][x] != "string") spurn(typeof Board[y][x])
+            if (typeof Board[y][x] != "string") spurn(typeof Board[y][x],2)
             $.fillStyle = Board[y][x] ? "black" : "white"
             Color = $.fillStyle = eval(Board[y][x][0])
             addSquare(x,y)
@@ -83,9 +83,9 @@ function Count(Way, Language) {
 function hintPaths(Object) {
     let x = Object.X
     let y = Object.Y
-    if (!("Primary" == Object.Color || "Red" == Object.Color || "Gold" == Object.Color || "Blue" == Object.Color || "Secondary" == Object.Color || "Purple" == Object.Color || "Orange" == Object.Color || "Green" == Object.Color || "Tertiary" == Object.Color)) spurn(Object.Color)
-    if (!Number.isInteger(x) || !Number.isInteger(y) || x<1 || y<1 || x>Board.length || y>Board.length) spurn(JSON.stringify(Object))
-    if (Object.Array == 0) spurn(JSON.stringify(Object))
+    if (!("Primary" == Object.Color || "Red" == Object.Color || "Gold" == Object.Color || "Blue" == Object.Color || "Secondary" == Object.Color || "Purple" == Object.Color || "Orange" == Object.Color || "Green" == Object.Color || "Tertiary" == Object.Color)) spurn(Object.Color,3)
+    if (!Number.isInteger(x) || !Number.isInteger(y) || x<1 || y<1 || x>Board.length || y>Board.length) spurn(JSON.stringify(Object),4)
+    if (Object.Array == 0) spurn(JSON.stringify(Object),5)
     const Group = [Solve[y-1][x-1]]
     $.beginPath()
     $.moveTo(_*(x-.5)/Board.length, _*(y-.5)/Board.length)
@@ -99,9 +99,9 @@ function hintPaths(Object) {
             case 5: x--; y++; break
             case 6: x--; break
             case 7: x--; y--; break
-            default: spurn(pursuit)
+            default: spurn(pursuit,6)
         }
-        if (x<1 || y<1 || x>Board.length || y>Board.length) spurn(JSON.stringify(Object))
+        if (x<1 || y<1 || x>Board.length || y>Board.length) spurn(JSON.stringify(Object),7)
         Group.push(Solve[y-1][x-1])
         $.lineTo(_*(x-.5)/Board.length, _*(y-.5)/Board.length)
     }
