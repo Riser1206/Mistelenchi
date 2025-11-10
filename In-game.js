@@ -8,6 +8,8 @@ const G = "gold"
 const B = "blue"
 const Level = location.search.split('?')
 alert(![])
+alert([])
+spurn([[],![]])
 fetch('Levels/' + Level[1] + '.json').then(res => res.json()).then(data => loadMap(data)).catch($ => spurn($))
 
 function spurn(Note) {
