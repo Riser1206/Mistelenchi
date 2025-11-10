@@ -87,10 +87,6 @@ function hintPaths(Object) {
     $.beginPath()
     $.moveTo(_*(x-.5)/Board.length, _*(y-.5)/Board.length)
     for (const pursuit of Object.Array) {
-        if (x < 1) spurn(x+"\n(x < 1)")
-        if (y < 1) spurn(y+"\n(y < 1)")
-        if (x > Board.length) spurn(x+"\n(x > Board.length)")
-        if (y > Board.length) spurn(y+"\n(y > Board.length)")
         switch (pursuit) {
             case 0: y--; break
             case 1: x++; y--; break
@@ -102,6 +98,10 @@ function hintPaths(Object) {
             case 7: x--; y--; break
             default: spurn(pursuit)
         }
+        if (x < 1) spurn(x+"\n(x < 1)")
+        if (y < 1) spurn(y+"\n(y < 1)")
+        if (x > Board.length) spurn(x+"\n(x > Board.length)")
+        if (y > Board.length) spurn(y+"\n(y > Board.length)")
         Group.push(Solve[y-1][x-1])
         $.lineTo(_*(x-.5)/Board.length, _*(y-.5)/Board.length)
     }
