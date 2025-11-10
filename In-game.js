@@ -83,7 +83,7 @@ function Count(Way, Language) {
 function hintPaths(Object) {
     let x = Object.X
     let y = Object.Y
-    if (!("Primary" == Object.Color || "Red" == Object.Color || "Gold" == Object.Color || "Blue" == Object.Color || "Secondary" == Object.Color || "Purple" == Object.Color || "Orange" == Object.Color || "Green" == Object.Color || "Tertiary" == Object.Color)) spurn(JSON.stringify(Object))
+    if (!("Primary" == Object.Color || "Red" == Object.Color || "Gold" == Object.Color || "Blue" == Object.Color || "Secondary" == Object.Color || "Purple" == Object.Color || "Orange" == Object.Color || "Green" == Object.Color || "Tertiary" == Object.Color)) spurn(Object.Color)
     if (!Number.isInteger(x) || !Number.isInteger(y) || x<1 || y<1 || x>Board.length || y>Board.length) spurn(JSON.stringify(Object))
     const Group = [Solve[y-1][x-1]]
     $.beginPath()
