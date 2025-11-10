@@ -15,8 +15,8 @@
     "Paths": [
         {
             "Color": "Lavender",
-            "X": 5.5,
-            "Y": 5.5,
+            "X": 5,
+            "Y": "Lavender",
             "Array": [2, 2, 2, 2, 2, 2]
         }
     ]
