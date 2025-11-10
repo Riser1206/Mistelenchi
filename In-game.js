@@ -37,7 +37,7 @@ function Clear() {
     for (let y = 0; y < Board.length; y++) {
         Solve[y] = Array(Board.length)
         for (let x = 0; x < Board.length; x++) {
-            if (typeof Board[y][x] != "string") spurn(typeof Board[y][x],2)
+            if (typeof Board[y][x] != "string") return spurn(typeof Board[y][x],2)
             $.fillStyle = Board[y][x] ? "black" : "white"
             Color = $.fillStyle = eval(Board[y][x][0])
             addSquare(x,y)
