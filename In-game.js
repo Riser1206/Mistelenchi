@@ -7,7 +7,7 @@ const R = "red"
 const G = "gold"
 const B = "blue"
 const Level = location.search.split('?')
-spurn(Number.isInteger("3"))
+
 fetch('Levels/' + Level[1] + '.json').then(res => res.json()).then(data => loadMap(data)).catch($ => spurn($))
 
 function spurn(Note) {
