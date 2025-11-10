@@ -11,7 +11,7 @@ const Level = location.search.split('?')
 fetch('Levels/' + Level[1] + '.json').then(res => res.json()).then(data => loadMap(data)).catch($ => spurn($))
 
 function spurn(Note) {
-    alert(Note)
+    alert(Note + \n + spurn)
     location.assign("https://www.bonuslevel.org")
     $ = $
 }
