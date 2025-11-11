@@ -7,7 +7,7 @@ const R = "red"
 const G = "gold"
 const B = "blue"
 const Level = location.search.split('?')
-
+console.log(안녕하세요, ${name}님!);
 fetch('Levels/' + Level[1] + '.json').then(res => res.json()).then(data => loadMap(data)).catch($ => spurn($,0))
 
 function spurn(message, code) {
