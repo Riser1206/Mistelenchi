@@ -62,7 +62,7 @@ function Check() {
         }
     }
     let massage = Count(Solve,"번 가로줄에 ")+Count(Trans,"번 세로줄에 ")
-    for (const Path of Paths) if (!hintPaths(Path)) massage += Path
+    for (const Path of Paths) if (!hintPaths(Path)) massage += Path.Color
     alert(massage ? massage : location.assign("https://www.bonuslevel.org")+"완료!")
 }
 
