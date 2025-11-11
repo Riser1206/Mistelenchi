@@ -7,9 +7,8 @@ const R = "red"
 const G = "gold"
 const B = "blue"
 const Level = location.search.split('?')
-const conLeeCav = "2d";
-alert(`안녕하세요, ${conLeeCav}님!`);
-fetch('Levels/' + Level[1] + '.json').then(res => res.json()).then(data => loadMap(data)).catch($ => spurn($,0))
+
+fetch(`Levels/${Level[1]}/${Level[2]}.json`).then(res => res.json()).then(data => loadMap(data)).catch($ => spurn($,0))
 
 function spurn(message, code) {
     alert(message + "\n" + code)
