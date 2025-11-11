@@ -7,7 +7,7 @@
         ["G", "G", "", "G", "G", "G", "G", "Royalblue", "G", "G"],
         ["", "G", "G", "G", "G", "G", "G", "G", "G", "Green"],
         ["G", "", "G", "G", "G", "G", "G", "G", "Brown", "G"],
-        ["G", "G", "", "G", "G", ["location.assign('https://cafe.naver.com/f-e/cafes/31072912/members/PNPSzwCiLHW1tPvQsHkglweJonLS-QI4oDOhKl6MOhM')"], "G", "Royalblue", "G", "G"],
+        ["G", "G", "", "G", "G", -0, "G", "Royalblue", "G", "G"],
         ["", "G", "G", "G", "G", "G", "G", "G", "G", "Green"],
         ["G", "", "G", "G", "G", "G", "G", "G", "Brown", "G"],
         ["G", "G", "", "G", "G", "G", "G", "Royalblue", "G", "G"]
