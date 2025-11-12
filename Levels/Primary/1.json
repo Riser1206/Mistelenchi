@@ -1,5 +1,5 @@
 {
-    "Target": 1,
+    "Target": 2,
     "Board": [
         ["G", "", "", "B", "", "B"],
         ["", "", "", "", "", ""],
@@ -10,27 +10,27 @@
     ],
     "Paths": [
         {
-            "Color": "Red",
+            "Color": "Green",
             "X": 2,
-            "Y": 2,
+            "Y": 1,
             "Array": [7]
         },
         {
-            "Color": "Green",
+            "Color": "Orange",
             "X": 2,
-            "Y": 5,
+            "Y": 6,
             "Array": [7]
         },
         {
             "Color": "Purple",
             "X": 5,
-            "Y": 2,
+            "Y": 1,
             "Array": [7]
         },
         {
-            "Color": "Blue",
+            "Color": "Green",
             "X": 5,
-            "Y": 5,
+            "Y": 6,
             "Array": [7]
         }
     ]
