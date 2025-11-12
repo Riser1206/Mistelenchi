@@ -7,7 +7,7 @@ const R = "red"
 const G = "gold"
 const B = "blue"
 const Level = location.search.split('?')
-if (!Number.isInteger(Level[2]) || Level[2] < 1) spurn(Level[2],1)
+if (!Number.isInteger(Level[2]) || Level[2] < 1) spurn((!Number.isInteger(Level[2]) || Level[2] < 1),1)
 
 fetch(`Levels/${Level[1]}/${Level[2]}.json`).then(res => res.json()).then(data => loadMap(data)).catch($ => spurn($,0))
 
