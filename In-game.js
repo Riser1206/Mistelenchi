@@ -9,7 +9,7 @@ const B = "blue"
 const Level = location.search.split('?')
 if (!Number.isInteger(Level[2] -= 0) || Level[2] < 1) spurn(Level[2],1)
 
-fetch(`Levels/${Level[1]}/${Level[2]}.json`).then(res => res.json()).then(data => loadMap(data)).catch($ => spurn($,0))
+fetch(`Levels/${Level[1]}/${Level[2]}.json`).then(res => res.json()).then(data => loadMap(data)).catch($ => spurn($,9))
 
 function spurn(message, code) {
     alert(message + "\n" + code)
@@ -21,7 +21,7 @@ function loadMap(Q) {
     Set = Q.Set
     Board = Q.Board
     Paths = Q.Paths
-    if (!Number.isInteger(Set) || Set < 1) return spurn(Set,0)
+    if (!Number.isInteger(Set) || Set < 1) return spurn(Set,8)
     Clear()
 }
 
