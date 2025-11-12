@@ -18,7 +18,7 @@ function spurn(message, code) {
 function loadMap(Q) {
     Qnumber.innerText = Level[2]
     Board = Q.Board
-    Target = Q.Target
+    Set = Q.Set
     Paths = Q.Paths
     Clear()
 }
@@ -72,8 +72,8 @@ function Count(Way, Language) {
         for (let j = 0; j < 3; j++) {
             const n = Way[i].filter(item => item === triplet[j]).length
             const massage = i+1+Language+triplet[j]
-            if (Target < n) return massage+" 초과\n"
-            if (Target > n) return massage+" 부족\n"
+            if (Set < n) return massage+" 초과\n"
+            if (Set > n) return massage+" 부족\n"
         }
     }
     return ""
