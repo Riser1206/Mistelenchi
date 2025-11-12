@@ -20,7 +20,7 @@ function loadMap(Q) {
     Set = Q.Set
     Board = Q.Board
     Paths = Q.Paths
-    (!Number.isInteger(Set) || Set < 1) return spurn(Set,0)
+    if (!Number.isInteger(Set) || Set < 1) return spurn(Set,0)
     Clear()
 }
 
