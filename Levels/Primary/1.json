@@ -25,7 +25,7 @@
             "Color": "Purple",
             "X": 2,
             "Y": 6,
-            "Array": [7]
+            "Array": [0, 0, 2]
         },
         {
             "Color": "Green",
