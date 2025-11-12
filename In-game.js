@@ -63,7 +63,7 @@ function Check() {
     }
     let massage = Count(Solve,"번 가로줄에 ")+Count(Trans,"번 세로줄에 ")
     for (const Path of Paths) if (!hintPaths(Path)) massage += Path.Color
-    alert(massage ? massage : ("완료!",location.href=`In-game?${Level[1]}?${++Level[2]}`))
+    alert(massage ? massage : (location.href=`In-game?${Level[1]}?${++Level[2]}`,"완료!"))
 }
 
 function Count(Way, Language) {
