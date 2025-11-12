@@ -19,13 +19,13 @@
             "Color": "Green",
             "X": 2,
             "Y": 2,
-            "Array": [4, 4, 6]
+            "Array": [4, 6, 4]
         },
         {
             "Color": "Purple",
             "X": 5,
             "Y": 5,
-            "Array": [0, 0, 2]
+            "Array": [0, 2, 0]
         },
         {
             "Color": "Green",
