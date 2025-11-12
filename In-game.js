@@ -1,4 +1,4 @@
-if (innerWidth > innerHeight) spurn("가로 화면입니다. 세로 화면으로 바꿔주세요.",1)
+if (innerWidth > innerHeight) spurn("가로 화면입니다. 세로 화면으로 바꿔주세요.",0)
 const _ = Canva.width = Canva.height = 2500
 const $ = Canva.getContext("2d")
 $.lineCap = "round"
@@ -7,6 +7,7 @@ const R = "red"
 const G = "gold"
 const B = "blue"
 const Level = location.search.split('?')
+if (!Number.isInteger(Level[2]) || Level[2] < 1) spurn(Level[2],1)
 
 fetch(`Levels/${Level[1]}/${Level[2]}.json`).then(res => res.json()).then(data => loadMap(data)).catch($ => spurn($,0))
 
