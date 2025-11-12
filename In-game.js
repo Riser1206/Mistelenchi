@@ -17,9 +17,10 @@ function spurn(message, code) {
 
 function loadMap(Q) {
     Qnumber.innerText = Level[2]
-    Board = Q.Board
     Set = Q.Set
+    Board = Q.Board
     Paths = Q.Paths
+    (!Set || !Number.isInteger(Set)) return spurn(Set,0)
     Clear()
 }
 
