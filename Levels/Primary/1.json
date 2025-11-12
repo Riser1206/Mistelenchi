@@ -19,7 +19,7 @@
             "Color": "Orange",
             "X": 2,
             "Y": 6,
-            "Array": [3]
+            "Array": [4, 4, 6]
         },
         {
             "Color": "Purple",
