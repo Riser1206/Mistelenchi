@@ -10,25 +10,25 @@
     ],
     "Paths": [
         {
-            "Color": "aqua",
+            "Color": "CornflowerBlue",
             "X": 2,
             "Y": 2,
             "Array": [7]
         },
         {
-            "Color": "black",
+            "Color": "GoldenRod",
             "X": 2,
             "Y": 5,
             "Array": [7]
         },
         {
-            "Color": "white",
+            "Color": "SlateGray",
             "X": 5,
             "Y": 2,
             "Array": [7]
         },
         {
-            "Color": "yellow",
+            "Color": "Turquoise",
             "X": 5,
             "Y": 5,
             "Array": [7]
