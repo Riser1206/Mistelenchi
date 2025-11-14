@@ -15,7 +15,7 @@ function spurn(message, code) {
 }
 
 function loadMap(Q) {
-    Qnumber.innerText += Set = Q.Set
+    Qnumber.innerText += `\nSet: ${Set = Q.Set}`
     Board = Q.Board
     Paths = Q.Paths
     if (!Number.isInteger(Set) || Set < 1) return spurn(Set,8)
