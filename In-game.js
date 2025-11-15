@@ -59,12 +59,12 @@ function Check() {
             Trans[i][j] = Solve[j][i]
         }
     }
-    let massage = Count(Solve,"번 가로줄에 ")+Count(Trans,"번 세로줄에 ")
+    let massage = Count(Solve,"번 가로줄에 ",7)+Count(Trans,"번 세로줄에 ",7)
     for (const Path of Paths) if (!hintPaths(Path)) massage += Path.Color+" 라인 불일치\n"
     alert(massage ? massage : (location.href=`In-game?${Level[1]}?${Level[2]+1}`,"완료!"))
 }
 
-function Count(Way, Language) {
+function Count(Way,Language,i) {
     const triplet = [R,G,B]
     for (let j = 0; j < 3; j++) {
         const n = Way[i].filter(item => item === triplet[j]).length
