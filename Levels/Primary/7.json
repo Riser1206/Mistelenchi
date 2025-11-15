@@ -49,7 +49,7 @@
             "Color": "Green",
             "X": 2,
             "Y": 6,
-            "Array": []
+            "Array": [0]
         }
     ]
 }
