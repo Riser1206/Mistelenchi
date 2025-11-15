@@ -22,13 +22,13 @@
             "Array": [4, 4]
         },
         {
-            "Color": "Orange",
+            "Color": "Green",
             "X": 3,
             "Y": 2,
             "Array": [6, 4]
         },
         {
-            "Color": "Green",
+            "Color": "Orange",
             "X": 3,
             "Y": 3,
             "Array": [2, 4, 6, 0]
