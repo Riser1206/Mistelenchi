@@ -10,28 +10,28 @@
     ],
     "Paths": [
         {
-            "Color": "Purple",
-            "X": 2,
+            "Color": "Orange",
+            "X": 4,
             "Y": 1,
-            "Array": [2, 2, 4, 2]
+            "Array": [2, 4, 2, 4]
         },
         {
-            "Color": "Green",
-            "X": 2,
-            "Y": 2,
-            "Array": [4, 6, 4]
+            "Color": "Orange",
+            "X": 1,
+            "Y": 3,
+            "Array": [2, 4, 0, 2]
         },
         {
             "Color": "Purple",
-            "X": 5,
-            "Y": 5,
-            "Array": [0, 2, 0]
+            "X": 4,
+            "Y": 4,
+            "Array": [2, 0, 4, 2]
         },
         {
             "Color": "Green",
-            "X": 5,
+            "X": 3,
             "Y": 6,
-            "Array": [6, 6, 0, 6]
+            "Array": [6, 0, 6, 0]
         }
     ]
 }
