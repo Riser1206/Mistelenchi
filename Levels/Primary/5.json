@@ -22,16 +22,34 @@
             "Array": [4, 6]
         },
         {
-            "Color": "Purple",
-            "X": 2,
-            "Y": 6,
-            "Array": [0, 0, 2]
+            "Color": "Green",
+            "X": 6,
+            "Y": 2,
+            "Array": [4]
         },
         {
+            "Color": "Purple",
+            "X": 3,
+            "Y": 3,
+            "Array": [2, 4, 6, 0]
+        }
+        {
+            "Color": "Purple",
+            "X": 1,
+            "Y": 4,
+            "Array": [4]
+        }
+        {
             "Color": "Green",
+            "X": 2,
+            "Y": 6,
+            "Array": [0, 2]
+        },
+        {
+            "Color": "Purple",
             "X": 5,
             "Y": 6,
-            "Array": [0, 2, 6, 6, 2, 0]
+            "Array": [2, 0]
         }
     ]
 }
