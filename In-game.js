@@ -70,7 +70,7 @@ function Count(Way, Language) {
     for (let i = 0; i < Board.length; i++) {
         for (let j = 0; j < 3; j++) {
             const n = Way[i].filter(item => item === triplet[j]).length
-            massage += i+1+Language+triplet[j]
+            if (Set != n) massage += i+1+Language+triplet[j]
             if (Set < n) massage+=" 초과\n"
             if (Set > n) massage+=" 부족\n"
         }
