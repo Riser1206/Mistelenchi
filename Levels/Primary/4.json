@@ -11,27 +11,27 @@
     "Paths": [
         {
             "Color": "Purple",
-            "X": 2,
+            "X": 3,
             "Y": 1,
-            "Array": [4, 2, 6, 6, 2, 4]
+            "Array": [4, 6, 0]
         },
         {
             "Color": "Orange",
-            "X": 5,
+            "X": 4,
             "Y": 1,
-            "Array": [4, 4, 6]
+            "Array": [4, 4, 0, 2, 2]
         },
         {
             "Color": "Orange",
-            "X": 2,
+            "X": 3,
             "Y": 6,
-            "Array": [0, 0, 2]
+            "Array": [0, 0, 4, 6, 6]
         },
         {
             "Color": "Purple",
             "X": 5,
             "Y": 6,
-            "Array": [0, 2, 6, 6, 2, 0]
+            "Array": [4, 6, 0]
         }
     ]
 }
