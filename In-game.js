@@ -75,6 +75,7 @@ function Count(Way, Language) {
             if (Set > n) massage+=" 부족\n"
         }
     }
+    return massage
 }
 
 function hintPaths(Object) {
