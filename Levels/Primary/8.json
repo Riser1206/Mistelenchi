@@ -11,9 +11,9 @@
     "Paths": [
         {
             "Color": "Green",
-            "X": 2,
+            "X": 3,
             "Y": 1,
-            "Array": [6, 4]
+            "Array": [2]
         },
         {
             "Color": "Orange",
@@ -47,9 +47,9 @@
         },
         {
             "Color": "Purple",
-            "X": 5,
+            "X": 3,
             "Y": 6,
-            "Array": [2, 0]
+            "Array": [2]
         }
     ]
 }
