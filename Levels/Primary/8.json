@@ -16,7 +16,7 @@
             "Array": [2]
         },
         {
-            "Color": "Orange",
+            "Color": "Green",
             "X": 5,
             "Y": 1,
             "Array": [4, 6]
@@ -40,7 +40,7 @@
             "Array": [0, 2]
         },
         {
-            "Color": "Green",
+            "Color": "Orange",
             "X": 2,
             "Y": 6,
             "Array": [0, 2]
