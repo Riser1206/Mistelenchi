@@ -10,7 +10,7 @@
     ],
     "Paths": [
         {
-            "Color": "Purple",
+            "Color": "Orange",
             "X": 3,
             "Y": 1,
             "Array": [2]
@@ -46,7 +46,7 @@
             "Array": [0, 2]
         },
         {
-            "Color": "Purple",
+            "Color": "Green",
             "X": 3,
             "Y": 6,
             "Array": [2]
