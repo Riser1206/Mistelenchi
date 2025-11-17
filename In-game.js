@@ -18,7 +18,7 @@ function loadMap(Q) {
     Board = Q.Board
     Paths = Q.Paths
     if (!Number.isInteger(Set) || Set < 1) return spurn(Set,8)
-    if (Set*3 == Board.length) alert(_1.style.display="none")
+    if (Set*3 == Board.length) _1.style.display="none"
     Clear()
 }
 
@@ -45,7 +45,7 @@ function Clear() {
             $.closePath()
         }
     }
-    pickColor(_1.style)
+    pickColor(_0.style)
     Given = 1
     for (const Path of Paths) hintPaths(Path)
 }
