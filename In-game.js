@@ -46,6 +46,7 @@ function Clear() {
     }
     Given = 1
     for (const Path of Paths) hintPaths(Path)
+    pickColor(_1.style)
 }
 
 function Check() {
