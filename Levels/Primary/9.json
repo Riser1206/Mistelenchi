@@ -24,9 +24,9 @@
         },
         {
             "Color": "Orange",
-            "X": 6,
+            "X": 5,
             "Y": 2,
-            "Array": [6, 4]
+            "Array": [4, 4]
         },
         {
             "Color": "Green",
@@ -36,9 +36,9 @@
         },
         {
             "Color": "Purple",
-            "X": 1,
+            "X": 2,
             "Y": 5,
-            "Array": [2, 0]
+            "Array": [0, 0]
         },
         {
             "Color": "Orange",
