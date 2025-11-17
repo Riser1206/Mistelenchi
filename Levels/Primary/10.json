@@ -40,13 +40,13 @@
             "Array": [0, 0]
         },
         {
-            "Color": "Orange",
+            "Color": "Purple",
             "X": 1,
             "Y": 3,
             "Array": [4, 4]
         },
         {
-            "Color": "Purple",
+            "Color": "Orange",
             "X": 2,
             "Y": 6,
             "Array": [6]
