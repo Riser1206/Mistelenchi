@@ -14,7 +14,6 @@ function spurn(message, code) {
 }
 
 function loadMap(Q) {
-    former = _1
     Qnumber.innerText = `Stage: ${Level[2]}\nSet: ${Set = Q.Set}`
     Board = Q.Board
     Paths = Q.Paths
