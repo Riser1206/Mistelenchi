@@ -20,6 +20,7 @@ function loadMap(Stage,Set,Length) {
         for (let x = 0; x < Length; x++) {
             Color = $.fillStyle = "white"
             addSquare(x,y)
+            Board[y][x] = ""
         }
     }
     //if (!Number.isInteger(Set) || Set < 1) return spurn(Set,8)
