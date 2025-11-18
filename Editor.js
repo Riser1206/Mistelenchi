@@ -1,6 +1,5 @@
 const _ = Canva.width = Canva.height = 2500
 const $ = Canva.getContext("2d")
-//const Board = []
 $.lineCap = "round"
 $.lineJoin = "round"
 const R = "red"
@@ -15,6 +14,14 @@ function spurn(message, code) {
 
 function loadMap(Stage,Set,Length) {
     Qnumber.innerText = `Stage: ${Stage}\nSet: ${Set}`
+    const Board = Array(Length)
+    for (let y = 0; y < Length; y++) {
+        Board[y] = Array(Length)
+        for (let x = 0; x < Length; x++) {
+            Color = $.fillStyle = "white"
+            addSquare(x,y)
+        }
+    }
     //if (!Number.isInteger(Set) || Set < 1) return spurn(Set,8)
     Clear()
 }
