@@ -150,3 +150,4 @@ function pickColor(latter) {
     Color = $.fillStyle = latter.background = latter.color
     former = latter
 }
+*/
