@@ -6,15 +6,15 @@ $.lineJoin = "round"
 const R = "red"
 const G = "gold"
 const B = "blue"
-if (innerWidth > innerHeight) spurn("가로 화면입니다. 세로 화면으로 바꿔주세요.",0); else loadMap()
+if (innerWidth > innerHeight) spurn("가로 화면입니다. 세로 화면으로 바꿔주세요.",0); else loadMap(`Title`,1,3)
 
 function spurn(message, code) {
     alert(message + "\n" + code)
     location.assign(code)
 }
 
-function loadMap(Level,Set) {
-    Qnumber.innerText = `Stage: ${Level}\nSet: ${Set}`
+function loadMap(Stage,Set,Length) {
+    Qnumber.innerText = `Stage: ${Stage}\nSet: ${Set}`
     //if (!Number.isInteger(Set) || Set < 1) return spurn(Set,8)
     Clear()
 }
