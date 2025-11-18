@@ -19,8 +19,7 @@ function loadMap(Stage,Set,Length) {
         Board[y] = Array(Length)
         for (let x = 0; x < Length; x++) {
             Color = $.fillStyle = "white"
-            addSquare(x,y)
-            Board[y][x] = ""
+            fixSquare(x,y)
         }
     }
     //if (!Number.isInteger(Set) || Set < 1) return spurn(Set,8)
@@ -34,11 +33,16 @@ function clickCanvas() {
     if (!Board[Y][X]) addSquare(X,Y)
 }
 
-function addSquare(x,y) {
-    //Solve[y][x] = Color
+function fixSquare(x,y) {
+    Board[y][x] = ""
     $.fillRect(_*x/Length+25,_*y/Length+25,_/Length-50,_/Length-50)
     //if (Given) for (const Path of Paths) hintPaths(Path)
 }
+function addSquare(x,y) {
+    $.fillRect(_*x/Length+25,_*y/Length+25,_/Length-50,_/Length-50)
+    //if (Given) for (const Path of Paths) hintPaths(Path)
+}
+
 
 function pickColor(latter) {
     if (window.former != undefined) former.background = latter.background
