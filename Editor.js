@@ -1,12 +1,13 @@
 const _ = Canva.width = Canva.height = 2500
 const $ = Canva.getContext("2d")
+//const Board = []
 $.lineCap = "round"
 $.lineJoin = "round"
 const R = "red"
 const G = "gold"
 const B = "blue"
-if (innerWidth > innerHeight) spurn("가로 화면입니다. 세로 화면으로 바꿔주세요.",0); else fetch(`Levels/${Level[1]}/${Level[2]}.json`).then(res => res.json()).then(data => loadMap(data)).catch($ => spurn($,9))
-/*
+if (innerWidth > innerHeight) spurn("가로 화면입니다. 세로 화면으로 바꿔주세요.",0); else loadMap(Q)
+
 function spurn(message, code) {
     alert(message + "\n" + code)
     location.assign(code)
@@ -16,11 +17,11 @@ function loadMap(Q) {
     Qnumber.innerText = `Stage: ${Level[2]}\nSet: ${Set = Q.Set}`
     Board = Q.Board
     Paths = Q.Paths
-    if (!Number.isInteger(Set) || Set < 1) return spurn(Set,8)
-    if (Set*3 == Board.length) _1.style.display="none"
+    //if (!Number.isInteger(Set) || Set < 1) return spurn(Set,8)
     Clear()
 }
 
+/*
 function clickCanvas() {
     const X = Math.round((event.clientX-$.canvas.offsetLeft)*Board.length/$.canvas.offsetWidth-1/2)
     const Y = Math.round((event.clientY-$.canvas.offsetTop)*Board.length/$.canvas.offsetHeight-1/2)
