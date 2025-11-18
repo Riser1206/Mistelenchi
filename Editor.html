@@ -1,1 +1,58 @@
+<meta http-equiv="CONTENT-TYPE" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
+<center>
+    <title>Mistelenchi</title>
+    <canvas onclick="clickCanvas()" id="Canva"></canvas><br>
+    <button onclick="pickColor(style)" style="color:white" id="_0"></button><button onclick="pickColor(style)" style="color:red"></button><button onclick="pickColor(style)" style="color:gold"></button><button onclick="pickColor(style)" style="color:blue"></button><button onclick="pickColor(style)" style="color:black" id="_1"></button>
+    <h1 id="Qnumber"></h1>
+    <button onclick="Check()" class="action">Check</button>
+    <button onclick="dia_log.showModal()" class="action">Clear</button>
+</center>
+
+<script src="In-game.js"></script>
+
+<style>
+    button:not(.action) {
+        margin: 5px;
+        margin-top: 12px;
+        padding: 25px;
+        border: 5px solid;
+        border-radius: 300px;
+        background-color: #7f7f7f7f;
+    }
+    .action {
+        margin: 3px;
+        font-size: 3em;
+        font-family: monospace;
+    }
+    dialog button {
+        width: 3em
+    }
+    canvas {
+        border: 5px solid;
+        width: 100%;
+        margin: -5px;
+        background: #999;
+        border-color: #999;
+    }
+    html {
+        background: #ccc
+    }
+    @media (prefers-color-scheme: dark) {
+        html {
+            background: #333
+        }
+        canvas {
+            background: #666;
+            border-color: #666;
+        }
+    }
+</style>
+
+<dialog id="dia_log">
+    <center>
+        <h1>Clear?</h1>
+        <button onclick="dia_log.close()" class="action">No</button>
+        <button onclick="dia_log.close(Clear())" class="action">Yes</button>
+    </center>
+</dialog>
