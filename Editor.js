@@ -27,6 +27,12 @@ function loadMap(Stage,Set,Length) {
     Clear()
 }
 
+function clickCanvas() {
+    const X = Math.round((event.clientX-$.canvas.offsetLeft)*Board.length/$.canvas.offsetWidth-1/2)
+    const Y = Math.round((event.clientY-$.canvas.offsetTop)*Board.length/$.canvas.offsetHeight-1/2)
+    if (Board || !Board[Y][X]) addSquare(X,Y)
+}
+
 function addSquare(x,y) {
     //Solve[y][x] = Color
     $.fillRect(_*x/Length+25,_*y/Length+25,_/Length-50,_/Length-50)
@@ -40,12 +46,6 @@ function pickColor(latter) {
 }
 
 /*
-function clickCanvas() {
-    const X = Math.round((event.clientX-$.canvas.offsetLeft)*Board.length/$.canvas.offsetWidth-1/2)
-    const Y = Math.round((event.clientY-$.canvas.offsetTop)*Board.length/$.canvas.offsetHeight-1/2)
-    if (!Board[Y][X]) addSquare(X,Y)
-}
-
 function Clear() {
     Given = 0
     Solve = Array(Board.length)
