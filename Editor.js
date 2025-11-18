@@ -14,7 +14,7 @@ function spurn(message, code) {
 
 function loadMap(Stage,Set,Length) {
     Qnumber.innerText = `Stage: ${Stage}\nSet: ${Set}`
-    const Board = Array(Length)
+    const Board = Array(window.Length=Length)
     for (let y = 0; y < Length; y++) {
         Board[y] = Array(Length)
         for (let x = 0; x < Length; x++) {
