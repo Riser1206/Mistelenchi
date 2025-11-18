@@ -29,7 +29,7 @@ function loadMap(Stage,Set,Length) {
 function addSquare(x,y) {
     Solve[y][x] = Color
     $.fillRect(_*x/Length+25,_*y/Length+25,_/Length-50,_/Length-50)
-    if (Given) for (const Path of Paths) hintPaths(Path)
+    //if (Given) for (const Path of Paths) hintPaths(Path)
 }
 
 function pickColor(latter) {
