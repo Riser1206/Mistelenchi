@@ -5,7 +5,7 @@ $.lineJoin = "round"
 const R = "red"
 const G = "gold"
 const B = "blue"
-if (innerWidth > innerHeight) spurn("가로 화면입니다. 세로 화면으로 바꿔주세요.",0); else loadMap(`Title`,1,3)
+if (innerWidth > innerHeight) spurn("가로 화면입니다. 세로 화면으로 바꿔주세요.",0); else loadMap(`Title`,1,3).catch(lS=>alert(lS))
 
 function spurn(message, code) {
     alert(message + "\n" + code)
@@ -30,7 +30,7 @@ function loadMap(Stage,Set,Length) {
 function clickCanvas() {
     const X = Math.round((event.clientX-$.canvas.offsetLeft)*Board.length/$.canvas.offsetWidth-1/2)
     const Y = Math.round((event.clientY-$.canvas.offsetTop)*Board.length/$.canvas.offsetHeight-1/2)
-    if (!window.isTest) return 0
+    if (!window.isTest) return fixSquare(X,Y)
     if (!Board[Y][X]) addSquare(X,Y)
 }
 
