@@ -60,7 +60,7 @@ function Check() {
     }
     let massage = Count(Solve,"번 가로줄에 ")+Count(Trans,"번 세로줄에 ")
     for (const Path of Paths) if (!hintPaths(Path)) massage += Path.Color+" 라인 불일치\n"
-    alert(massage ? massage : (location.href=`In-game?${Level[1]}?${Level[2]+1}`,"완료!"))
+    alert(massage ? massage : (location.href=`Editor?${Level[1]}?${Level[2]+1}`,"완료!"))
 }
 
 function Count(Way, Language) {
