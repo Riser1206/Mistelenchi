@@ -26,6 +26,18 @@ function loadMap(Stage,Set,Length) {
     Clear()
 }
 
+function addSquare(x,y) {
+    Solve[y][x] = Color
+    $.fillRect(_*x/Length+25,_*y/Length+25,_/Length-50,_/Length-50)
+    if (Given) for (const Path of Paths) hintPaths(Path)
+}
+
+function pickColor(latter) {
+    if (window.former != undefined) former.background = latter.background
+    Color = $.fillStyle = latter.background = latter.color
+    former = latter
+}
+
 /*
 function clickCanvas() {
     const X = Math.round((event.clientX-$.canvas.offsetLeft)*Board.length/$.canvas.offsetWidth-1/2)
