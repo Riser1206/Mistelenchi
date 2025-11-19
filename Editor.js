@@ -35,6 +35,10 @@ function clickCanvas() {
 
 function fixSquare(x,y) {
     Board[y][x] = ""
+    if (Color == R) Board[y][x] = "R"
+    if (Color == G) Board[y][x] = "G"
+    if (Color == B) Board[y][x] = "B"
+    if (Color == "black‎") Board[y][x] = " "
     $.fillRect(_*x/Length+25,_*y/Length+25,_/Length-50,_/Length-50)
     //if (Given) for (const Path of Paths) hintPaths(Path)
 }
