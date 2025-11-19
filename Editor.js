@@ -6,7 +6,7 @@ const R = "red"
 const G = "gold"
 const B = "blue"
 if (innerWidth > innerHeight) spurn("가로 화면입니다. 세로 화면으로 바꿔주세요.",0); else loadMap(`Title`,1,3)
-
+Qnumber.innerText = `Click`
 function spurn(message, code) {
     alert(message + "\n" + code)
     location.assign(code)
@@ -24,7 +24,6 @@ function loadMap(Stage,Set,Length) {
             fixSquare(x,y)
         }
     }
-    //if (!Number.isInteger(Set) || Set < 1) return spurn(Set,8)
 }
 
 function clickCanvas() {
