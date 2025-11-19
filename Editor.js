@@ -40,7 +40,11 @@ function fixSquare(x,y) {
     if (Color == B) Board[y][x] = "B"
     if (Color == "black") Board[y][x] = " "
     $.fillRect(_*x/Length+25,_*y/Length+25,_/Length-50,_/Length-50)
-    //if (Given) for (const Path of Paths) hintPaths(Path)
+    $.fillStyle = "#fff7"
+    $.beginPath()
+    $.arc(_*(x+1/2)/Length,_*(y+1/2)/Length,_/7/Length,0,7)
+    $.fill()
+    $.closePath()
 }
 function addSquare(x,y) {
     $.fillRect(_*x/Length+25,_*y/Length+25,_/Length-50,_/Length-50)
