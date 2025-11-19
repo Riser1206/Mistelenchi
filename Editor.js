@@ -23,7 +23,6 @@ function loadMap(Stage,Set,Length) {
         }
     }
     //if (!Number.isInteger(Set) || Set < 1) return spurn(Set,8)
-    Clear()
 }
 
 function clickCanvas() {
