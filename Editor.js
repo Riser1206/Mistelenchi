@@ -13,12 +13,12 @@ function spurn(message, code) {
 }
 
 function loadMap(Stage,Set,Length) {
-    Qnumber.innerText = `Stage: ${Stage}\nSet: ${Set}`
-    Board = Array(window.Length=Length)
+    Qnumber.innerText = `Stage: ${Stage_=Stage}\nSet: ${Set_=Set}`
     pickColor(_0.style)
-    for (let y = 0; y < Length; y++) {
-        Board[y] = Array(Length)
-        for (let x = 0; x < Length; x++) {
+    Board = Array(Length_=Length)
+    for (let y = 0; y < Length_; y++) {
+        Board[y] = Array(Length_)
+        for (let x = 0; x < Length_; x++) {
             fixSquare(x,y)
         }
     }
@@ -27,8 +27,8 @@ function loadMap(Stage,Set,Length) {
 }
 
 function clickCanvas() {
-    const X = Math.round((event.clientX-$.canvas.offsetLeft)*Board.length/$.canvas.offsetWidth-1/2)
-    const Y = Math.round((event.clientY-$.canvas.offsetTop)*Board.length/$.canvas.offsetHeight-1/2)
+    const X = Math.round((event.clientX-$.canvas.offsetLeft)*Length_/$.canvas.offsetWidth-1/2)
+    const Y = Math.round((event.clientY-$.canvas.offsetTop)*Length_/$.canvas.offsetHeight-1/2)
     if (!window.isTest) return fixSquare(X,Y)
     if (!Board[Y][X]) addSquare(X,Y)
 }
@@ -39,16 +39,16 @@ function fixSquare(x,y) {
     if (Color == G) Board[y][x] = "G"
     if (Color == B) Board[y][x] = "B"
     if (Color == "black") Board[y][x] = " "
-    $.fillRect(_*x/Length+25,_*y/Length+25,_/Length-50,_/Length-50)
+    $.fillRect(_*x/Length_+25,_*y/Length_+25,_/Length_-50,_/Length_-50)
     $.fillStyle = "#fff7"
     $.beginPath()
-    $.arc(_*(x+1/2)/Length,_*(y+1/2)/Length,_/7/Length,0,7)
+    $.arc(_*(x+1/2)/Length_,_*(y+1/2)/Length_,_/7/Length_,0,7)
     $.fill()
     $.closePath()
     $.fillStyle = former.background
 }
 function addSquare(x,y) {
-    $.fillRect(_*x/Length+25,_*y/Length+25,_/Length-50,_/Length-50)
+    $.fillRect(_*x/Length_+25,_*y/Length_+25,_/Length_-50,_/Length_-50)
     //if (Given) for (const Path of Paths) hintPaths(Path)
 }
 
