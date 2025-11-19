@@ -68,7 +68,7 @@
         <h2>Title</h2><input id="_Stage" style="text-align:center">
         <h2>Size</h2><nobreak><button onclick="if (_Length.innerText>3) _Length.innerText--">－</button><b id="_Length"></b><button onclick="if (_Length.innerText<15) _Length.innerText++">＋</button></nobreak>
         <h2>Set</h2><nobreak><button onclick="if (_Set.innerText>1) _Set.innerText--">－</button><b id="_Set"></b><button onclick="if (_Set.innerText<5) _Set.innerText++">＋</button></nobreak>
-        <br><button onclick="dia_log.close()" class="action">Close</button>
+        <br><button onclick="dia_log.close()" class="action">Cancel</button>
         <br><button onclick="dia_log.close(loadMap(_Stage.value,_Set.innerText,_Length.innerText))" class="action">Recreate</button>
     </center>
 </dialog>
