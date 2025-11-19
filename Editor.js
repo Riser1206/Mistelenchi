@@ -5,7 +5,7 @@ $.lineJoin = "round"
 const R = "red"
 const G = "gold"
 const B = "blue"
-if (innerWidth > innerHeight) spurn("가로 화면입니다. 세로 화면으로 바꿔주세요.",0); else loadMap(`Title`,1,3).catch(_ => alert(_))
+if (innerWidth > innerHeight) spurn("가로 화면입니다. 세로 화면으로 바꿔주세요.",0); else loadMap(`Title`,1,3)
 
 function spurn(message, code) {
     alert(message + "\n" + code)
@@ -45,7 +45,7 @@ function fixSquare(x,y) {
     $.arc(_*(x+1/2)/Length,_*(y+1/2)/Length,_/7/Length,0,7)
     $.fill()
     $.closePath()
-    $.fillStyle = "#ffff"
+    //$.fillStyle = "#ffff"
 }
 function addSquare(x,y) {
     $.fillRect(_*x/Length+25,_*y/Length+25,_/Length-50,_/Length-50)
