@@ -39,7 +39,6 @@ function fixSquare(x,y) {
     if (Color == G) Board[y][x] = "G"
     if (Color == B) Board[y][x] = "B"
     if (Color == "black") Board[y][x] = " "
-    Board[y][x] = Color
     $.fillRect(_*x/Length+25,_*y/Length+25,_/Length-50,_/Length-50)
     //if (Given) for (const Path of Paths) hintPaths(Path)
 }
