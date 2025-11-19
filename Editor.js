@@ -15,7 +15,7 @@ function spurn(message, code) {
 function loadMap(Stage,Set,Length) {
     Qnumber.innerText = `Stage: ${Stage}\nSet: ${Set}`
     Board = Array(window.Length=Length)
-    pickColor(_1.style)
+    pickColor(_0.style)
     for (let y = 0; y < Length; y++) {
         Board[y] = Array(Length)
         for (let x = 0; x < Length; x++) {
