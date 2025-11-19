@@ -46,6 +46,7 @@ function fixSquare(x,y) {
     $.fill()
     $.closePath()
     $.globalAlpha = 1
+    alert($.fillStyle)
 }
 function addSquare(x,y) {
     $.fillRect(_*x/Length+25,_*y/Length+25,_/Length-50,_/Length-50)
