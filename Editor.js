@@ -5,6 +5,7 @@ $.lineJoin = "round"
 const R = "red"
 const G = "gold"
 const B = "blue"
+pickColor(_0.style)
 if (innerWidth > innerHeight) spurn("가로 화면입니다. 세로 화면으로 바꿔주세요.",0); else loadMap(`Title`,1,3)
 
 function spurn(message, code) {
