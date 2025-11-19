@@ -13,7 +13,7 @@ function spurn(message, code) {
 }
 
 function loadMap(Stage,Set,Length) {
-    _1.style.display = Set*3 == Length ? "none" : "block"
+    _1.style.display = Set*3 == Length ? "none" : "inline-block"
     $.clearRect(0, 0, Canva.width, Canva.height)
     Qnumber.innerText = `Stage: ${Stage_=Stage}\nSet: ${Set_=Set}`
     pickColor(_0.style)
