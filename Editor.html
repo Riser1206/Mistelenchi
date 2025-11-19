@@ -27,9 +27,11 @@
     }
     b {
         display: block;
-        display: flex;
         width: 1em;
         background-color: #7f7f7fff;
+    }
+    nobreak {
+        display: flex
     }
     .action {
         margin: 3px;
@@ -60,8 +62,8 @@
 <dialog id="dia_log">
     <center>
         <h2>Title</h2><input id="_Stage" style="text-align:center">
-        <h2>Size</h2><button onclick="">－</button><b id="_Length">_Length</b><button onclick="">＋</button>
-        <h2>Set</h2><button onclick="">－</button><b id="_Set">_Set</b><button onclick="">＋</button>
+        <h2>Size</h2><nobreak><button onclick="">－</button><b id="_Length">_Length</b><button onclick="">＋</button></nobreak>
+        <h2>Set</h2><nobreak><button onclick="">－</button><b id="_Set">_Set</b><button onclick="">＋</button></nobreak>
         <br><button onclick="dia_log.close()" class="action">Close</button>
         <br><button onclick="dia_log.close(loadMap(_Stage.value,Set,Length))" class="action">Recreate</button>
     </center>
