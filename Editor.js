@@ -5,8 +5,8 @@ $.lineJoin = "round"
 const R = "red"
 const G = "gold"
 const B = "blue"
-if (innerWidth > innerHeight) spurn("가로 화면입니다. 세로 화면으로 바꿔주세요.",0); else loadMap(`Title`,1,3)
-Qnumber.innerText = `Click`
+if (innerWidth > innerHeight) spurn("가로 화면입니다. 세로 화면으로 바꿔주세요.",0); else loadMap(`Click`,1,3)
+
 function spurn(message, code) {
     alert(message + "\n" + code)
     location.assign(code)
@@ -15,7 +15,7 @@ function spurn(message, code) {
 function loadMap(Stage,Set,Length) {
     _1.style.display = Set*3 == Length ? "none" : "inline-block"
     $.clearRect(0, 0, Canva.width, Canva.height)
-    Qnumber.innerText = `Stage: ${Stage_=Stage}\nSet: ${Set_=Set}`
+    Qnumber.innerText = `${Stage_=Stage}\nSet: ${Set_=Set}`
     pickColor(_0.style)
     Board = Array(Length_=Length)
     for (let y = 0; y < Length_; y++) {
