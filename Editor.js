@@ -31,12 +31,15 @@ function clickCanvas() {
     const X = Math.round((event.clientX-$.canvas.offsetLeft)*Length_/$.canvas.offsetWidth-1/2)
     const Y = Math.round((event.clientY-$.canvas.offsetTop)*Length_/$.canvas.offsetHeight-1/2)
     if (isPaths) {
-    Paths.push(Color)
+    Paths.push({Color,X,Y,[]})
     alert(Paths)
     return
     }
     if (!window.isTest) return fixSquare(X,Y)
     if (!Board[Y][X]) addSquare(X,Y)
+}
+
+function setPath(x,y) {
 }
 
 function fixSquare(x,y) {
@@ -53,6 +56,7 @@ function fixSquare(x,y) {
     $.closePath()
     $.fillStyle = former.background
 }
+
 function addSquare(x,y) {
     $.fillRect(_*x/Length_+25,_*y/Length_+25,_/Length_-50,_/Length_-50)
     //if (Given) for (const Path of Paths) hintPaths(Path)
