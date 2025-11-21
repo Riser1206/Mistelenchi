@@ -32,7 +32,7 @@ function clickCanvas() {
     const Y = Math.round((event.clientY-$.canvas.offsetTop)*Length_/$.canvas.offsetHeight-1/2)
     if (isPaths) {
     Paths.push({"Color":Color,"X":X,"Y":Y,"Array":[]})
-    alert(Paths)
+    alert(JSON.stringify(Paths))
     return
     }
     if (!window.isTest) return fixSquare(X,Y)
