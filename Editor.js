@@ -32,19 +32,6 @@ function clickCanvas() {
     const Y = Math.round((event.clientY-$.canvas.offsetTop)*Length_/$.canvas.offsetHeight-1/2)
     if (isPaths) {
     Paths.push()
-try {let someUndefinedVariable = 10
-  // 시도할 코드 블록 (오류 발생 가능성 있음)
-  let result = 10 / someUndefinedVariable; // ReferenceError 발생
-  alert(result); // 이 줄은 실행되지 않습니다
-} catch (error) {
-  // 오류가 발생했을 때 실행될 코드 블록
-  alert("오류가 발생했습니다:", error.message); 
-  // 출력: 오류가 발생했습니다: someUndefinedVariable is not defined
-} finally {
-  // 예외 발생 여부와 상관없이 항상 실행됩니다
-  alert("작업이 완료되었습니다."); 
-}
-
     alert(Paths)
     return
     }
