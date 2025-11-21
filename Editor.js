@@ -5,7 +5,7 @@ $.lineJoin = "round"
 const R = "red"
 const G = "gold"
 const B = "blue"
-if (innerWidth > innerHeight) spurn("가로 화면입니다. 세로 화면으로 바꿔주세요.",0); else loadMap(`Click`,1,3)
+if (innerWidth > innerHeight) spurn("가로 화면입니다. 세로 화면으로 바꿔주세요.",0); else loadMap(`→Click←`,1,3)
 
 function spurn(message, code) {
     alert(message + "\n" + code)
