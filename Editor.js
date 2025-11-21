@@ -5,7 +5,6 @@ $.lineJoin = "round"
 const R = "red"
 const G = "gold"
 const B = "blue"
-const Paths = []
 if (innerWidth > innerHeight) spurn("가로 화면입니다. 세로 화면으로 바꿔주세요.",0); else loadMap(`Click`,1,3)
 
 function spurn(message, code) {
@@ -14,6 +13,7 @@ function spurn(message, code) {
 }
 
 function loadMap(Stage,Set,Length) {
+    Paths = []
     _1.style.display = Set*3 == Length ? "none" : "inline-block"
     $.clearRect(0, 0, Canva.width, Canva.height)
     Qnumber.innerText = `${Stage_=Stage}\nSet: ${Set_=Set}`
