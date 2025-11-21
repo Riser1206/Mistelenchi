@@ -81,9 +81,25 @@ function pickColor(latter,Z) {
 
 function Save() {
     alert(JSON.stringify({"Set":Set_,"Board":Board,"Paths":Paths}))
+    const blob = new Blob([JSON.stringify({"Set":Set_,"Board":Board,"Paths":Paths})], { type: 'text/plain' });
+    let objURL = URL.createObjectURL(blob);
+    if (window.___) URL.revokeObjectURL(___);
+    ___ = objURL;
+    const a = document.createElement('a');
+    a.download = Stage_;
+    a.href = objURL;
+    a.click();
 }
 
-/*
+/*{"Set":Set_,"Board":Board,"Paths":Paths}
+    const blob = new Blob([data], { type: 'text/plain' });
+    objURL = URL.createObjectURL(blob);
+    if (window._) URL.revokeObjectURL(_);
+    _ = objURL;
+    const a = document.createElement('a');
+    a.download = $;
+    a.href = objURL;
+    a.click();
     if ("Primary" == Object.Color) $.strokeStyle = "#bfbfbf"
     if ("Secondary" == Object.Color) $.strokeStyle = "#7f7f7f"
     if ("Tertiary" == Object.Color) $.strokeStyle = "#3f3f3f"
