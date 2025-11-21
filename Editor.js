@@ -80,7 +80,7 @@ function pickColor(latter,Z) {
 }
 
 function Save() {
-    alert(JSON.stringify({"Set":Set,"Board":Board,"Paths":Paths}))
+    alert(JSON.stringify({"Set":Set_,"Board":Board,"Paths":Paths}))
 }
 
 /*
