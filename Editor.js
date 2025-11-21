@@ -39,6 +39,26 @@ function clickCanvas() {
 }
 
 function setPath(x,y) {
+    $.beginPath()
+    $.moveTo(_*(x-.5)/Board.length, _*(y-.5)/Board.length)
+    for (const pursuit of Object.Array) {
+        switch (pursuit) {
+            case 0: y--; break
+            case 1: x++; y--; break
+            case 2: x++; break
+            case 3: x++; y++; break
+            case 4: y++; break
+            case 5: x--; y++; break
+            case 6: x--; break
+            case 7: x--; y--; break
+        }
+        if (x<1 || y<1 || x>Board.length || y>Board.length) return spurn([x,y],7)
+        Group.push(Solve[y-1][x-1])
+        $.lineTo(_*(x-.5)/Board.length, _*(y-.5)/Board.length)
+    }
+    $.strokeStyle = Object.Color
+    $.lineWidth = _/7/Board.length
+    $.stroke()
 }
 
 function fixSquare(x,y) {
