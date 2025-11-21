@@ -35,9 +35,10 @@ function clickCanvas() {
         setPath(Path)
         return
         Paths.push(Path)
+    } else {
+        if (!window.isTest) return fixSquare(X,Y)
+        if (!Board[Y][X]) addSquare(X,Y)
     }
-    if (!window.isTest) return fixSquare(X,Y)
-    if (!Board[Y][X]) addSquare(X,Y)
 }
 
 function setPath(Path) {
