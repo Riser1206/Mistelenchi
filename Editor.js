@@ -32,7 +32,6 @@ function clickCanvas() {
     const Y = Math.round((event.clientY-$.canvas.offsetTop)*Length_/$.canvas.offsetHeight-1/2)
     if (isPaths) {
         Paths.push({"Color":Color,"X":X+1,"Y":Y+1,"Array":[]})
-    alert(JSON.stringify(Paths))
         return
     }
     if (!window.isTest) return fixSquare(X,Y)
@@ -78,6 +77,10 @@ function pickColor(latter,Z) {
         case "green": Color = "Green"; break
         case "rgb(63, 63, 63)": Color = "Tertiary"; break
     }
+}
+
+function Save() {
+    alert(JSON.stringify({"Set":Set,"Board":Board,"Paths":Paths}))
 }
 
 /*
