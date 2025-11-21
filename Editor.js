@@ -16,7 +16,7 @@ function loadMap(Stage,Set,Length) {
     Paths = []
     _1.style.display = Set*3 == Length ? "none" : "inline-block"
     $.clearRect(0, 0, Canva.width, Canva.height)
-    Qnumber.innerText = `${(Stage_=Stage) ? Stage_ : `→Click←`}\nSet: ${Set_=Set}`
+    Qnumber.innerText = `${(Stage_=Stage) ? Stage_ : "→Click←"}\nSet: ${Set_=Set}`
     pickColor(_0.style)
     Board = Array(Length_=Length)
     for (let y = 0; y < Length_; y++) {
