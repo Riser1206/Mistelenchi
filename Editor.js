@@ -82,11 +82,11 @@ function pickColor(latter,Z) {
 function Save() {
     alert(JSON.stringify({"Set":Set_,"Board":Board,"Paths":Paths}))
     const blob = new Blob([JSON.stringify({"Set":Set_,"Board":Board,"Paths":Paths})], { type: 'text/plain' });
-    let objURL = URL.createObjectURL(blob);
+    let __ = URL.createObjectURL(blob);
     if (window.___) URL.revokeObjectURL(___);
-    ___ = objURL;
+    ___ = __;
     const a = document.createElement('a');
-    a.download = Stage_;
+    a.download = Stage_+'.json'
     a.href = objURL;
     a.click();
 }
