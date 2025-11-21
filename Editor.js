@@ -49,6 +49,7 @@ function fixSquare(x,y) {
     $.fillStyle = former.background
 }
 function addSquare(x,y) {
+    if (isPaths) return
     $.fillRect(_*x/Length_+25,_*y/Length_+25,_/Length_-50,_/Length_-50)
     //if (Given) for (const Path of Paths) hintPaths(Path)
 }
