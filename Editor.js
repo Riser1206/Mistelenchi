@@ -31,16 +31,18 @@ function clickCanvas() {
     const X = Math.round((event.clientX-$.canvas.offsetLeft)*Length_/$.canvas.offsetWidth-1/2)
     const Y = Math.round((event.clientY-$.canvas.offsetTop)*Length_/$.canvas.offsetHeight-1/2)
     if (isPaths) {
+        const Path = {"Color":Color,"X":X+1,"Y":Y+1,"Array":[]}
+        setPath(Path)
         return
-        Paths.push({"Color":Color,"X":X+1,"Y":Y+1,"Array":[]})
+        Paths.push(Path)
     }
     if (!window.isTest) return fixSquare(X,Y)
     if (!Board[Y][X]) addSquare(X,Y)
 }
 
-function setPath(x,y) {
+function setPath(Path) {
     $.beginPath()
-    $.moveTo(_*(x-.5)/Board.length, _*(y-.5)/Board.length)
+    $.moveTo(_*(Path.X-.5)/Length_, _*(Path.Y-.5)/Length_)
     for (const pursuit of Object.Array) {
         switch (pursuit) {
             case 0: y--; break
@@ -52,9 +54,8 @@ function setPath(x,y) {
             case 6: x--; break
             case 7: x--; y--; break
         }
-        if (x<1 || y<1 || x>Board.length || y>Board.length) return spurn([x,y],7)
-        Group.push(Solve[y-1][x-1])
-        $.lineTo(_*(x-.5)/Board.length, _*(y-.5)/Board.length)
+        Group.push(Solve[Path.Y-1][Path.X-1])
+        $.lineTo(_*(Path.X-.5)/Length_, _*(Path.Y-.5)/Length_)
     }
     $.strokeStyle = Object.Color
     $.lineWidth = _/7/Board.length
