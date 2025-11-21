@@ -34,6 +34,7 @@ function clickCanvas() {
 }
 
 function fixSquare(x,y) {
+    if (isPaths) return
     Board[y][x] = ""
     if (Color == R) Board[y][x] = "R"
     if (Color == G) Board[y][x] = "G"
