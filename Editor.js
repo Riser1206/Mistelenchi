@@ -68,11 +68,28 @@ function pickColor(latter,Z) {
     Color = $.fillStyle = latter.background = latter.color
     former = latter
     if (isPaths = Z) switch (Color) {
-        case "Color": Color = "Color"; break
+        case "rgb(191, 191, 191)": Color = "Primary"; break
+        case "red": Color = "Red"; break
+        case "gold": Color = "Gold"; break
+        case "blue": Color = "Blue"; break
+        case "rgb(127, 127, 127)": Color = "Secondary"; break
+        case "purple": Color = "Purple"; break
+        case "orange": Color = "Orange"; break
+        case "green": Color = "Green"; break
+        case "rgb(63, 63, 63)": Color = "Tertiary"; break
     }
 }
 
 /*
+    if ("Primary" == Object.Color) $.strokeStyle = "#bfbfbf"
+    if ("Secondary" == Object.Color) $.strokeStyle = "#7f7f7f"
+    if ("Tertiary" == Object.Color) $.strokeStyle = "#3f3f3f"
+    if (Results == "truefalsetrue") $.strokeStyle = Achromatic ? "#7f7f7f" : "Purple"
+    if (Results == "truefalsefalse") $.strokeStyle = Achromatic ? "#bfbfbf" : "Red"
+    if (Results == "truetruefalse") $.strokeStyle = Achromatic ? "#7f7f7f" : "Orange"
+    if (Results == "falsetruefalse") $.strokeStyle = Achromatic ? "#bfbfbf" : "Gold"
+    if (Results == "falsetruetrue") $.strokeStyle = Achromatic ? "#7f7f7f" : "Green"
+    if (Results == "falsefalsetrue") $.strokeStyle = Achromatic ? "#bfbfbf" : "Blue"
 function Clear() {
     Given = 0
     Solve = Array(Board.length)
@@ -149,9 +166,6 @@ function hintPaths(Object) {
     }
     $.strokeStyle = Object.Color
     $.lineWidth = _/7/Board.length
-    if ("Primary" == Object.Color) $.strokeStyle = "#bfbfbf"
-    if ("Secondary" == Object.Color) $.strokeStyle = "#7f7f7f"
-    if ("Tertiary" == Object.Color) $.strokeStyle = "#3f3f3f"
     $.stroke()
     const Results = ""+Group.includes(R)+Group.includes(G)+Group.includes(B)
     const Target = $.strokeStyle
