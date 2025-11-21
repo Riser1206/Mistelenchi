@@ -32,7 +32,7 @@ function clickCanvas() {
     const Y = Math.round((event.clientY-$.canvas.offsetTop)*Length_/$.canvas.offsetHeight-1/2)
     if (isPaths) {
     Paths.push()
-try {
+try {let someUndefinedVariable = 10
   // 시도할 코드 블록 (오류 발생 가능성 있음)
   let result = 10 / someUndefinedVariable; // ReferenceError 발생
   alert(result); // 이 줄은 실행되지 않습니다
