@@ -53,10 +53,11 @@ function addSquare(x,y) {
 }
 
 
-function pickColor(latter) {
+function pickColor(latter,Z) {
     if (window.former != undefined) former.background = latter.background
     Color = $.fillStyle = latter.background = latter.color
     former = latter
+    isPaths = Z
 }
 
 /*
