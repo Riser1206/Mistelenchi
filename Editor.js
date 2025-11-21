@@ -81,7 +81,7 @@ function pickColor(latter,Z) {
 
 function Save() {
     alert(JSON.stringify({"Set":Set_,"Board":Board,"Paths":Paths}))
-    let __ = URL.createObjectURL(new Blob([JSON.stringify({"Set":Set_,"Board":Board,"Paths":Paths})], { type: 'text/plain' }))
+    let __ = URL.createObjectURL(new Blob([JSON.stringify({"Set":Set_,"Board":Board,"Paths":Paths})], { type: 'application/json' }))
     if (window.___) URL.revokeObjectURL(___)
     ___ = __
     const a = document.createElement('a')
