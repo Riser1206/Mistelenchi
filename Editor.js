@@ -31,9 +31,9 @@ function clickCanvas() {
     const X = Math.round((event.clientX-$.canvas.offsetLeft)*Length_/$.canvas.offsetWidth-1/2)
     const Y = Math.round((event.clientY-$.canvas.offsetTop)*Length_/$.canvas.offsetHeight-1/2)
     if (isPaths) {
-    Paths.push({"Color":Color,"X":X+1,"Y":Y+1,"Array":[]})
+        Paths.push({"Color":Color,"X":X+1,"Y":Y+1,"Array":[]})
     alert(JSON.stringify(Paths))
-    return
+        return
     }
     if (!window.isTest) return fixSquare(X,Y)
     if (!Board[Y][X]) addSquare(X,Y)
@@ -67,7 +67,9 @@ function pickColor(latter,Z) {
     if (window.former != undefined) former.background = latter.background
     Color = $.fillStyle = latter.background = latter.color
     former = latter
-    isPaths = Z
+    if (isPaths = Z) switch (Color) {
+        case "Color": Color = "Color"; break
+    }
 }
 
 /*
