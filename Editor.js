@@ -33,7 +33,6 @@ function clickCanvas() {
     if (isPaths) {
         const Path = {"Color":Color,"X":X+1,"Y":Y+1,"Array":[]}
         setPath(Path)
-        return
         Paths.push(Path)
     } else {
         if (!window.isTest) return fixSquare(X,Y)
@@ -42,6 +41,7 @@ function clickCanvas() {
 }
 
 function setPath(Path) {
+        /*
     $.beginPath()
     $.moveTo(_*(Path.X-.5)/Length_, _*(Path.Y-.5)/Length_)
     for (const pursuit of Object.Array) {
@@ -61,6 +61,8 @@ function setPath(Path) {
     $.strokeStyle = Object.Color
     $.lineWidth = _/7/Board.length
     $.stroke()
+        return
+        */
 }
 
 function fixSquare(x,y) {
