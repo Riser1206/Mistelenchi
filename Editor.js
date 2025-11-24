@@ -37,7 +37,7 @@ function clickCanvas() {
         if (!window.isTest) return fixSquare(X,Y)
         if (!Board[Y][X]) addSquare(X,Y)
     }
-    //for (const Path of Paths) hintPaths(Path)
+    for (const Path of Paths) drawPaths(Path)
 }
 
 function addPath(Path) {
@@ -45,6 +45,9 @@ function addPath(Path) {
     $.arc(_*(Path.X-.5)/Length_,_*(Path.Y-.5)/Length_,_/7/Length_,0,7)
     $.fill()
     $.closePath()
+}
+
+function drawPaths(Path) {
         /*
     $.beginPath()
     $.moveTo(_*(Path.X-.5)/Length_, _*(Path.Y-.5)/Length_)
