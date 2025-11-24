@@ -39,7 +39,6 @@ function clickCanvas() {
         if (!Board[Y][X]) addSquare(X,Y)
     }
     for (const Path of Paths) drawPaths(Path)
-    alert(JSON.stringify({Set:Set_,Board:Board,Paths:Paths}))
 }
 
 function addPath(Path) {
@@ -70,7 +69,6 @@ function drawPaths(Path) {
     $.strokeStyle = Path.Color
     $.lineWidth = _/7/Length_
     $.stroke()
-    alert()
 }
 
 function fixSquare(x,y) {
