@@ -66,10 +66,9 @@ function drawPaths(Path) {
         }
         $.lineTo(_*(x-.5)/Length_, _*(y-.5)/Length_)
     }
-    $.strokeStyle = "black"//Path.Color
+    $.strokeStyle = Path.Color
     $.lineWidth = _/7/Length_
     $.stroke()
-    alert([Object.X,Object.Y,x,y])
 }
 
 function fixSquare(x,y) {
