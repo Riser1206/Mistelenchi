@@ -32,6 +32,7 @@ function clickCanvas() {
     const Y = Math.round((event.clientY-$.canvas.offsetTop)*Length_/$.canvas.offsetHeight-1/2)
     if (isPathNum == []) {
         const Path = {"Color":Color,"X":X+1,"Y":Y+1,"Array":[]}
+        Path.Array.push(7) //{"Color":Color,"X":X+1,"Y":Y+1,"Array":[]}
         Paths.push(Path)
     } else {
         if (!window.isTest) return fixSquare(X,Y)
@@ -66,7 +67,6 @@ function drawPaths(Path) {
     $.strokeStyle = Path.Color
     $.lineWidth = _/7/Length_
     $.stroke()
-    alert()
 }
 
 function fixSquare(x,y) {
@@ -87,7 +87,6 @@ function fixSquare(x,y) {
 function addSquare(x,y) {
     $.fillRect(_*x/Length_+25,_*y/Length_+25,_/Length_-50,_/Length_-50)
 }
-
 
 function pickColor(latter,Z) {
     if (window.former != undefined) former.background = latter.background
