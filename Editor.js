@@ -49,8 +49,8 @@ function addPath(Path) {
 }
 
 function drawPaths(Path) {
-    let x = Object.X
-    let y = Object.Y
+    let x = Path.X
+    let y = Path.Y
     $.beginPath()
     $.moveTo(_*(x-.5)/Length_, _*(y-.5)/Length_)
     for (const pursuit of Path.Array) {
