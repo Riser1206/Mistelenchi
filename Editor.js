@@ -41,7 +41,6 @@ function clickCanvas() {
 }
 
 function addPath(Path) {
-alert($.fill();$.fill();$.fill())
     $.beginPath()
     $.arc(_*(Path.X-.5)/Length_,_*(Path.Y-.5)/Length_,_/7/Length_,0,7)
     $.fill()
