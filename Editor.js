@@ -30,7 +30,7 @@ function loadMap(Stage,Set,Length) {
 function clickCanvas() {
     const X = Math.round((event.clientX-$.canvas.offsetLeft)*Length_/$.canvas.offsetWidth-1/2)
     const Y = Math.round((event.clientY-$.canvas.offsetTop)*Length_/$.canvas.offsetHeight-1/2)
-    if (isPaths) {
+    if (isPathNum) {
         const Path = {"Color":Color,"X":X+1,"Y":Y+1,"Array":[]}
         setPath(Path)
         Paths.push(Path)
@@ -90,7 +90,7 @@ function pickColor(latter,Z) {
     if (window.former != undefined) former.background = latter.background
     Color = $.fillStyle = latter.background = latter.color
     former = latter
-    if (isPaths = Z) switch (Color) {
+    if (isPathNum = Z) switch (Color) {
         case "rgb(191, 191, 191)": Color = "Primary"; break
         case "red": Color = "Red"; break
         case "gold": Color = "Gold"; break
