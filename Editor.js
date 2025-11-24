@@ -31,8 +31,8 @@ function clickCanvas() {
     const X = Math.round((event.clientX-$.canvas.offsetLeft)*Length_/$.canvas.offsetWidth-1/2)
     const Y = Math.round((event.clientY-$.canvas.offsetTop)*Length_/$.canvas.offsetHeight-1/2)
     if (isPathNum == []) {
-        const Path = {Color:Color,X:X+1,Y:Y+1,Array:[]}
-        Path.Array.push(7) //{"Color":Color,"X":X+1,"Y":Y+1,"Array":[]}
+        const Path = {Color=Color,X=X+1,Y=Y+1,Array=[]}
+        Path.Array.push(7) //{Color:Color,X:X+1,Y:Y+1,Array:[]}
         Paths.push(Path)
     } else {
         if (!window.isTest) return fixSquare(X,Y)
@@ -107,7 +107,7 @@ function pickColor(latter,Z) {
 }
 
 function Save() {
-    let __ = URL.createObjectURL(new Blob([JSON.stringify({"Set":Set_,"Board":Board,"Paths":Paths})], { type: 'application/json' }))
+    let __ = URL.createObjectURL(new Blob([JSON.stringify({Set:Set_,Board:Board,Paths:Paths})], { type: 'application/json' }))
     if (window.___) URL.revokeObjectURL(___)
     ___ = __
     const a = document.createElement('a')
