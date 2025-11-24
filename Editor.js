@@ -32,7 +32,7 @@ function clickCanvas() {
     const Y = Math.round((event.clientY-$.canvas.offsetTop)*Length_/$.canvas.offsetHeight-1/2)
     if (isPathNum == []) {
         const Path = {"Color":Color,"X":X+1,"Y":Y+1,"Array":[]}
-        setPath(Path)
+        addPath(Path)
         Paths.push(Path)
     } else {
         if (!window.isTest) return fixSquare(X,Y)
@@ -40,7 +40,7 @@ function clickCanvas() {
     }
 }
 
-function setPath(Path) {
+function addPath(Path) {
     $.beginPath()
     $.arc(_*(Path.X-.5)/Length_,_*(Path.Y-.5)/Length_,_/7/Length_,0,7)
     $.fill()
