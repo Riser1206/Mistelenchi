@@ -38,7 +38,7 @@ function clickCanvas() {
         if (!window.isTest) return fixSquare(X,Y)
         if (!Board[Y][X]) addSquare(X,Y)
     }
-    for (const Path of Paths) hintPaths(Path)
+    //for (const Path of Paths) hintPaths(Path)
 }
 
 function addPath(Path) {
