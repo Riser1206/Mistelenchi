@@ -66,7 +66,7 @@ function drawPaths(Path) {
         }
         $.lineTo(_*(x-.5)/Length_, _*(y-.5)/Length_)
     }
-    $.strokeStyle = Path.Color
+    $.strokeStyle = "black"//Path.Color
     $.lineWidth = _/7/Length_
     $.stroke()
 }
