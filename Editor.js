@@ -93,7 +93,7 @@ function pickColor(latter,Z) {
     if (window.former != undefined) former.background = latter.background
     Color = $.fillStyle = latter.background = latter.color
     former = latter
-    if (isPathNum = Z) switch (Color) {
+    if (isPathNum == []) switch (Color) {
         case "rgb(191, 191, 191)": Color = "Primary"; break
         case "red": Color = "Red"; break
         case "gold": Color = "Gold"; break
