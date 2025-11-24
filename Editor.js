@@ -30,7 +30,7 @@ function loadMap(Stage,Set,Length) {
 function clickCanvas() {
     const X = Math.round((event.clientX-$.canvas.offsetLeft)*Length_/$.canvas.offsetWidth-1/2)
     const Y = Math.round((event.clientY-$.canvas.offsetTop)*Length_/$.canvas.offsetHeight-1/2)
-    if (isPathNum) {
+    if (isPathNum == []) {
         const Path = {"Color":Color,"X":X+1,"Y":Y+1,"Array":[]}
         setPath(Path)
         Paths.push(Path)
