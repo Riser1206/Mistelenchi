@@ -31,8 +31,8 @@ function clickCanvas() {
     const X = Math.round((event.clientX-$.canvas.offsetLeft)*Length_/$.canvas.offsetWidth-1/2)
     const Y = Math.round((event.clientY-$.canvas.offsetTop)*Length_/$.canvas.offsetHeight-1/2)
     if (isPathNum == []) {
-        const Path = {Color=Color,X=X+1,Y=Y+1,Array=[]}
-        Path.Array.push(7) //{Color:Color,X:X+1,Y:Y+1,Array:[]}
+        const Path = {Color:Color,X:X+1,Y:Y+1,Array:[]}
+        Path.Array.push(7)
         Paths.push(Path)
     } else {
         if (!window.isTest) return fixSquare(X,Y)
