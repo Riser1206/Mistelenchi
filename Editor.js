@@ -69,6 +69,7 @@ function drawPaths(Path) {
     $.strokeStyle = "black"//Path.Color
     $.lineWidth = _/7/Length_
     $.stroke()
+    alert([Object.X,Object.Y,x,y])
 }
 
 function fixSquare(x,y) {
