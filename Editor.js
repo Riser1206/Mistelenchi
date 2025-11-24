@@ -39,6 +39,7 @@ function clickCanvas() {
         if (!Board[Y][X]) addSquare(X,Y)
     }
     for (const Path of Paths) drawPaths(Path)
+    alert()
     alert(JSON.stringify({Set:Set_,Board:Board,Paths:Paths}))
 }
 
