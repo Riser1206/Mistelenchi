@@ -64,7 +64,7 @@ function drawPaths(Path) {
         $.lineTo(_*(Path.X-.5)/Length_, _*(Path.Y-.5)/Length_)
     }
     $.strokeStyle = Path.Color
-    $.lineWidth = _/7/Board.length
+    $.lineWidth = _/7/Length_
     $.stroke()
     alert()
 }
