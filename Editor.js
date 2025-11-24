@@ -41,6 +41,10 @@ function clickCanvas() {
 }
 
 function setPath(Path) {
+    $.beginPath()
+    $.arc(_*(Path.X-.5)/Length_,_*(Path.Y-.5)/Length_,_/7/Length_,0,7)
+    $.fill()
+    $.closePath()
         /*
     $.beginPath()
     $.moveTo(_*(Path.X-.5)/Length_, _*(Path.Y-.5)/Length_)
