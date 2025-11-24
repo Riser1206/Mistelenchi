@@ -48,10 +48,9 @@ function addPath(Path) {
 }
 
 function drawPaths(Path) {
-        /*
     $.beginPath()
     $.moveTo(_*(Path.X-.5)/Length_, _*(Path.Y-.5)/Length_)
-    for (const pursuit of Object.Array) {
+    for (const pursuit of Path.Array) {
         switch (pursuit) {
             case 0: y--; break
             case 1: x++; y--; break
@@ -62,14 +61,12 @@ function drawPaths(Path) {
             case 6: x--; break
             case 7: x--; y--; break
         }
-        Group.push(Solve[Path.Y-1][Path.X-1])
         $.lineTo(_*(Path.X-.5)/Length_, _*(Path.Y-.5)/Length_)
     }
-    $.strokeStyle = Object.Color
+    $.strokeStyle = Path.Color
     $.lineWidth = _/7/Board.length
     $.stroke()
-        return
-        */
+    alert()
 }
 
 function fixSquare(x,y) {
