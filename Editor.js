@@ -50,8 +50,10 @@ function addPath(Path) {
 }
 
 function drawPaths(Path) {
+    let x = Object.X
+    let y = Object.Y
     $.beginPath()
-    $.moveTo(_*(Path.X-.5)/Length_, _*(Path.Y-.5)/Length_)
+    $.moveTo(_*(x-.5)/Length_, _*(y-.5)/Length_)
     for (const pursuit of Path.Array) {
         switch (pursuit) {
             case 0: y--; break
@@ -63,7 +65,7 @@ function drawPaths(Path) {
             case 6: x--; break
             case 7: x--; y--; break
         }
-        $.lineTo(_*(Path.X-.5)/Length_, _*(Path.Y-.5)/Length_)
+        $.lineTo(_*(x-.5)/Length_, _*(y-.5)/Length_)
     }
     $.strokeStyle = Path.Color
     $.lineWidth = _/7/Length_
