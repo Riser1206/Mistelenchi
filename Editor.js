@@ -94,17 +94,7 @@ function pickColor(latter,Z) {
     if (window.former != undefined) former.background = latter.background
     Color = $.fillStyle = latter.background = latter.color
     former = latter
-    if ((isPathNum=Z) == []) switch (Color) {
-        case "rgb(191, 191, 191)": Color = "Primary"; break
-        case "red": Color = "Red"; break
-        case "gold": Color = "Gold"; break
-        case "blue": Color = "Blue"; break
-        case "rgb(127, 127, 127)": Color = "Secondary"; break
-        case "purple": Color = "Purple"; break
-        case "orange": Color = "Orange"; break
-        case "green": Color = "Green"; break
-        case "rgb(63, 63, 63)": Color = "Tertiary"; break
-    }
+    isPathNum = Z
 }
 
 function Save() {
@@ -117,7 +107,18 @@ function Save() {
     a.click()
 }
 
-/*{"Set":Set_,"Board":Board,"Paths":Paths}
+/*
+    if (isPathNum == []) switch (Color) {
+        case "rgb(191, 191, 191)": Color = "Primary"; break
+        case "red": Color = "Red"; break
+        case "gold": Color = "Gold"; break
+        case "blue": Color = "Blue"; break
+        case "rgb(127, 127, 127)": Color = "Secondary"; break
+        case "purple": Color = "Purple"; break
+        case "orange": Color = "Orange"; break
+        case "green": Color = "Green"; break
+        case "rgb(63, 63, 63)": Color = "Tertiary"; break
+    }
     const blob = new Blob([data], { type: 'text/plain' });
     objURL = URL.createObjectURL(blob);
     if (window._) URL.revokeObjectURL(_);
