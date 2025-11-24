@@ -31,7 +31,7 @@ function clickCanvas() {
     const X = Math.round((event.clientX-$.canvas.offsetLeft)*Length_/$.canvas.offsetWidth-1/2)
     const Y = Math.round((event.clientY-$.canvas.offsetTop)*Length_/$.canvas.offsetHeight-1/2)
     if (isPathNum == []) {
-        const Path = {"Color":Color,"X":X+1,"Y":Y+1,"Array":[]}
+        const Path = {Color:Color,X:X+1,Y:Y+1,Array:[]}
         Path.Array.push(7) //{"Color":Color,"X":X+1,"Y":Y+1,"Array":[]}
         Paths.push(Path)
     } else {
@@ -39,6 +39,7 @@ function clickCanvas() {
         if (!Board[Y][X]) addSquare(X,Y)
     }
     for (const Path of Paths) drawPaths(Path)
+    alert(JSON.stringify({Set:Set_,Board:Board,Paths:Paths}))
 }
 
 function addPath(Path) {
@@ -106,7 +107,6 @@ function pickColor(latter,Z) {
 }
 
 function Save() {
-    alert(JSON.stringify({"Set":Set_,"Board":Board,"Paths":Paths}))
     let __ = URL.createObjectURL(new Blob([JSON.stringify({"Set":Set_,"Board":Board,"Paths":Paths})], { type: 'application/json' }))
     if (window.___) URL.revokeObjectURL(___)
     ___ = __
