@@ -42,10 +42,6 @@ alert(isPathNum + "\n" + JSON.stringify(Paths))
 }
 
 function addPath(Path) {
-    $.beginPath()
-    $.arc(_*(Path.X-.5)/Length_,_*(Path.Y-.5)/Length_,_/7/Length_,0,7)
-    $.fill()
-    $.closePath()
 }
 
 function drawPaths(Path) {
@@ -69,6 +65,12 @@ function drawPaths(Path) {
     $.strokeStyle = Path.Color
     $.lineWidth = _/7/Length_
     $.stroke()
+    if (Paths[isPathNum-1] == Path) {
+        $.beginPath()
+        $.arc(_*(Path.X-.5)/Length_,_*(Path.Y-.5)/Length_,_/7/Length_,0,7)
+        $.fill()
+        $.closePath()
+    }
 }
 
 function fixSquare(x,y) {
