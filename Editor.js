@@ -43,6 +43,7 @@ function clickCanvas() {
     drawSquare()
     for (const Path of Paths) drawPaths(Path)
 
+Qnumber.background="white"
 Qnumber.background="radial-gradient(white, transparent, black),conic-gradient(red,orange,yellow,green,blue)"
 }
 
