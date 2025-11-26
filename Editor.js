@@ -52,6 +52,14 @@ function drawSquare() {
         for (let x = 0; x < Length_; x++) {
             $.fillStyle = Solve[y][x]
             $.fillRect(_*x/Length_+25,_*y/Length_+25,_/Length_-50,_/Length_-50)
+            if (Board[y][x] == "white") {
+                $.fillStyle = "#fff7"
+                $.beginPath()
+                $.arc(_*(x+.5)/Length_,_*(y+.5)/Length_,_/7/Length_,0,7)
+                $.fill()
+                $.closePath()
+                $.fillStyle = former.background
+            }
         }
     }
 }
@@ -88,14 +96,6 @@ function drawPaths(Path) {
 function fixSquare(x,y) {
     Board[y][x] = Color
     Solve[y][x] = Color
-/*
-    $.fillStyle = "#fff7"
-    $.beginPath()
-    $.arc(_*(x+.5)/Length_,_*(y+.5)/Length_,_/7/Length_,0,7)
-    $.fill()
-    $.closePath()
-    $.fillStyle = former.background
-*/
 }
 
 function addSquare(x,y) {
