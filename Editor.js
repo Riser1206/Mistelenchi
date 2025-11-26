@@ -29,6 +29,7 @@ function loadMap(Stage,Set,Length) {
             fixSquare(x,y)
         }
     }
+    drawSquare()
 }
 
 function clickCanvas() {
