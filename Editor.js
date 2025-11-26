@@ -32,6 +32,7 @@ function clickCanvas() {
     const Y = Math.round((event.clientY-$.canvas.offsetTop)*Length_/$.canvas.offsetHeight-1/2)
     if (isPathNum == []) {
         const Path = {Color:Color,X:X+1,Y:Y+1,Array:[]}
+        isPathNum = Paths.length
         Paths.push(Path)
     } else if (!window.isTest) fixSquare(X,Y); else if (!Board[Y][X]) addSquare(X,Y)
     for (const Path of Paths) drawPaths(Path)
