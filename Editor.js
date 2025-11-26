@@ -99,6 +99,9 @@ function addSquare(x,y) {
 */
 }
 
+function store(Way) {
+}
+
 function pickColor(latter,Z) {
     if (window.former != undefined) former.background = latter.background
     Color = $.fillStyle = latter.background = latter.color
@@ -106,7 +109,7 @@ function pickColor(latter,Z) {
     isPathNum = Z
 }
 
-function Save() {
+function save() {
     let __ = URL.createObjectURL(new Blob([JSON.stringify({Set:Set_,Board:Board,Paths:Paths})], { type: 'application/json' }))
     if (window.___) URL.revokeObjectURL(___)
     ___ = __
