@@ -2,9 +2,11 @@ const _ = Canva.width = Canva.height = 2500
 const $ = Canva.getContext("2d")
 $.lineCap = "round"
 $.lineJoin = "round"
+const $0 = "white"
 const R = "red"
 const G = "gold"
 const B = "blue"
+const $1 = "black"
 if (innerWidth > innerHeight) spurn("가로 화면입니다. 세로 화면으로 바꿔주세요.",0); else loadMap(``,1,3)
 
 function spurn(message, code) {
@@ -18,6 +20,7 @@ function loadMap(Stage,Set,Length) {
     $.clearRect(0, 0, Canva.width, Canva.height)
     Qnumber.innerText = `${(Stage_=Stage) ? Stage_ : "→Click←"}\nSet: ${Set_=Set}`
     pickColor(_0.style)
+    $.strokeStyle = $0
     Board = Array(Length_)
     Solve = Array(Length_)
     for (let y = 0; y < Length_; y++) {
@@ -115,7 +118,7 @@ function store(x,y,Way) {
 function pickColor(latter,Z) {
     if (window.former != undefined) former.background = latter.background
     switch (latter.background = latter.color) {
-        case "black": Color = " "; break
+        case $1: Color = " "; break
         case R: Color = "R"; break
         case G: Color = "G"; break
         case B: Color = "B"; break
