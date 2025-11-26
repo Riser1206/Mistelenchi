@@ -45,6 +45,7 @@ function addPath(Path) {
 }
 
 function drawPaths(Path) {
+    $.clearRect(0, 0, Canva.width, Canva.height)
     let x = Path.X
     let y = Path.Y
     $.beginPath()
