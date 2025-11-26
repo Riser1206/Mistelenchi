@@ -2,11 +2,6 @@ const _ = Canva.width = Canva.height = 2500
 const $ = Canva.getContext("2d")
 $.lineCap = "round"
 $.lineJoin = "round"
-const $0 = "white"
-const R = "red"
-const G = "gold"
-const B = "blue"
-const $1 = "black"
 if (innerWidth > innerHeight) spurn("가로 화면입니다. 세로 화면으로 바꿔주세요.",0); else loadMap(``,1,3)
 
 function spurn(message, code) {
@@ -84,7 +79,7 @@ function drawPaths(Path) {
     $.lineWidth = _/7/Length_
     $.stroke()
     if (Paths[isPathNum-1] == Path) {
-        $.fillStyle = "black"
+        $.fillStyle = Path.Color
         $.beginPath()
         $.arc(_*(Path.X-.5)/Length_,_*(Path.Y-.5)/Length_,_/7/Length_,0,7)
         $.fill()
