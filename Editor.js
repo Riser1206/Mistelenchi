@@ -77,8 +77,8 @@ function drawPaths(Path) {
 }
 
 function fixSquare(x,y) {
-    store(x,y,Way)
-    store(x,y,Way)
+    store(x,y,Board)
+    store(x,y,Solve)
 /*
     $.fillRect(_*x/Length_+25,_*y/Length_+25,_/Length_-50,_/Length_-50)
     $.fillStyle = "#fff7"
@@ -91,7 +91,7 @@ function fixSquare(x,y) {
 }
 
 function addSquare(x,y) {
-    store(x,y,Way)
+    store(x,y,Solve)
 /*
     $.fillRect(_*x/Length_+25,_*y/Length_+25,_/Length_-50,_/Length_-50)
 */
