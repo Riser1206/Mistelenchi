@@ -82,26 +82,22 @@ function drawPaths(Path) {
     $.lineWidth = _/7/Length_
     $.stroke()
     if (Paths[isPathNum-1] == Path) {
-        $.fillStyle = Path.Color
-        $.beginPath()
-        $.arc(_*(Path.X-.5)/Length_,_*(Path.Y-.5)/Length_,_/7/Length_,0,7)
-        $.fill()
-        $.closePath()
+        for (let Y = 0; Y < 3; Y++) {
+            for (let X = 0; X < 3; X++) {
+                const Z = X*Y == 1
+                $.fillStyle = Path.Color
+                $.beginPath()
+                $.arc(_*(Path.X-.5)/Length_,_*(Path.Y-.5)/Length_,_/7/Length_,0,7)
+                $.fill()
+                $.closePath()
+            }
+        }
     }
 }
 
 function pickColor(latter,Z) {
     if (window.former != undefined) former.background = latter.background
     Color = latter.background = latter.color
-/*
-    switch (latter.background = latter.color) {
-        case $0: Color = ""; break
-        case R: Color = "R"; break
-        case G: Color = "G"; break
-        case B: Color = "B"; break
-        case $1: Color = " "; break
-    }
-*/
     former = latter
     isPathNum = Z
 }
@@ -117,6 +113,13 @@ function save() {
 }
 
 /*
+    switch (latter.background = latter.color) {
+        case $0: Color = ""; break
+        case R: Color = "R"; break
+        case G: Color = "G"; break
+        case B: Color = "B"; break
+        case $1: Color = " "; break
+    }
     if (isPathNum == []) switch (Color) {
         case "rgb(191, 191, 191)": Color = "Primary"; break
         case "red": Color = "Red"; break
