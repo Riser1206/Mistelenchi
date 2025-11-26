@@ -43,20 +43,7 @@ function clickCanvas() {
     drawSquare()
     for (const Path of Paths) drawPaths(Path)
 
-// 방사형 그라데이션 생성 (중심에서 바깥으로)
-const radialGrad = $.createRadialGradient(
-    75, 50, 5,  // 시작 원: (75, 50) 좌표, 반지름 5
-    90, 60, 100 // 끝 원: (90, 60) 좌표, 반지름 100
-);
-
-// 색상 정지점 추가
-radialGrad.addColorStop(0, "red");   // 시작점 색상
-radialGrad.addColorStop(1, "white"); // 끝점 색상
-
-// 스타일 적용 및 그리기
-$.fillStyle = radialGrad;
-$.fillRect(10, 10, 150, 100);
-
+Qnumber.background="radial-gradient(white, transparent, black),conic-gradient(red,orange,yellow,green,blue)"
 }
 
 function drawSquare() {
