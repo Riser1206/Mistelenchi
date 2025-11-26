@@ -34,8 +34,8 @@ function clickCanvas() {
         
     } else if (isPathNum == []) {
         const Path = {Color:Color,X:X+1,Y:Y+1,Array:[]}
-        isPathNum = Paths.length
         Paths.push(Path)
+        isPathNum = Paths.length
     } else if (!window.isTest) fixSquare(X,Y); else if (!Board[Y][X]) addSquare(X,Y)
     for (const Path of Paths) drawPaths(Path)
 alert(isPathNum + "\n" + JSON.stringify(Paths))
