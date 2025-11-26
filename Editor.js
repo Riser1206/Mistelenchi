@@ -41,9 +41,9 @@ function clickCanvas() {
         Paths.push(Path)
         isPathNum = Paths.length
     } else if (!window.isTest) fixSquare(X,Y); else if (Board[Y][X] == "white") addSquare(X,Y)
-//alert(JSON.stringify(Solve) + "\n" + JSON.stringify(Board))
     drawSquare()
-    for (const Path of Paths) drawPaths(Path)
+    for (const Path of Paths) drawPaths(Path
+alert(JSON.stringify(Solve) + "\n" + JSON.stringify(Board)))
 }
 
 function drawSquare() {
