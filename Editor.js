@@ -84,10 +84,10 @@ function drawPaths(Path) {
     if (Paths[isPathNum-1] == Path) {
         for (let Y = 0; Y < 3; Y++) {
             for (let X = 0; X < 3; X++) {
-                const Z = X*Y == 1
+                const Z = X*Y-1
                 $.fillStyle = Path.Color
                 $.beginPath()
-                $.arc(_*(Path.X-.5)/Length_,_*(Path.Y-.5)/Length_,_/7/Length_,0,7)
+                $.arc(_*(Path.X+X-.5)/Length_,_*(Path.Y+Y-.5)/Length_,_/7/Length_,0,7)
                 $.fill()
                 $.closePath()
             }
