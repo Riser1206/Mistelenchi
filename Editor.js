@@ -20,7 +20,6 @@ function loadMap(Stage,Set,Length) {
     $.clearRect(0, 0, Canva.width, Canva.height)
     Qnumber.innerText = `${(Stage_=Stage) ? Stage_ : "→Click←"}\nSet: ${Set_=Set}`
     pickColor(_0.style)
-    $.strokeStyle = $0
     Board = Array(Length_)
     Solve = Array(Length_)
     for (let y = 0; y < Length_; y++) {
@@ -28,7 +27,6 @@ function loadMap(Stage,Set,Length) {
         Solve[y] = Array(Length_)
         for (let x = 0; x < Length_; x++) {
             fixSquare(x,y)
-            $.fillRect(_*x/Length_+25,_*y/Length_+25,_/Length_-50,_/Length_-50)
         }
     }
 }
@@ -118,11 +116,11 @@ function store(x,y,Way) {
 function pickColor(latter,Z) {
     if (window.former != undefined) former.background = latter.background
     switch (latter.background = latter.color) {
-        case $1: Color = " "; break
+        case $0: Color = ""; break
         case R: Color = "R"; break
         case G: Color = "G"; break
         case B: Color = "B"; break
-        default: Color = ""; break
+        case $1: Color = " "; break
     }
     former = latter
     isPathNum = Z
