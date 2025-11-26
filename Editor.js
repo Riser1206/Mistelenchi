@@ -42,20 +42,21 @@ function clickCanvas() {
     } else if (Board[Y][X] == "white") Solve[Y][X] = Color
     drawSquare()
     for (const Path of Paths) drawPaths(Path)
-// 1. Create the gradient object (linear or radial)
-const gradient = $.createLinearGradient(0, 0, 100, 0); // x1, y1, x2, y2
 
-// 2. Add color stops
-gradient.addColorStop(0, "cyan");   // Start color
-gradient.addColorStop(0.5, "magenta"); // Middle color
-gradient.addColorStop(1, "yellow"); // End color
+// 방사형 그라데이션 생성 (중심에서 바깥으로)
+const radialGrad = $.createRadialGradient(
+    75, 50, 5,  // 시작 원: (75, 50) 좌표, 반지름 5
+    90, 60, 100 // 끝 원: (90, 60) 좌표, 반지름 100
+);
 
-// 3. Assign the gradient to strokeStyle
-$.strokeStyle = gradient;
+// 색상 정지점 추가
+radialGrad.addColorStop(0, "red");   // 시작점 색상
+radialGrad.addColorStop(1, "white"); // 끝점 색상
 
-// 4. Draw the path
-$.lineWidth = 5;
-$.strokeRect(10, 10, 100, 50);
+// 스타일 적용 및 그리기
+$.fillStyle = radialGrad;
+$.fillRect(10, 10, 150, 100);
+
 }
 
 function drawSquare() {
