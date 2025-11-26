@@ -42,6 +42,10 @@ function clickCanvas() {
         isPathNum = Paths.length
     } else if (!window.isTest) fixSquare(X,Y); else if (!Board[Y][X]) addSquare(X,Y)
 alert(JSON.stringify(Solve) + "\n" + JSON.stringify(Board))
+    for (const Path of Paths) drawPaths(Path)
+}
+
+function draw() {
     $.clearRect(0, 0, Canva.width, Canva.height)
     for (let y = 0; y < Length_; y++) {
         for (let x = 0; x < Length_; x++) {
@@ -49,10 +53,6 @@ alert(JSON.stringify(Solve) + "\n" + JSON.stringify(Board))
             $.fillRect(_*x/Length_+25,_*y/Length_+25,_/Length_-50,_/Length_-50)
         }
     }
-    for (const Path of Paths) drawPaths(Path)
-}
-
-function addPath(Path) {
 }
 
 function drawPaths(Path) {
