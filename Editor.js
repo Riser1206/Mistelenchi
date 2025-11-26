@@ -35,7 +35,7 @@ function clickCanvas() {
         Paths.push(Path)
     } else if (!window.isTest) fixSquare(X,Y); else if (!Board[Y][X]) addSquare(X,Y)
     for (const Path of Paths) drawPaths(Path)
-alert(JSON.stringify(Paths))
+alert(isPathNum + "\n" + JSON.stringify(Paths))
 }
 
 function addPath(Path) {
