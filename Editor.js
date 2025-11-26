@@ -86,7 +86,7 @@ function drawPaths(Path) {
             for (let X = 0; X < 3; X++) {
                 const Z = X*Y-1
                 $.fillStyle = Path.Color
-                const con = $.createConicGradient(0, 2000, 2000)
+                const con = $.createConicGradient(0, _/2, _/2)
                 con.addColorStop(0, 'white')
                 con.addColorStop(0.1, 'black')
                 con.addColorStop(0.9, 'white')
