@@ -42,9 +42,6 @@ function clickCanvas() {
     } else if (Board[Y][X] == "white") Solve[Y][X] = Color
     drawSquare()
     for (const Path of Paths) drawPaths(Path)
-
-Qnumber.style.background="white"
-Qnumber.style.background="radial-gradient(white, transparent, black),conic-gradient(red,orange,yellow,green,blue)"
 }
 
 function drawSquare() {
@@ -89,7 +86,7 @@ function drawPaths(Path) {
             for (let X = 0; X < 3; X++) {
                 const Z = X*Y-1
                 $.fillStyle = Path.Color
-                const con = $.createConicGradient(0, 0, 0)
+                const con = $.createConicGradient(2000, 2000, 2000)
                 con.addColorStop(0, 'red')
                 con.addColorStop(1, 'blue')
                 $.strokeStyle = con
