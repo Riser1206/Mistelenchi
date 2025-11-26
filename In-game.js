@@ -10,7 +10,7 @@ if (innerWidth > innerHeight) spurn("가로 화면입니다. 세로 화면으로
 
 function spurn(message, code) {
     alert(message + "\n" + code)
-    location.assign(code)
+    history.back()
 }
 
 function loadMap(Q) {
