@@ -52,14 +52,12 @@ function drawSquare() {
         for (let x = 0; x < Length_; x++) {
             $.fillStyle = Solve[y][x]
             $.fillRect(_*x/Length_+25,_*y/Length_+25,_/Length_-50,_/Length_-50)
-            if (Board[y][x] == "white") {
-                $.fillStyle = "#fff7"
-                $.beginPath()
-                $.arc(_*(x+.5)/Length_,_*(y+.5)/Length_,_/7/Length_,0,7)
-                $.fill()
-                $.closePath()
-                $.fillStyle = former.background
-            }
+            if (Board[y][x] == "white") continue
+            $.fillStyle = "#fff7"
+            $.beginPath()
+            $.arc(_*(x+.5)/Length_,_*(y+.5)/Length_,_/7/Length_,0,7)
+            $.fill()
+            $.closePath()
         }
     }
 }
