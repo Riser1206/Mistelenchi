@@ -77,11 +77,6 @@ function drawPaths(Path) {
 }
 
 function fixSquare(x,y) {
-    Board[y][x] = ""
-    if (Color == R) Board[y][x] = "R"
-    if (Color == G) Board[y][x] = "G"
-    if (Color == B) Board[y][x] = "B"
-    if (Color == "black") Board[y][x] = " "
 /*
     $.fillRect(_*x/Length_+25,_*y/Length_+25,_/Length_-50,_/Length_-50)
     $.fillStyle = "#fff7"
@@ -99,7 +94,12 @@ function addSquare(x,y) {
 */
 }
 
-function store(Way) {
+function store(x,y,Way) {
+    Board[y][x] = ""
+    if (Color == R) Board[y][x] = "R"
+    if (Color == G) Board[y][x] = "G"
+    if (Color == B) Board[y][x] = "B"
+    if (Color == "black") Board[y][x] = " "
 }
 
 function pickColor(latter,Z) {
