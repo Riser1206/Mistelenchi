@@ -82,6 +82,7 @@ function fixSquare(x,y) {
     if (Color == G) Board[y][x] = "G"
     if (Color == B) Board[y][x] = "B"
     if (Color == "black") Board[y][x] = " "
+/*
     $.fillRect(_*x/Length_+25,_*y/Length_+25,_/Length_-50,_/Length_-50)
     $.fillStyle = "#fff7"
     $.beginPath()
@@ -89,10 +90,13 @@ function fixSquare(x,y) {
     $.fill()
     $.closePath()
     $.fillStyle = former.background
+*/
 }
 
 function addSquare(x,y) {
+/*
     $.fillRect(_*x/Length_+25,_*y/Length_+25,_/Length_-50,_/Length_-50)
+*/
 }
 
 function pickColor(latter,Z) {
