@@ -77,16 +77,16 @@ function Count(Way, Language) {
     return massage
 }
 
-function drawPaths(Object) {
-    let x = Object.X
-    let y = Object.Y
-    if (!("Primary" == Object.Color || "Red" == Object.Color || "Gold" == Object.Color || "Blue" == Object.Color || "Secondary" == Object.Color || "Purple" == Object.Color || "Orange" == Object.Color || "Green" == Object.Color || "Tertiary" == Object.Color)) return spurn(Object.Color,3)
+function drawPaths(Path) {
+    let x = Path.X
+    let y = Path.Y
+    if (!("Primary" == Path.Color || "Red" == Path.Color || "Gold" == Path.Color || "Blue" == Path.Color || "Secondary" == Path.Color || "Purple" == Path.Color || "Orange" == Path.Color || "Green" == Path.Color || "Tertiary" == Path.Color)) return spurn(Path.Color,3)
     if (!Number.isInteger(x) || !Number.isInteger(y) || x<1 || y<1 || x>Board.length || y>Board.length) return spurn([x,y],4)
-    if (!Object.Array.length) return spurn(JSON.stringify(Object.Array),5)
+    if (!Path.Array.length) return spurn(JSON.stringify(Path.Array),5)
     const Group = [Solve[y-1][x-1]]
     $.beginPath()
     $.moveTo(_*(x-.5)/Board.length, _*(y-.5)/Board.length)
-    for (const pursuit of Object.Array) {
+    for (const pursuit of Path.Array) {
         switch (pursuit) {
             case 0: y--; break
             case 1: x++; y--; break
@@ -102,18 +102,18 @@ function drawPaths(Object) {
         Group.push(Solve[y-1][x-1])
         $.lineTo(_*(x-.5)/Board.length, _*(y-.5)/Board.length)
     }
-    $.strokeStyle = Object.Color
+    $.strokeStyle = Path.Color
     $.lineWidth = _/7/Board.length
-    if ("Primary" == Object.Color) $.strokeStyle = "#bfbfbf"
-    if ("Secondary" == Object.Color) $.strokeStyle = "#7f7f7f"
-    if ("Tertiary" == Object.Color) $.strokeStyle = "#3f3f3f"
+    if ("Primary" == Path.Color) $.strokeStyle = "#bfbfbf"
+    if ("Secondary" == Path.Color) $.strokeStyle = "#7f7f7f"
+    if ("Tertiary" == Path.Color) $.strokeStyle = "#3f3f3f"
     $.stroke()
     const Results = ""+Group.includes(R)+Group.includes(G)+Group.includes(B)
     const Target = $.strokeStyle
-    x = Object.X
-    y = Object.Y
+    x = Path.X
+    y = Path.Y
     $.moveTo(_*(x-.5)/Board.length, _*(y-.5)/Board.length)
-    for (const pursuit of Object.Array) {
+    for (const pursuit of Path.Array) {
         switch (pursuit) {
             case 0: y--; break
             case 1: x++; y--; break
@@ -126,7 +126,7 @@ function drawPaths(Object) {
         }
         $.lineTo(_*(x-.5)/Board.length, _*(y-.5)/Board.length)
     }
-    const Achromatic = 6 < Object.Color.length
+    const Achromatic = 6 < Path.Color.length
     if (Results == "falsefalsefalse") $.strokeStyle = "Ivory"
     if (Results == "truefalsetrue") $.strokeStyle = Achromatic ? "#7f7f7f" : "Purple"
     if (Results == "truefalsefalse") $.strokeStyle = Achromatic ? "#bfbfbf" : "Red"
