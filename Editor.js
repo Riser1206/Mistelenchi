@@ -25,6 +25,7 @@ function loadMap(Stage,Set,Length) {
         Solve[y] = Array(Length_)
         for (let x = 0; x < Length_; x++) {
             fixSquare(x,y)
+            $.fillRect(_*x/Length_+25,_*y/Length_+25,_/Length_-50,_/Length_-50)
         }
     }
 }
