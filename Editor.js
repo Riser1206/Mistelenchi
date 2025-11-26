@@ -36,10 +36,10 @@ function clickCanvas() {
         const Path = {Color:Color,X:X+1,Y:Y+1,Array:[]}
         Paths.push(Path)
         isPathNum = Paths.length
-    } else {
+    } else if (!window.isTest) {
+        Board[Y][X] = Color
         Solve[Y][X] = Color
-        if (Board[Y][X] != "white"!window.isTest) Board[Y][X] = Color
-    }
+    } else if (Board[Y][X] == "white") Solve[Y][X] = Color
     drawSquare()
     for (const Path of Paths) drawPaths(Path)
 }
