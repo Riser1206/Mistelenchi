@@ -85,7 +85,8 @@ function drawPaths(Path) {
         for (let Y = 0; Y < 3; Y++) {
             for (let X = 0; X < 3; X++) {
                 const Z = X*Y-1
-                $.fillStyle = Z ? "#777" : Path.Color
+                $.fillStyle = Path.Color
+                $.strokeStyle = "#777"
                 $.beginPath()
                 $.arc(_*(Path.X+X-1.5)/Length_,_*(Path.Y+Y-1.5)/Length_,_/(Z ? 9 : 5)/Length_,0,7)
                 $.fill()
