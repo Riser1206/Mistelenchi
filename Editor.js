@@ -14,13 +14,15 @@ function spurn(message, code) {
 
 function loadMap(Stage,Set,Length) {
     Paths = []
-    _1.style.display = Set*3 == Length ? "none" : "inline-block"
+    _1.style.display = Set*3 == (Length_=Length) ? "none" : "inline-block"
     $.clearRect(0, 0, Canva.width, Canva.height)
     Qnumber.innerText = `${(Stage_=Stage) ? Stage_ : "→Click←"}\nSet: ${Set_=Set}`
     pickColor(_0.style)
-    Board = Array(Length_=Length)
+    Board = Array(Length_)
+    Solve = Array(Length_)
     for (let y = 0; y < Length_; y++) {
         Board[y] = Array(Length_)
+        Solve[y] = Array(Length_)
         for (let x = 0; x < Length_; x++) {
             fixSquare(x,y)
         }
