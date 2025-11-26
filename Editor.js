@@ -20,7 +20,8 @@ function loadMap(Stage,Set,Length) {
         Board[y] = Array(Length_)
         Solve[y] = Array(Length_)
         for (let x = 0; x < Length_; x++) {
-            fixSquare(x,y)
+            Board[y][x] = Color
+            Solve[y][x] = Color
         }
     }
     drawSquare()
@@ -35,10 +36,12 @@ function clickCanvas() {
         const Path = {Color:Color,X:X+1,Y:Y+1,Array:[]}
         Paths.push(Path)
         isPathNum = Paths.length
-    } else if (!window.isTest) fixSquare(X,Y); else if (Board[Y][X] == "white") addSquare(X,Y)
+    } else if (!window.isTest) {
+        Board[y][x] = Color
+        Solve[y][x] = Color
+    } else if (Board[Y][X] == "white") Solve[y][x] = Color
     drawSquare()
     for (const Path of Paths) drawPaths(Path)
-alert(JSON.stringify(Solve) + "\n" + JSON.stringify(Board))
 }
 
 function drawSquare() {
@@ -85,15 +88,6 @@ function drawPaths(Path) {
         $.fill()
         $.closePath()
     }
-}
-
-function fixSquare(x,y) {
-    Board[y][x] = Color
-    Solve[y][x] = Color
-}
-
-function addSquare(x,y) {
-    Solve[y][x] = Color
 }
 
 function pickColor(latter,Z) {
