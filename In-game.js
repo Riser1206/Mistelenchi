@@ -47,7 +47,7 @@ function Clear() {
     }
     pickColor(_0.style)
     Given = 1
-    for (const Path of Paths) hintPaths(Path)
+    for (const Path of Paths) drawPaths(Path)
 }
 
 function Check() {
@@ -59,7 +59,7 @@ function Check() {
         }
     }
     let massage = Count(Solve,"번 가로줄에 ")+Count(Trans,"번 세로줄에 ")
-    for (const Path of Paths) if (!hintPaths(Path)) massage += Path.Color+" 라인 불일치\n"
+    for (const Path of Paths) if (!drawPaths(Path)) massage += Path.Color+" 라인 불일치\n"
     alert(massage ? massage : (location.href=`In-game?${Level[1]}?${Level[2]+1}`,"완료!"))
 }
 
@@ -77,7 +77,7 @@ function Count(Way, Language) {
     return massage
 }
 
-function hintPaths(Object) {
+function drawPaths(Object) {
     let x = Object.X
     let y = Object.Y
     if (!("Primary" == Object.Color || "Red" == Object.Color || "Gold" == Object.Color || "Blue" == Object.Color || "Secondary" == Object.Color || "Purple" == Object.Color || "Orange" == Object.Color || "Green" == Object.Color || "Tertiary" == Object.Color)) return spurn(Object.Color,3)
@@ -143,7 +143,7 @@ function hintPaths(Object) {
 function addSquare(x,y) {
     Solve[y][x] = Color
     $.fillRect(_*x/Board.length+25,_*y/Board.length+25,_/Board.length-50,_/Board.length-50)
-    if (Given) for (const Path of Paths) hintPaths(Path)
+    if (Given) for (const Path of Paths) drawPaths(Path)
 }
 
 function pickColor(latter) {
