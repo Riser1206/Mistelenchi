@@ -103,16 +103,24 @@ function addSquare(x,y) {
 }
 
 function store(x,y,Way) {
+/*
     Way[y][x] = ""
     if (Color == R) Way[y][x] = "R"
     if (Color == G) Way[y][x] = "G"
     if (Color == B) Way[y][x] = "B"
     if (Color == "black") Way[y][x] = " "
+*/
 }
 
 function pickColor(latter,Z) {
     if (window.former != undefined) former.background = latter.background
-    Color = $.fillStyle = latter.background = latter.color
+    switch (latter.background = latter.color) {
+        case "black": Color = " "; break
+        case R: Color = "R"; break
+        case G: Color = "G"; break
+        case B: Color = "B"; break
+        default: Color = ""; break
+    }
     former = latter
     isPathNum = Z
 }
