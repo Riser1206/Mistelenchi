@@ -42,6 +42,20 @@ function clickCanvas() {
     } else if (Board[Y][X] == "white") Solve[Y][X] = Color
     drawSquare()
     for (const Path of Paths) drawPaths(Path)
+// 1. Create the gradient object (linear or radial)
+const gradient = $.createLinearGradient(0, 0, 100, 0); // x1, y1, x2, y2
+
+// 2. Add color stops
+gradient.addColorStop(0, "cyan");   // Start color
+gradient.addColorStop(0.5, "magenta"); // Middle color
+gradient.addColorStop(1, "yellow"); // End color
+
+// 3. Assign the gradient to strokeStyle
+$.strokeStyle = gradient;
+
+// 4. Draw the path
+$.lineWidth = 5;
+$.strokeRect(10, 10, 100, 50);
 }
 
 function drawSquare() {
