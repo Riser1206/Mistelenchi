@@ -102,6 +102,8 @@ function addSquare(x,y) {
 
 function pickColor(latter,Z) {
     if (window.former != undefined) former.background = latter.background
+    Color = latter.background = latter.color
+/*
     switch (latter.background = latter.color) {
         case $0: Color = ""; break
         case R: Color = "R"; break
@@ -109,6 +111,7 @@ function pickColor(latter,Z) {
         case B: Color = "B"; break
         case $1: Color = " "; break
     }
+*/
     former = latter
     isPathNum = Z
 }
