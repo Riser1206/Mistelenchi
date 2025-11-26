@@ -39,6 +39,7 @@ function clickCanvas() {
         Paths.push(Path)
         isPathNum = Paths.length
     } else if (!window.isTest) fixSquare(X,Y); else if (!Board[Y][X]) addSquare(X,Y)
+alert(JSON.stringify(Solve) + "\n" + JSON.stringify(Board))
     $.clearRect(0, 0, Canva.width, Canva.height)
     for (let y = 0; y < Length_; y++) {
         for (let x = 0; x < Length_; x++) {
@@ -46,7 +47,6 @@ function clickCanvas() {
         }
     }
     for (const Path of Paths) drawPaths(Path)
-alert(JSON.stringify(Solve) + "\n" + JSON.stringify(Board))
 }
 
 function addPath(Path) {
