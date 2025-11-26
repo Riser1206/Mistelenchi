@@ -45,7 +45,7 @@ alert(JSON.stringify(Solve) + "\n" + JSON.stringify(Board))
     for (const Path of Paths) drawPaths(Path)
 }
 
-function draw() {
+function drawSquare() {
     $.clearRect(0, 0, Canva.width, Canva.height)
     for (let y = 0; y < Length_; y++) {
         for (let x = 0; x < Length_; x++) {
