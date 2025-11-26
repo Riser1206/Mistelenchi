@@ -89,7 +89,7 @@ function drawPaths(Path) {
             for (let X = 0; X < 3; X++) {
                 const Z = X*Y-1
                 $.fillStyle = Path.Color
-                $.strokeStyle = "white"
+                $.strokeStyle = "radial-gradient(white, transparent, black),conic-gradient(red,orange,yellow,green,blue)"
                 $.lineWidth = _/37/Length_
                 $.beginPath()
                 $.arc(_*(Path.X+X-1.5)/Length_,_*(Path.Y+Y-1.5)/Length_,_/(Z ? 9 : 5)/Length_,0,7)
