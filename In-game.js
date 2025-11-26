@@ -23,8 +23,8 @@ function loadMap(Q) {
 }
 
 function clickCanvas() {
-    const X = Math.round((event.clientX-$.canvas.offsetLeft)*Board.length/$.canvas.offsetWidth-1/2)
-    const Y = Math.round((event.clientY-$.canvas.offsetTop)*Board.length/$.canvas.offsetHeight-1/2)
+    const X = Math.round((event.clientX-$.canvas.offsetLeft)*Board.length/$.canvas.offsetWidth-.5)
+    const Y = Math.round((event.clientY-$.canvas.offsetTop)*Board.length/$.canvas.offsetHeight-.5)
     if (!Board[Y][X]) addSquare(X,Y)
 }
 
