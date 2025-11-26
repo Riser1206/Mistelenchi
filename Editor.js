@@ -84,6 +84,7 @@ function drawPaths(Path) {
     $.lineWidth = _/7/Length_
     $.stroke()
     if (Paths[isPathNum-1] == Path) {
+        $.fillStyle = "black"
         $.beginPath()
         $.arc(_*(Path.X-.5)/Length_,_*(Path.Y-.5)/Length_,_/7/Length_,0,7)
         $.fill()
