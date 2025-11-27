@@ -112,7 +112,7 @@ function pickColor(latter,Z) {
     Color = latter.background = latter.color
     former = latter
     isPathNum = Z
-    if (window.former != undefined) drawSquare()
+    if (window.former != undefined) drawSquare(alert())
 }
 
 function save() {
