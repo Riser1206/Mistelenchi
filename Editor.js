@@ -112,6 +112,7 @@ function pickColor(latter,Z) {
     Color = latter.background = latter.color
     former = latter
     isPathNum = Z
+    drawSquare()
 }
 
 function save() {
