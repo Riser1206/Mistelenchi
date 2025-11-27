@@ -12,6 +12,8 @@ function spurn(message) {
 
 function loadMap(Stage,Set,Length) {
     Paths = []
+    Board = undefined
+    Solve = undefined
     _1.style.display = Set*3 == (Length_=Length) ? "none" : "inline-block"
     Qnumber.innerText = `${(Stage_=Stage) ? Stage_ : "→Click←"}\nSet: ${Set_=Set}`
     pickColor(_0.style)
