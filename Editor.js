@@ -32,8 +32,7 @@ function clickCanvas() {
     const X = Math.round((event.clientX-$.canvas.offsetLeft)*Length_/$.canvas.offsetWidth-.5)
     const Y = Math.round((event.clientY-$.canvas.offsetTop)*Length_/$.canvas.offsetHeight-.5)
     if (isPathNum) {
-        alert([$.canvas.offsetWidth,$.canvas.offsetHeight])
-        //if ($.isPointInPath((event.clientX-$.canvas.offsetLeft)*_/$.canvas.offsetWidth,(event.clientY-$.canvas.offsetTop)*_/$.canvas.offsetHeight)) alert(JSON.stringify(Switches))
+        if ($.isPointInPath((event.clientX-$.canvas.offsetLeft)*_/$.canvas.offsetWidth,(event.clientY-$.canvas.offsetTop)*_/$.canvas.offsetHeight)) alert(JSON.stringify(Switches))
         isPathNum = 0
     } else if (isPathNum == []) {
         const Path = {Color:Color,X:X+1,Y:Y+1,Array:[]}
