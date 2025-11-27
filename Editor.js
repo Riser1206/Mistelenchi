@@ -89,6 +89,8 @@ function drawPaths(Path) {
                 const con = $.createConicGradient(0, _/2, _/2)
                 con.addColorStop(0, 'white')
                 con.addColorStop(0.1, 'black')
+                con.addColorStop(0.2, 'white')
+                con.addColorStop(0.8, 'black')
                 con.addColorStop(0.9, 'white')
                 con.addColorStop(1, 'black')
                 $.strokeStyle = con
