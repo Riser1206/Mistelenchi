@@ -32,9 +32,7 @@ function clickCanvas() {
     const X = Math.round((event.clientX-$.canvas.offsetLeft)*Length_/$.canvas.offsetWidth-.5)
     const Y = Math.round((event.clientY-$.canvas.offsetTop)*Length_/$.canvas.offsetHeight-.5)
     if (isPathNum) {
-  $.beginPath(); // 새 경로 시작 (선택 사항이지만 명시적으로 경로를 구분하는 것이 좋습니다)
-  $.rect(110, 110, 1150, 810); // 사각형 경로 정의
-        if ($.isPointInPath((event.clientX-$.canvas.offsetLeft)*_/$.canvas.offsetWidth,(event.clientY-$.canvas.offsetTop)*_/$.canvas.offsetHeight)) alert(JSON.stringify(Switches))
+        //if ($.isPointInPath((event.clientX-$.canvas.offsetLeft)*_/$.canvas.offsetWidth,(event.clientY-$.canvas.offsetTop)*_/$.canvas.offsetHeight)) alert(JSON.stringify(Switches))
         isPathNum = 0
     } else if (isPathNum == []) {
         const Path = {Color:Color,X:X+1,Y:Y+1,Array:[]}
@@ -46,12 +44,9 @@ function clickCanvas() {
     } else if (Board[Y][X] == "white") Solve[Y][X] = Color
     drawSquare()
     for (const Path of Paths) drawPaths(Path)
-  $.beginPath(); // 새 경로 시작 (선택 사항이지만 명시적으로 경로를 구분하는 것이 좋습니다)
-  $.rect(110, 110, 1150, 810); // 사각형 경로 정의
-  $.stroke(); // 정의된 경로의 윤곽선을 그림
             $.fillStyle = "#ccce"
             $.beginPath()
-            $.arc((event.clientX-$.canvas.offsetLeft)*_/$.canvas.offsetWidth,(event.clientY-$.canvas.offsetTop)*_/$.canvas.offsetHeight,_/7/Length_,0,7)
+            $.arc((event.clientX-$.canvas.offsetLeft)*_/($.canvas.offsetWidth-10),(event.clientY-$.canvas.offsetTop)*_/($.canvas.offsetHeight-10),_/7/Length_,0,7)
             $.fill()
             $.closePath()
 }
