@@ -108,11 +108,11 @@ function drawPaths(Path) {
 }
 
 function pickColor(latter,Z) {
-    if (window.former != undefined) former.background = latter.background
+    if (window.former) former.background = latter.background
     Color = latter.background = latter.color
     former = latter
     isPathNum = Z
-    if (window.former != undefined) drawSquare(alert())
+    //if (winefined) drawSquare(alert())
 }
 
 function save() {
