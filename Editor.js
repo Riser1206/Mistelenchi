@@ -84,22 +84,21 @@ function drawPaths(Path) {
     if (Paths[isPathNum-1] == Path) {
         for (let Y = 0; Y < 3; Y++) {
             for (let X = 0; X < 3; X++) {
-                const Z = X*Y-1
-                const con = $.createConicGradient(0, _*(Path.X+X-1.5)/Length_, _*(Path.Y+Y-1.5)/Length_)
-                con.addColorStop(0, 'black')
-                con.addColorStop(1/8, 'white')
-                con.addColorStop(2/8, 'black')
-                con.addColorStop(3/8, 'white')
-                con.addColorStop(4/8, 'black')
-                con.addColorStop(5/8, 'white')
-                con.addColorStop(6/8, 'black')
-                con.addColorStop(7/8, 'white')
-                con.addColorStop(1, 'black')
-                $.strokeStyle = con
+                const Z = $.createConicGradient(0, _*(Path.X+X-1.5)/Length_, _*(Path.Y+Y-1.5)/Length_)
+                Z.addColorStop(0, 'black')
+                Z.addColorStop(1/8, 'white')
+                Z.addColorStop(2/8, 'black')
+                Z.addColorStop(3/8, 'white')
+                Z.addColorStop(4/8, 'black')
+                Z.addColorStop(5/8, 'white')
+                Z.addColorStop(6/8, 'black')
+                Z.addColorStop(7/8, 'white')
+                Z.addColorStop(1, 'black')
+                $.strokeStyle = Z
                 $.fillStyle = Path.Color
                 $.lineWidth = _/37/Length_
                 $.beginPath()
-                $.arc(_*(Path.X+X-1.5)/Length_,_*(Path.Y+Y-1.5)/Length_,_/(Z ? 9 : 5)/Length_,0,7)
+                $.arc(_*(Path.X+X-1.5)/Length_,_*(Path.Y+Y-1.5)/Length_,_/(X*Y-1 ? 9 : 5)/Length_,0,7)
                 $.fill()
                 $.stroke()
                 $.closePath()
