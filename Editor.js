@@ -100,7 +100,7 @@ function drawPaths(Path) {
                 $.strokeStyle = Z
                 $.fillStyle = Path.Color
                 $.lineWidth = _/37/Length_
-                const Switch = new Path2D()
+                const Switch = Switches[X][Y] = new Path2D()
                 Switch.arc(_*(Path.X+X-1.5)/Length_,_*(Path.Y+Y-1.5)/Length_,_/(X*Y-1 ? 9 : 5)/Length_,0,7)
                 Switch.closePath()
                 $.fill(Switch)
