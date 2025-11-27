@@ -108,7 +108,7 @@ function drawPaths(Path) {
 }
 
 function pickColor(latter,Z) {
-    if (window.former) former.background = latter.background
+    //if (window.former) former.background = latter.background
     Color = latter.background = latter.color
     former = latter
     isPathNum = Z
