@@ -32,6 +32,9 @@ function clickCanvas() {
     const X = Math.round((event.clientX-$.canvas.offsetLeft)*Length_/$.canvas.offsetWidth-.5)
     const Y = Math.round((event.clientY-$.canvas.offsetTop)*Length_/$.canvas.offsetHeight-.5)
     if (isPathNum) {
+  $.beginPath(); // 새 경로 시작 (선택 사항이지만 명시적으로 경로를 구분하는 것이 좋습니다)
+  $.rect(10, 10, 150, 80); // 사각형 경로 정의
+  $.stroke(); // 정의된 경로의 윤곽선을 그림
         if ($.isPointInPath((event.clientX-$.canvas.offsetLeft)*_/$.canvas.offsetWidth,(event.clientY-$.canvas.offsetTop)*_/$.canvas.offsetHeight)) alert(JSON.stringify(Switches))
         isPathNum = 0
     } else if (isPathNum == []) {
