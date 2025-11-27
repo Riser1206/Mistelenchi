@@ -12,16 +12,14 @@ function spurn(message) {
 
 function loadMap(Stage,Set,Length) {
     Paths = []
-    Board = undefined
-    Solve = undefined
+    Board = []
+    Solve = []
     _1.style.display = Set*3 == (Length_=Length) ? "none" : "inline-block"
     Qnumber.innerText = `${(Stage_=Stage) ? Stage_ : "→Click←"}\nSet: ${Set_=Set}`
     pickColor(_0.style)
-    Board = Array(Length_)
-    Solve = Array(Length_)
     for (let y = 0; y < Length_; y++) {
-        Board[y] = Array(Length_)
-        Solve[y] = Array(Length_)
+        Board[y] = []
+        Solve[y] = []
         for (let x = 0; x < Length_; x++) {
             Board[y][x] = Color
             Solve[y][x] = Color
