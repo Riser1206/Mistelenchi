@@ -31,7 +31,7 @@ function clickCanvas() {
     const X = Math.round((event.clientX-$.canvas.offsetLeft)*Length_/$.canvas.offsetWidth-.5)
     const Y = Math.round((event.clientY-$.canvas.offsetTop)*Length_/$.canvas.offsetHeight-.5)
     if (isPathNum) {
-        
+        isPathNum = 0
     } else if (isPathNum == []) {
         const Path = {Color:Color,X:X+1,Y:Y+1,Array:[]}
         Paths.push(Path)
