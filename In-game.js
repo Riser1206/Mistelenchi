@@ -147,7 +147,7 @@ function addSquare(x,y) {
 }
 
 function pickColor(latter) {
-    if (window.former != undefined) former.background = latter.background
+    if (window.former) former.background = latter.background
     Color = $.fillStyle = latter.background = latter.color
     former = latter
 }
