@@ -49,6 +49,7 @@ function clickCanvas() {
   $.beginPath(); // 새 경로 시작 (선택 사항이지만 명시적으로 경로를 구분하는 것이 좋습니다)
   $.rect(110, 110, 1150, 810); // 사각형 경로 정의
   $.stroke(); // 정의된 경로의 윤곽선을 그림
+            $.fillStyle = "#ccce"
             $.beginPath()
             $.arc((event.clientX-$.canvas.offsetLeft)*_/$.canvas.offsetWidth,(event.clientY-$.canvas.offsetTop)*_/$.canvas.offsetHeight,_/7/Length_,0,7)
             $.fill()
