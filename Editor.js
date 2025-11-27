@@ -85,6 +85,11 @@ function drawPaths(Path) {
     if (Paths[isPathNum-1] == Path) {
         for (let Y = 0; Y < 3; Y++) {
             for (let X = 0; X < 3; X++) {
+                const trianglePath = new Path2D();
+trianglePath.moveTo(50, 50);
+trianglePath.lineTo(100, 150);
+trianglePath.lineTo(0, 150);
+trianglePath.closePath();
                 const Z = $.createConicGradient(0, _*(Path.X+X-1.5)/Length_, _*(Path.Y+Y-1.5)/Length_)
                 Z.addColorStop(0, 'black')
                 Z.addColorStop(1/8, 'white')
