@@ -44,6 +44,7 @@ function clickCanvas() {
     } else if (Board[Y][X] == "white") Solve[Y][X] = Color
     drawSquare()
     for (const Path of Paths) drawPaths(Path)
+    alert(JSON.stringify(Switches))
 }
 
 function drawSquare() {
@@ -104,7 +105,6 @@ function drawPaths(Path) {
                 Switch.closePath()
                 $.fill(Switch)
                 $.stroke(Switch)
-    alert(Switches.length)
             }
         }
     }
