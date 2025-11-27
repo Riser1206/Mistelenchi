@@ -104,6 +104,7 @@ function drawPaths(Path) {
                 Switch.closePath()
                 $.fill(Switch)
                 $.stroke(Switch)
+    alert(JSON.stringify({Z:Z,Switch:Switch}))
             }
         }
     }
