@@ -87,11 +87,10 @@ function drawPaths(Path) {
                 const Z = X*Y-1
                 $.fillStyle = Path.Color
                 const con = $.createConicGradient(0, _/2, _/2)
-                con.addColorStop(0, 'white')
-                con.addColorStop(0.1, 'black')
-                con.addColorStop(0.2, 'white')
-                con.addColorStop(0.8, 'black')
-                con.addColorStop(0.9, 'white')
+                con.addColorStop(0, 'black')
+                con.addColorStop(0.25, 'white')
+                con.addColorStop(0.5, 'black')
+                con.addColorStop(0.75, 'white')
                 con.addColorStop(1, 'black')
                 $.strokeStyle = con
                 $.lineWidth = _/37/Length_
