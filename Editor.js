@@ -119,11 +119,11 @@ function drawPaths(Path) {
 }
 
 function pickColor(latter,Z) {
-    if (window.Board) former.background = latter.background
+    if (Board) former.background = latter.background
     Color = latter.background = latter.color
     former = latter
     isPathNum = Z
-    if (window.Board) drawSquare()
+    if (Board) drawSquare()
 }
 
 function save() {
