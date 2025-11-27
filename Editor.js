@@ -112,7 +112,7 @@ function pickColor(latter,Z) {
     Color = latter.background = latter.color
     former = latter
     isPathNum = Z
-    //if (winefined) drawSquare(alert())
+    if (window.Board) drawSquare()
 }
 
 function save() {
