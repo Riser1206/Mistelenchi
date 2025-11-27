@@ -44,11 +44,13 @@ function clickCanvas() {
     } else if (Board[Y][X] == "white") Solve[Y][X] = Color
     drawSquare()
     for (const Path of Paths) drawPaths(Path)
+/*
             $.fillStyle = "#ccce"
             $.beginPath()
             $.arc((event.clientX-$.canvas.offsetLeft-5)*_/($.canvas.offsetWidth-10),(event.clientY-$.canvas.offsetTop-5)*_/($.canvas.offsetHeight-10),_/7/Length_,0,7)
             $.fill()
             $.closePath()
+*/
 }
 
 function drawSquare() {
