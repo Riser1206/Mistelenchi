@@ -85,11 +85,6 @@ function drawPaths(Path) {
     if (Paths[isPathNum-1] == Path) {
         for (let Y = 0; Y < 3; Y++) {
             for (let X = 0; X < 3; X++) {
-                const trianglePath = new Path2D();
-trianglePath.moveTo(50, 50);
-trianglePath.lineTo(100, 150);
-trianglePath.lineTo(0, 150);
-trianglePath.closePath();
                 const Z = $.createConicGradient(0, _*(Path.X+X-1.5)/Length_, _*(Path.Y+Y-1.5)/Length_)
                 Z.addColorStop(0, 'black')
                 Z.addColorStop(1/8, 'white')
@@ -103,11 +98,11 @@ trianglePath.closePath();
                 $.strokeStyle = Z
                 $.fillStyle = Path.Color
                 $.lineWidth = _/37/Length_
-                $.beginPath()
-                $.arc(_*(Path.X+X-1.5)/Length_,_*(Path.Y+Y-1.5)/Length_,_/(X*Y-1 ? 9 : 5)/Length_,0,7)
+                const Switch = new Path2D()
+                Switch.arc(_*(Path.X+X-1.5)/Length_,_*(Path.Y+Y-1.5)/Length_,_/(X*Y-1 ? 9 : 5)/Length_,0,7)
+                Switch.closePath()
                 $.fill()
-                $.stroke(trianglePath)
-                $.closePath()
+                $.stroke()
             }
         }
     }
