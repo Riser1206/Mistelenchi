@@ -60,7 +60,7 @@ function drawSquare() {
             $.closePath()
         }
     }
-    //for (const Path of Paths) drawPaths(Path)
+    for (const Path of Paths) drawPaths(Path)
 }
 
 function drawPaths(Path) {
