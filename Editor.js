@@ -35,7 +35,7 @@ function clickCanvas() {
     if (isPathNum) {
     try {
         if ($.isPointInPath(null,Math.round((event.clientX-$.canvas.offsetLeft-5)*_/($.canvas.offsetWidth-10)-.5),Math.round((event.clientY-$.canvas.offsetTop-5)*_/($.canvas.offsetHeight-10)-.5))) alert(JSON.stringify(Switches))
-    } catch (ium) {Qnumber.innerText = ium}
+    } catch (ium) {Qnumber.style.fontSize=10;Qnumber.innerText = ium}
         isPathNum = 0
     } else if (isPathNum == []) {
         const Path = {Color:Color,X:X+1,Y:Y+1,Array:[]}
@@ -47,10 +47,6 @@ function clickCanvas() {
     } else if (Board[Y][X] == "white") Solve[Y][X] = Color
     drawSquare()
     for (const Path of Paths) drawPaths(Path)
-            $.fillStyle = "tan"
-            //if (Switches[X][Y]) $.fill(Switches[X][Y])
-            $.rect(525,725,550,750)
-            $.fill()
 }
 
 function drawSquare() {
