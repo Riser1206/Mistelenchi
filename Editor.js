@@ -35,7 +35,7 @@ function clickCanvas() {
     if (isPathNum) {
     try {
         if ($.isPointInPath(null,Math.round((event.clientX-$.canvas.offsetLeft-5)*_/($.canvas.offsetWidth-10)-.5),Math.round((event.clientY-$.canvas.offsetTop-5)*_/($.canvas.offsetHeight-10)-.5))) alert(JSON.stringify(Switches))
-    } catch (ium) {Qnumber.style.fontSize=1;Qnumber.innerText = ium}
+    } catch (ium) {Qnumber.style.fontSize=3;Qnumber.innerText = ium}
         isPathNum = 0
     } else if (isPathNum == []) {
         const Path = {Color:Color,X:X+1,Y:Y+1,Array:[]}
