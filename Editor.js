@@ -34,7 +34,7 @@ function clickCanvas() {
     if (X == -1 || Y == -1 || X == Length_ || Y == Length_) return
     if (isPathNum) {
     try {
-        for (let y = 0; y < 3; y++) for (let x = 0; x < 3; x++) if ($.isPointInPath(Switches[x][y],Math.round((event.clientX-$.canvas.offsetLeft-5)*_/($.canvas.offsetWidth-10)-.5),Math.round((event.clientY-$.canvas.offsetTop-5)*_/($.canvas.offsetHeight-10)-.5))) alert([x,y])
+        for (let y = 0; y < 3; y++) for (let x = 0; x < 3; x++) if ($.isPointInPath(Switches[x][y],Math.round((event.clientX-$.canvas.offsetLeft-5)*_/($.canvas.offsetWidth-10)-.5),Math.round((event.clientY-$.canvas.offsetTop-5)*_/($.canvas.offsetHeight-10)-.5))) alert(Math.atan2(y, x))
     } catch (ium) {Qnumber.style.fontSize=3;Qnumber.innerText = ium}
         isPathNum = 0
     } else if (isPathNum == []) {
