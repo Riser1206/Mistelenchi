@@ -87,7 +87,7 @@ function drawPaths(Path) {
     if (Paths[isPathNum-1] == Path) {
         for (let Y = 0; Y < 3; Y++) {
             for (let X = 0; X < 3; X++) {
-                const Z = $.createConicGradient(0, _*(Path.X+X-1.5)/Length_, _*(Path.Y+Y-1.5)/Length_)
+                const Z = $.createConicGradient(0, _*(x+X-1.5)/Length_, _*(y+Y-1.5)/Length_)
                 Z.addColorStop(0, 'black')
                 Z.addColorStop(1/8, 'white')
                 Z.addColorStop(2/8, 'black')
