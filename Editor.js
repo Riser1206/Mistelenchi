@@ -44,7 +44,6 @@ function clickCanvas() {
         Solve[Y][X] = Color
     } else if (Board[Y][X] == "white") Solve[Y][X] = Color
     drawSquare()
-    for (const Path of Paths) drawPaths(Path)
 }
 
 function drawSquare() {
@@ -61,6 +60,7 @@ function drawSquare() {
             $.closePath()
         }
     }
+    //for (const Path of Paths) drawPaths(Path)
 }
 
 function drawPaths(Path) {
@@ -115,7 +115,7 @@ function pickColor(latter,Z) {
     Color = latter.background = latter.color
     former = latter
     isPathNum = Z
-    if (Board+Solve) for (const Path of Paths) (drawSquare(), drawPaths(Path))
+    if (Board+Solve) drawSquare()
 }
 
 function save() {
