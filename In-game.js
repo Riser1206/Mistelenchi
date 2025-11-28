@@ -25,7 +25,7 @@ function loadMap(Q) {
 function clickCanvas() {
     const X = Math.round((event.clientX-$.canvas.offsetLeft-5)*Board.length/($.canvas.offsetWidth-10)-.5)
     const Y = Math.round((event.clientY-$.canvas.offsetTop-5)*Board.length/($.canvas.offsetHeight-10)-.5)
-    if (X == -1 || Y == -1 || X == Board.length || Y == Board.length) return alert([X,Y])
+    if (X == -1 || Y == -1 || X == Board.length || Y == Board.length) return
     if (!Board[Y][X]) addSquare(X,Y)
 }
 
