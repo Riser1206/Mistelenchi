@@ -46,7 +46,7 @@ function clickCanvas() {
     drawSquare()
     for (const Path of Paths) drawPaths(Path)
             $.fillStyle = "tan"
-            $.fill(Switches[X][Y])
+            if (Switches[X][Y]) $.fill(Switches[X][Y])
 }
 
 function drawSquare() {
