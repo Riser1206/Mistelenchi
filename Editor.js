@@ -115,7 +115,7 @@ function pickColor(latter,Z) {
     Color = latter.background = latter.color
     former = latter
     isPathNum = Z
-    if (Board+Solve) (drawSquare(), drawPaths(Path))
+    if (Board+Solve) (drawSquare(), for (const Path of Paths) drawPaths(Path))
 }
 
 function save() {
