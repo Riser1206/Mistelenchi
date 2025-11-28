@@ -45,6 +45,7 @@ function clickCanvas() {
     } else if (Board[Y][X] == "white") Solve[Y][X] = Color
     drawSquare()
     for (const Path of Paths) drawPaths(Path)
+            $.fillStyle = "tan"
             $.fill(Switches[X][Y])
 }
 
