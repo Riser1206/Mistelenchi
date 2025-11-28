@@ -23,8 +23,9 @@ function loadMap(Q) {
 }
 
 function clickCanvas() {
-    const X = Math.round((event.clientX-$.canvas.offsetLeft)*Board.length/$.canvas.offsetWidth-.5)
-    const Y = Math.round((event.clientY-$.canvas.offsetTop)*Board.length/$.canvas.offsetHeight-.5)
+    const X = Math.round((event.clientX-$.canvas.offsetLeft-5)*Length_/($.canvas.offsetWidth-10)-.5)
+    const Y = Math.round((event.clientY-$.canvas.offsetTop-5)*Length_/($.canvas.offsetHeight-10)-.5)
+    if (X == -1 || Y == -1 || X == Board.length || Y == Board.length) return alert([X,Y])
     if (!Board[Y][X]) addSquare(X,Y)
 }
 
