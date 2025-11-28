@@ -31,6 +31,7 @@ function loadMap(Stage,Set,Length) {
 function clickCanvas() {
     const X = Math.round((event.clientX-$.canvas.offsetLeft-5)*Length_/($.canvas.offsetWidth-10)-.5)
     const Y = Math.round((event.clientY-$.canvas.offsetTop-5)*Length_/($.canvas.offsetHeight-10)-.5)
+    alert([X,Y])
     if (isPathNum) {
         //if ($.isPointInPath((event.clientX-$.canvas.offsetLeft)*_/$.canvas.offsetWidth,(event.clientY-$.canvas.offsetTop)*_/$.canvas.offsetHeight)) alert(JSON.stringify(Switches))
         isPathNum = 0
