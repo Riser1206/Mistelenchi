@@ -33,6 +33,7 @@ function clickCanvas() {
     const Y = Math.round((event.clientY-$.canvas.offsetTop-5)*Length_/($.canvas.offsetHeight-10)-.5)
     if (X == -1 || Y == -1 || X == Length_ || Y == Length_) return
     if (isPathNum) {
+            $.rect(525,725,550,750)
         //if ($.isPointInPath(Math.round((event.clientX-$.canvas.offsetLeft-5)*_/($.canvas.offsetWidth-10)-.5),Math.round((event.clientY-$.canvas.offsetTop-5)*_/($.canvas.offsetHeight-10)-.5))) alert(JSON.stringify(Switches))
         isPathNum = 0
     } else if (isPathNum == []) {
@@ -46,7 +47,9 @@ function clickCanvas() {
     drawSquare()
     for (const Path of Paths) drawPaths(Path)
             $.fillStyle = "tan"
-            if (Switches[X][Y]) $.fill(Switches[X][Y])
+            //if (Switches[X][Y]) $.fill(Switches[X][Y])
+            $.rect(525,725,550,750)
+            $.fill()
 }
 
 function drawSquare() {
