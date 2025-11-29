@@ -41,8 +41,8 @@ function clickCanvas() {
 }
 
 function cease() {
-    //Qnumber.innerText=JSON.stringify(Paths.splice(isPathNum-1))
-     try{alert(JSON.stringify(Paths)+"\n"+!Paths[isPathNum-1].Array.length)}catch(thN){Qnumber.innerText=thN}
+    if (!Paths[isPathNum-1].Array.length) Qnumber.innerText=JSON.stringify(Paths.splice(isPathNum-1))
+     try{alert(JSON.stringify(Paths))}catch(thN){Qnumber.innerText=thN}
 }
 
 function drawSquare() {
