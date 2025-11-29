@@ -37,8 +37,9 @@ function clickCanvas() {
             if (x*y-1) Paths[isPathNum-1].Array.push(4-Math.atan2(x-1,y-1)/Math.PI*4); else Paths[isPathNum-1].Array.pop()
         }
      alert(JSON.stringify(Paths))
+     try{Qnumber.innerText=JSON.stringify(Paths.splice(isPathNum-1))}catch(thN){Qnumber.innerText=thN}
     } else if (isPathNum == []) isPathNum = Paths.push({Color:Color,X:X+1,Y:Y+1,Array:[]}); else if (!window.isTest) Board[Y][X] = Solve[Y][X] = Color; else if (Board[Y][X] == "white") Solve[Y][X] = Color
-    drawSquare();try{Qnumber.innerText=JSON.stringify(Paths.splice(isPathNum-1))}catch(thN){Qnumber.innerText=thN}
+    drawSquare()
 }
 
 function drawSquare() {
