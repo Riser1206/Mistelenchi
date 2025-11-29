@@ -39,7 +39,7 @@ function clickCanvas() {
      alert(JSON.stringify(Paths))
     } else if (isPathNum == []) {
         Qnumber.innerText = Paths.push({Color:Color,X:X+1,Y:Y+1,Array:[]})
-        isPathNum = Paths.length
+        //isPathNum = Paths.length
     } else if (!window.isTest) {
         Board[Y][X] = Color
         Solve[Y][X] = Color
