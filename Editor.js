@@ -3,6 +3,7 @@ const $ = Canva.getContext("2d")
 const Switches = [[],[],[]]
 $.lineCap = "round"
 $.lineJoin = "round"
+Cease = 0
 if (innerWidth > innerHeight) spurn("가로 화면입니다. 세로 화면으로 바꿔주세요."); else loadMap(``,1,3)
 
 function spurn(message) {
