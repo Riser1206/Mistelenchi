@@ -38,7 +38,7 @@ function clickCanvas() {
         }
      alert(JSON.stringify(Paths))
     } else if (isPathNum == []) isPathNum = Paths.push({Color:Color,X:X+1,Y:Y+1,Array:[]}); else if (!window.isTest) Board[Y][X] = Solve[Y][X] = Color; else if (Board[Y][X] == "white") Solve[Y][X] = Color
-    drawSquare();try{splice()}catch(thN){Qnumber.innerText=thN}
+    drawSquare();try{Paths.splice()}catch(thN){Qnumber.innerText=thN}
 }
 
 function drawSquare() {
