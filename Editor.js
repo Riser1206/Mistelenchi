@@ -3,7 +3,6 @@ const $ = Canva.getContext("2d")
 const Switches = [[],[],[]]
 $.lineCap = "round"
 $.lineJoin = "round"
-Cease = 0
 if (innerWidth > innerHeight) spurn("가로 화면입니다. 세로 화면으로 바꿔주세요."); else loadMap(``,1,3)
 
 function spurn(message) {
@@ -34,8 +33,9 @@ function clickCanvas() {
     const Y = Math.round((event.clientY-$.canvas.offsetTop-5)*Length_/($.canvas.offsetHeight-10)-.5)
     if (X == -1 || Y == -1 || X == Length_ || Y == Length_) return
     if (isPathNum) {
+        let $$ = 0
         for (let y = 0; y < 3; y++) for (let x = 0; x < 3; x++) if ($.isPointInPath(Switches[x][y],Math.round((event.clientX-$.canvas.offsetLeft-5)*_/($.canvas.offsetWidth-10)-.5),Math.round((event.clientY-$.canvas.offsetTop-5)*_/($.canvas.offsetHeight-10)-.5))) if (x*y-($$=1)) Paths[isPathNum-1].Array.push(4-Math.atan2(x-1,y-1)/Math.PI*4); else Paths[isPathNum-1].Array.pop()
-    cease()//if (!$$) try{Qnumber.innerText=JSON.stringify(Paths.splice(isPathNum-1))}catch(thN){Qnumber.innerText=thN}
+        if (!$$) try{cease()}catch(thN){Qnumber.innerText=thN}//Qnumber.innerText=JSON.stringify(Paths.splice(isPathNum-1))
      try{alert(Cease+"\n"+JSON.stringify(Paths)+"\n"+!Paths[isPathNum-1].Array.length)}catch(thN){Qnumber.innerText=thN}
     } else if (isPathNum == []) isPathNum = Paths.push({Color:Color,X:X+1,Y:Y+1,Array:[]}); else if (!window.isTest) Board[Y][X] = Solve[Y][X] = Color; else if (Board[Y][X] == "white") Solve[Y][X] = Color
     drawSquare()
