@@ -116,7 +116,7 @@ function pickColor(latter,Z) {
     if (window.former) former.background = latter.background
     Color = latter.background = latter.color
     former = latter
-    if (window.isPathNum) cease(alert(isPathNum))
+    if (window.isPathNum) cease()
     isPathNum = Z
     if (Board+Solve) drawSquare()
 }
