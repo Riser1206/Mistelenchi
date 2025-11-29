@@ -42,7 +42,7 @@ function clickCanvas() {
 
 function cease() {
     if (!Paths[isPathNum-1].Array.length) Qnumber.innerText=JSON.stringify(Paths.splice(isPathNum-1))
-     try{alert(JSON.stringify(Paths))}catch(thN){Qnumber.innerText=thN}
+alert(JSON.stringify(Paths))
 }
 
 function drawSquare() {
