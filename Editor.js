@@ -26,6 +26,7 @@ function loadMap(Stage,Set,Length) {
         }
     }
     drawSquare()
+    alert(typeof ([]+[]))
 }
 
 function clickCanvas() {
