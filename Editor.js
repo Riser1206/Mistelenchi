@@ -11,7 +11,6 @@ function spurn(message) {
 
 function loadMap(Stage,Set,Length) {
     Switches = [[],[],[]]
-    PathSwitches = []
     Paths = []
     Board = []
     Solve = []
