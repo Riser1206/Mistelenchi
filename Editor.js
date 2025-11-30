@@ -45,7 +45,7 @@ function clickCanvas() {
 }
 
 function cease() {
-    Paths.splice(isPathNum-1)//if (!Paths[isPathNum-1].Array.length) Qnumber.innerText=JSON.stringify(Paths.splice(isPathNum-1))
+    if (!Paths[isPathNum-1].Array.length) Paths.splice(isPathNum-1)//if (!Paths[isPathNum-1].Array.length) Qnumber.innerText=JSON.stringify(Paths.splice(isPathNum-1))
 //alert(JSON.stringify(Paths))
 }
 
