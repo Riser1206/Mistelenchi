@@ -133,7 +133,7 @@ function save() {
     a.click()
 }
 
-/*
+/*JSON.stringify(value, replacer, space)
     switch (latter.background = latter.color) {
         case $0: Color = ""; break
         case R: Color = "R"; break
