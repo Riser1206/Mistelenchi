@@ -66,7 +66,7 @@ function drawSquare() {
     for (const Path of Paths) drawPaths(Path)
 }
 
-function drawPaths(Path) {
+function drawPaths(Path) {//ctx.isPointInStroke(path, x, y)
     let x = Path.X
     let y = Path.Y
     $.beginPath()
