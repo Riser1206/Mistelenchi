@@ -3,7 +3,7 @@ const $ = Canva.getContext("2d")
 $.lineCap = "round"
 $.lineJoin = "round"
 if (innerWidth > innerHeight) spurn("가로 화면입니다. 세로 화면으로 바꿔주세요."); else loadMap(``,1,3)
-Euameate=document.createElement('textarea')
+(Euameate=document.createElement('textarea')).style.fontSize = 3
 document.body.appendChild(Euameate)
 
 function spurn(message) {
