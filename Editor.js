@@ -3,8 +3,8 @@ const $ = Canva.getContext("2d")
 $.lineCap = "round"
 $.lineJoin = "round"
 if (innerWidth > innerHeight) spurn("가로 화면입니다. 세로 화면으로 바꿔주세요."); else loadMap(``,1,3)
-try{(Euameate=document.createElement('textarea')).style.fontSize = 3
-alert(document.body.appendChild(Euameate))}catch(re){alert(re)}
+(Euameate=document.createElement('textarea')).style.fontSize = 9
+alert(document.body.appendChild(Euameate))
 
 function spurn(message) {
     alert(message)
@@ -67,7 +67,7 @@ function drawSquare() {
     for (const Path of Paths) drawPaths(Path)
 }
 
-function drawPaths(Path) {//ctx.isPointInStroke(path, x, y)
+function drawPaths(Path) {//ctx.isPointInStroke(path, x, y)try{}catch(re){alert(re)}
     let x = Path.X
     let y = Path.Y
     const PathSwitch = new Path2D()
