@@ -70,6 +70,7 @@ function drawPaths(Path) {//ctx.isPointInStroke(path, x, y)
     let x = Path.X
     let y = Path.Y
     const PathSwitch = new Path2D()
+    PathSwitches.push(PathSwitch)
     PathSwitch.moveTo(_*(x-.5)/Length_, _*(y-.5)/Length_)
     for (const pursuit of Path.Array) {
         switch (pursuit) {
