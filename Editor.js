@@ -88,6 +88,7 @@ function drawPaths(Path) {//ctx.isPointInStroke(path, x, y)
     $.strokeStyle = Path.Color
     $.lineWidth = _/7/Length_
     $.stroke()
+    alert()
     if (Paths[isPathNum-1] == Path) {
         for (let Y = 0; Y < 3; Y++) {
             for (let X = 0; X < 3; X++) {
