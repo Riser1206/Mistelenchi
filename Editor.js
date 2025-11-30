@@ -1,7 +1,5 @@
 const _ = Canva.width = Canva.height = 2500
 const $ = Canva.getContext("2d")
-const Switches = [[],[],[]]
-const PathSwitches = []
 $.lineCap = "round"
 $.lineJoin = "round"
 if (innerWidth > innerHeight) spurn("가로 화면입니다. 세로 화면으로 바꿔주세요."); else loadMap(``,1,3)
@@ -12,6 +10,8 @@ function spurn(message) {
 }
 
 function loadMap(Stage,Set,Length) {
+const Switches = [[],[],[]]
+const PathSwitches = []
     Paths = []
     Board = []
     Solve = []
