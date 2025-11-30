@@ -69,8 +69,9 @@ function drawSquare() {
 function drawPaths(Path) {//ctx.isPointInStroke(path, x, y)
     let x = Path.X
     let y = Path.Y
-    $.beginPath()
-    $.moveTo(_*(x-.5)/Length_, _*(y-.5)/Length_)
+    const PathSwitch = new Path2D()
+    PathSwitch.beginPath()
+    PathSwitch.moveTo(_*(x-.5)/Length_, _*(y-.5)/Length_)
     for (const pursuit of Path.Array) {
         switch (pursuit) {
             case 0: y--; break
@@ -82,7 +83,7 @@ function drawPaths(Path) {//ctx.isPointInStroke(path, x, y)
             case 6: x--; break
             case 7: x--; y--; break
         }
-        $.lineTo(_*(x-.5)/Length_, _*(y-.5)/Length_)
+        PathSwitch.lineTo(_*(x-.5)/Length_, _*(y-.5)/Length_)
     }
     $.strokeStyle = Path.Color
     $.lineWidth = _/7/Length_
