@@ -70,7 +70,6 @@ function drawPaths(Path) {//ctx.isPointInStroke(path, x, y)
     let x = Path.X
     let y = Path.Y
     const PathSwitch = new Path2D()
-    try {
     PathSwitch.moveTo(_*(x-.5)/Length_, _*(y-.5)/Length_)
     for (const pursuit of Path.Array) {
         switch (pursuit) {
@@ -87,8 +86,7 @@ function drawPaths(Path) {//ctx.isPointInStroke(path, x, y)
     }
     $.strokeStyle = Path.Color
     $.lineWidth = _/7/Length_
-    $.stroke()
-   }  catch (athNu) {alert(athNu) }alert() 
+    $.stroke(PathSwitch)
     if (Paths[isPathNum-1] == Path) {
         for (let Y = 0; Y < 3; Y++) {
             for (let X = 0; X < 3; X++) {
