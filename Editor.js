@@ -10,7 +10,6 @@ function spurn(message) {
 }
 
 function loadMap(Stage,Set,Length) {
-    Switches = [[],[],[]]
     Paths = []
     Board = []
     Solve = []
@@ -62,6 +61,7 @@ function drawSquare() {
         }
     }
     PathSwitches = []
+    Switches = [[],[],[]]
     for (const Path of Paths) drawPaths(Path)
 }
 
