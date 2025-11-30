@@ -62,6 +62,7 @@ function drawSquare() {
             $.closePath()
         }
     }
+    PathSwitches = []
     for (const Path of Paths) drawPaths(Path)
 }
 
