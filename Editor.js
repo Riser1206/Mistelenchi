@@ -8,7 +8,7 @@ document.body.appendChild(Euameate)
 try{}catch(re){
 Euameate.style.fontSize = 9}
 alert(Euameate.style.width)
-Euameate.width = innerWidth
+Euameate.style.width = innerWidth
 
 function spurn(message) {
     alert(message)
