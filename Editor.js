@@ -1,14 +1,16 @@
 const _ = Canva.width = Canva.height = 2500
 const $ = Canva.getContext("2d")
+const Euameate=document.createElement('textarea')//ctx
+document.body.appendChild(Euameate)//ctx
 $.lineCap = "round"
 $.lineJoin = "round"
 if (innerWidth > innerHeight) spurn("가로 화면입니다. 세로 화면으로 바꿔주세요."); else loadMap(``,1,3)
-const Euameate=document.createElement('textarea')
-document.body.appendChild(Euameate)
-try{}catch(re){}
-Euameate.style.height = innerHeight
-Euameate.style.width = innerWidth
-Euameate.style.fontSize = 9
+
+function retcher(){//ctx
+Euameate.style.height = innerHeight//ctx
+Euameate.style.width = innerWidth//ctx
+Euameate.style.fontSize = 9//ctx
+}//ctx
 
 function spurn(message) {
     alert(message)
