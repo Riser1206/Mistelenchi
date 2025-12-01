@@ -37,12 +37,6 @@ function clickCanvas() {
     const X = Math.round((event.clientX-$.canvas.offsetLeft-5)*Length_/($.canvas.offsetWidth-10)-.5)
     const Y = Math.round((event.clientY-$.canvas.offsetTop-5)*Length_/($.canvas.offsetHeight-10)-.5)
     if (X == -1 || Y == -1 || X == Length_ || Y == Length_) return Euameate.value = JSON.stringify({PathSwitches:PathSwitches,Switches:Switches,Paths:Paths,Board:Board,Solve:Solve,isPathNum:isPathNum,Color:Color}, null, 2)
-    if (typeof isPathNum == "number") {
-        $.lineWidth = _/7/Length_
-        for (const PathSwitch of PathSwitches) if ($.isPointInStroke(PathSwitch,Math.round((event.clientX-$.canvas.offsetLeft-5)*_/($.canvas.offsetWidth-10)-.5),Math.round((event.clientY-$.canvas.offsetTop-5)*_/($.canvas.offsetHeight-10)-.5))) {
-            return Qnumber.innerText = "number"
-        }Qnumber.innerText = $.lineWidth
-    }
     if (isPathNum) {
         let $$
         for (let y = 0; y < 3; y++) for (let x = 0; x < 3; x++) if ($.isPointInPath(Switches[x][y],Math.round((event.clientX-$.canvas.offsetLeft-5)*_/($.canvas.offsetWidth-10)-.5),Math.round((event.clientY-$.canvas.offsetTop-5)*_/($.canvas.offsetHeight-10)-.5))) if (x*y-($$=1)) Paths[isPathNum-1].Array.push(4-Math.atan2(x-1,y-1)/Math.PI*4); else Paths[isPathNum-1].Array.pop()
@@ -54,6 +48,13 @@ function clickCanvas() {
         isPathNum = Paths.push({Color:Color,X:X+1,Y:Y+1,Array:[]})
     } else if (!window.isTest) Board[Y][X] = Solve[Y][X] = Color; else if (Board[Y][X] == "white") Solve[Y][X] = Color
     drawSquare()
+}
+
+function select() {
+    $.lineWidth = _/7/Length_
+    for (const PathSwitch of PathSwitches) if ($.isPointInStroke(PathSwitch,Math.round((event.clientX-$.canvas.offsetLeft-5)*_/($.canvas.offsetWidth-10)-.5),Math.round((event.clientY-$.canvas.offsetTop-5)*_/($.canvas.offsetHeight-10)-.5))) {
+        return Qnumber.innerText = "number"
+    }Qnumber.innerText = $.lineWidth
 }
 
 function cease() {
