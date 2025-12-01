@@ -39,8 +39,8 @@ function clickCanvas() {
     if (X == -1 || Y == -1 || X == Length_ || Y == Length_) return Euameate.value = JSON.stringify({PathSwitches:PathSwitches,Switches:Switches,Paths:Paths,Board:Board,Solve:Solve,isPathNum:isPathNum,Color:Color}, null, 2)
     if (typeof isPathNum == "number") {
         for (const PathSwitch of PathSwitches) if ($.isPointInPath(PathSwitch,Math.round((event.clientX-$.canvas.offsetLeft-5)*_/($.canvas.offsetWidth-10)-.5),Math.round((event.clientY-$.canvas.offsetTop-5)*_/($.canvas.offsetHeight-10)-.5))) {
-            return Euameate.value = "number"
-        }
+            return Qnumber.innerText = "number"
+        }Qnumber.innerText = $.lineWidth
     }
     if (isPathNum) {
         let $$
