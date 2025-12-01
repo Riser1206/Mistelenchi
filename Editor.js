@@ -45,7 +45,7 @@ function clickCanvas() {
             isPathNum = 0
         }
     } else if (isPathNum == []) {
-        if (select()) break
+        if (select())
         isPathNum = Paths.push({Color:Color,X:X+1,Y:Y+1,Array:[]})
     } else if (!window.isTest) Board[Y][X] = Solve[Y][X] = Color; else if (Board[Y][X] == "white") Solve[Y][X] = Color
     drawSquare()
