@@ -5,10 +5,10 @@ $.lineJoin = "round"
 if (innerWidth > innerHeight) spurn("가로 화면입니다. 세로 화면으로 바꿔주세요."); else loadMap(``,1,3)
 const Euameate=document.createElement('textarea')
 document.body.appendChild(Euameate)
-try{}catch(re){
-Euameate.style.fontSize = 9}
-alert(Euameate.style.width)
+try{}catch(re){}
+Euameate.style.height = innerHeight
 Euameate.style.width = innerWidth
+Euameate.style.fontSize = 9
 
 function spurn(message) {
     alert(message)
