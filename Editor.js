@@ -7,6 +7,7 @@ const Euameate=document.createElement('textarea')
 document.body.appendChild(Euameate)
 try{}catch(re){
 Euameate.style.fontSize = 9}
+alert(Euameate.width)
 Euameate.width = innerWidth
 
 function spurn(message) {
