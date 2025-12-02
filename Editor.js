@@ -103,7 +103,7 @@ function drawPaths(Path) {//ctx.isPointInStroke(path, x, y)try{}catch(re){alert(
     PathSwitches.push(PathSwitch)
 }
 
-function select() {
+function drawSwitches() {
     for (let Y = 0; Y < 3; Y++) {
         for (let X = 0; X < 3; X++) {
             const Z = $.createConicGradient(0, _*(x+X-1.5)/Length_, _*(y+Y-1.5)/Length_)
