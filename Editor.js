@@ -77,6 +77,7 @@ function drawSquare() {
     PathSwitches = []
     Switches = [[],[],[]]
     for (const Path of Paths) drawPaths(Path)
+    for (const Path of Paths)
 }
 
 function drawPaths(Path) {//ctx.isPointInStroke(path, x, y)try{}catch(re){alert(re)}
