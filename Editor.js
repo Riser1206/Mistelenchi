@@ -55,9 +55,9 @@ function select() {
     PathSwitches.forEach((PathSwitch, i) => {
         if ($.isPointInStroke(PathSwitch,Math.round((event.clientX-$.canvas.offsetLeft-5)*_/($.canvas.offsetWidth-10)-.5),Math.round((event.clientY-$.canvas.offsetTop-5)*_/($.canvas.offsetHeight-10)-.5))) return Qnumber.innerText = i+1
     })
-
+try{alert(PathSwitch)}catch(re){alert(re)}
+try{alert(i)}catch(re){alert(re)}
   alert(Qnumber.innerText);
-
 }
 
 function cease() {
