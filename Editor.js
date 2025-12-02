@@ -43,6 +43,7 @@ function clickCanvas() {
         if (!$$) {
             cease()
             isPathNum = 0
+            select()
         }
     } else if (isPathNum == []) if (select()); else isPathNum = Paths.push({Color:Color,X:X+1,Y:Y+1,Array:[]}); else if (!window.isTest) Board[Y][X] = Solve[Y][X] = Color; else if (Board[Y][X] == "white") Solve[Y][X] = Color
     drawSquare()
@@ -79,7 +80,7 @@ function drawSquare() {
     Euameate.value = JSON.stringify({isPathNum:isPathNum,Color:Color,PathSwitches:PathSwitches,Switches:Switches,Paths:Paths,Board:Board,Solve:Solve}, null, 2)
 }
 
-function drawPaths(Path) {//ctx.isPointInStroke(path, x, y)try{}catch(re){alert(re)}
+function drawPaths(Path) {//try{}catch(re){alert(re)}
     let x = Path.X
     let y = Path.Y
     const PathSwitch = new Path2D()
