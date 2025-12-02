@@ -52,12 +52,12 @@ function clickCanvas() {
 
 function select() {
     $.lineWidth = _/7/Length_
-    const 😥=PathSwitches.forEach((element, index) => {
+    const 뱱=PathSwitches.forEach((element, index) => {
         if ($.isPointInStroke(element,Math.round((event.clientX-$.canvas.offsetLeft-5)*_/($.canvas.offsetWidth-10)-.5),Math.round((event.clientY-$.canvas.offsetTop-5)*_/($.canvas.offsetHeight-10)-.5))) return Qnumber.innerText = index
   alert('😥');
     })
 
-  alert(😥);
+  alert(뱱);
 
 }
 
