@@ -57,7 +57,7 @@ function select() {
 }
 
 function cease() {
-    if (!Paths[isPathNum-1].Array.length) Paths.splice(isPathNum-1)
+    if (!Paths[isPathNum-1].Array.length) Paths.splice(isPathNum-1,1)
 }
 
 function drawSquare() {
