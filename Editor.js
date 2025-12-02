@@ -52,13 +52,11 @@ function clickCanvas() {
 
 function select() {
     $.lineWidth = _/7/Length_
-    for (const PathSwitch of PathSwitches) if ($.isPointInStroke(PathSwitch,Math.round((event.clientX-$.canvas.offsetLeft-5)*_/($.canvas.offsetWidth-10)-.5),Math.round((event.clientY-$.canvas.offsetTop-5)*_/($.canvas.offsetHeight-10)-.5))) {
-        return Qnumber.innerText = i
-    }
+    PathSwitches.forEach((element, index) => {
+        if ($.isPointInStroke(element,Math.round((event.clientX-$.canvas.offsetLeft-5)*_/($.canvas.offsetWidth-10)-.5),Math.round((event.clientY-$.canvas.offsetTop-5)*_/($.canvas.offsetHeight-10)-.5))) return Qnumber.innerText = i
+    })
 
-PathSwitches.forEach((element, index) => {
-  alert([index, element]);
-});
+  alert();
 
 }
 
