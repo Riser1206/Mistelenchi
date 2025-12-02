@@ -56,7 +56,7 @@ function select() {
         return Qnumber.innerText = i
     }const array = ['a', 'b', 'c'];
 
-PathSwitches.forEach((element, index) => {
+array.forEach((element, index) => {
   console.log(index, element);
 });
 
