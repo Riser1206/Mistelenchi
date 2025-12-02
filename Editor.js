@@ -77,7 +77,7 @@ function drawSquare() {
     PathSwitches = []
     Switches = [[],[],[]]
     for (const Path of Paths) drawPaths(Path)
-    try{drawPaths(Paths[isPathNum-1])}catch(re){alert(re)}
+    if (isPathNum) drawPaths(Paths[isPathNum-1])}catch(re){alert(re)}
     Euameate.value = JSON.stringify({isPathNum:isPathNum,Color:Color,PathSwitches:PathSwitches,Switches:Switches,Paths:Paths,Board:Board,Solve:Solve}, null, 2)
 }
 
@@ -133,7 +133,7 @@ function pickColor(latter,Z) {
     if (window.former) former.background = latter.background
     Color = latter.background = latter.color
     former = latter
-    if (window.isPathNum) cease()
+    if (isPathNum) cease()
     isPathNum = Z
     if (Board+Solve) drawSquare()
 }
