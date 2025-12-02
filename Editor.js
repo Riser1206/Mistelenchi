@@ -57,7 +57,7 @@ function select() {
     }const array = ['a', 'b', 'c'];
 
 array.forEach((element, index) => {
-  console.log(index, element);
+  alert(index, element);
 });
 
 }
