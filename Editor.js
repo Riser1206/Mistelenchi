@@ -46,15 +46,14 @@ function clickCanvas() {
             select()
         }
     } else if (isPathNum == []) if (select()); else isPathNum = Paths.push({Color:Color,X:X+1,Y:Y+1,Array:[]}); else if (!window.isTest) Board[Y][X] = Solve[Y][X] = Color; else if (Board[Y][X] == "white") Solve[Y][X] = Color
-    try{drawSquare()}catch(re){alert(re)}
+    drawSquare()
 }
 
 function select() {
     $.lineWidth = _/7/Length_
     PathSwitches.forEach((PathSwitch, i) => {
         if ($.isPointInStroke(PathSwitch,Math.round((event.clientX-$.canvas.offsetLeft-5)*_/($.canvas.offsetWidth-10)-.5),Math.round((event.clientY-$.canvas.offsetTop-5)*_/($.canvas.offsetHeight-10)-.5))) {
-            if (i == Paths.length) return isPathNum = 0
-            isPathNum = i+1
+            return isPathNum = i == Paths.length ? 0 : i+1
         }
     })
     return isPathNum
