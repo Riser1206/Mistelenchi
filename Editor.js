@@ -53,7 +53,7 @@ function select() {
     $.lineWidth = _/7/Length_
     PathSwitches.forEach((PathSwitch, i) => {
         if ($.isPointInStroke(PathSwitch,Math.round((event.clientX-$.canvas.offsetLeft-5)*_/($.canvas.offsetWidth-10)-.5),Math.round((event.clientY-$.canvas.offsetTop-5)*_/($.canvas.offsetHeight-10)-.5))) {
-            if (i == Paths.length) return alert(i)
+            if (i == Paths.length) return isPathNum = 0
             isPathNum = i+1
         }
     })
