@@ -183,8 +183,12 @@ function Count(Way, Language) {
     return massage
 }
 
+function alternate() {
+    //return massage
+}
+
 function Save() {
-    try{const Level = JSON.stringify({Set:Set_,Board:Board,Paths:Paths}, Euameate, 2);alert(Level)}catch(re){alert(re)}
+    try{const Level = JSON.stringify({Set:Set_,Board:Board,Paths:Paths}, alternate, 2);alert(Level)}catch(re){alert(re)}
     const massage = Check()
     if (massage) return alert(massage)
     let __ = URL.createObjectURL(new Blob([Level], { type: 'application/json' }))
