@@ -166,7 +166,7 @@ function Check() {
     }
     let massage = Count(Solve,"번 가로줄에 ")+Count(Trans,"번 세로줄에 ")
     for (const Path of Paths) if (!drawPaths(Path)) massage += Path.Color+" 라인 불일치\n"
-    alert(massage ? massage : "완료!")
+    return massage
 }
 
 function Count(Way, Language) {
@@ -183,7 +183,7 @@ function Count(Way, Language) {
     return massage
 }
 
-function Save() {return Check()
+function Save() {return Check()alert(massage ? massage : "완료!")
     let __ = URL.createObjectURL(new Blob([JSON.stringify({Set:Set_,Board:Board,Paths:Paths}, null, 2)], { type: 'application/json' }))
     if (window.___) URL.revokeObjectURL(___)
     ___ = __
