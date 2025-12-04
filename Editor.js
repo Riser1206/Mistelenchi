@@ -33,10 +33,10 @@ function loadMap(Stage,Set,Length) {
     drawSquare()
 }
 
-function clickCanvas() {try{Paths.filter(cease)}catch(re){alert(re)}
+function clickCanvas() {
     const X = Math.round((event.clientX-$.canvas.offsetLeft-5)*Length_/($.canvas.offsetWidth-10)-.5)
     const Y = Math.round((event.clientY-$.canvas.offsetTop-5)*Length_/($.canvas.offsetHeight-10)-.5)
-    if (X == -1 || Y == -1 || X == Length_ || Y == Length_) return Paths.filter()
+    if (X == -1 || Y == -1 || X == Length_ || Y == Length_) return Paths.filter(cease)
     if (isPathNum) {
         let $$
         for (let y = 0; y < 3; y++) for (let x = 0; x < 3; x++) if ($.isPointInPath(Switches[x][y],Math.round((event.clientX-$.canvas.offsetLeft-5)*_/($.canvas.offsetWidth-10)-.5),Math.round((event.clientY-$.canvas.offsetTop-5)*_/($.canvas.offsetHeight-10)-.5))) if (x*y-($$=1)) Paths[isPathNum-1].Array.push(4-Math.atan2(x-1,y-1)/Math.PI*4); else Paths[isPathNum-1].Array.pop()
@@ -54,8 +54,8 @@ function select() {
     return isPathNum
 }
 
-function cease() {
-    //if (!Paths[i].Array.length) Paths.splice(i,1)
+function cease(i) {
+    return!Paths[i].Array
 }
 
 function drawSquare() {
