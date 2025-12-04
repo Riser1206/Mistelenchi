@@ -184,9 +184,10 @@ function Count(Way, Language) {
 }
 
 function Save() {
+    try{const Level = JSON.stringify({Set:Set_,Board:Board,Paths:Paths}, Level, 2)}catch(re){alert(re)}
     const massage = Check()
     if (massage) return alert(massage)
-    let __ = URL.createObjectURL(new Blob([JSON.stringify({Set:Set_,Board:Board,Paths:Paths}, null, 2)], { type: 'application/json' }))
+    let __ = URL.createObjectURL(new Blob([Level], { type: 'application/json' }))
     if (window.___) URL.revokeObjectURL(___)
     ___ = __
     const a = document.createElement('a')
