@@ -38,9 +38,9 @@ function clickCanvas() {
     const Y = Math.round((event.clientY-$.canvas.offsetTop-5)*Length_/($.canvas.offsetHeight-10)-.5)
     if (X == -1 || Y == -1 || X == Length_ || Y == Length_) return
     if (isPathNum) {
-        let $$
-        for (let y = 0; y < 3; y++) for (let x = 0; x < 3; x++) if ($.isPointInPath(Switches[x][y],Math.round((event.clientX-$.canvas.offsetLeft-5)*_/($.canvas.offsetWidth-10)-.5),Math.round((event.clientY-$.canvas.offsetTop-5)*_/($.canvas.offsetHeight-10)-.5))) if (x*y-($$=1)) Paths[isPathNum-1].Array.push(4-Math.atan2(x-1,y-1)/Math.PI*4); else Paths[isPathNum-1].Array.pop()
-        if (!$$) {
+        let Z
+        for (let y = 0; y < 3; y++) for (let x = 0; x < 3; x++) if ($.isPointInPath(Switches[x][y],Math.round((event.clientX-$.canvas.offsetLeft-5)*_/($.canvas.offsetWidth-10)-.5),Math.round((event.clientY-$.canvas.offsetTop-5)*_/($.canvas.offsetHeight-10)-.5))) if (x*y-(Z=1)) Paths[isPathNum-1].Array.push(4-Math.atan2(x-1,y-1)/Math.PI*4); else Paths[isPathNum-1].Array.pop()
+        if (!Z) {
             isPathNum = 0
             select()
         }
@@ -68,7 +68,7 @@ function drawSquare() {
             $.closePath()
         }
     }
-    try{Paths = Paths.filter($$$ => $$$.Array.length)}catch(re){alert(re)}
+    try{Paths = Paths.filter(Path => Path.Array.length)}catch(re){alert(re)}
     PathSwitches = []
     Switches = [[],[],[]]
     for (const Path of Paths) drawPaths(Path)
