@@ -15,7 +15,7 @@ function spurn(message) {
 }
 
 function loadMap(Stage,Set,Length) {
-    isPathNum = isPath = 0
+    isPathNum = 0
     Paths = []
     Board = []
     Solve = []
@@ -98,7 +98,7 @@ function drawPaths(Path) {
     $.strokeStyle = Path.Color
     $.lineWidth = _/7/Length_
     $.stroke(PathSwitch)
-    PathSwitches.push(PathSwitch)
+    if (Path.Array.length) PathSwitches.push(PathSwitch)
     if (Paths[isPathNum-1] == Path) {
         for (let Y = 0; Y < 3; Y++) {
             for (let X = 0; X < 3; X++) {
