@@ -36,7 +36,7 @@ function loadMap(Stage,Set,Length) {
 function clickCanvas() {
     const X = Math.round((event.clientX-$.canvas.offsetLeft-5)*Length_/($.canvas.offsetWidth-10)-.5)
     const Y = Math.round((event.clientY-$.canvas.offsetTop-5)*Length_/($.canvas.offsetHeight-10)-.5)
-    if (X == -1 || Y == -1 || X == Length_ || Y == Length_) return Euameate.value = JSON.stringify(Paths.filter(cease))
+    if (X == -1 || Y == -1 || X == Length_ || Y == Length_) return Euameate.value = JSON.stringify(Paths.filter($$$ => $$$.Array.length))
     if (isPathNum) {
         let $$
         for (let y = 0; y < 3; y++) for (let x = 0; x < 3; x++) if ($.isPointInPath(Switches[x][y],Math.round((event.clientX-$.canvas.offsetLeft-5)*_/($.canvas.offsetWidth-10)-.5),Math.round((event.clientY-$.canvas.offsetTop-5)*_/($.canvas.offsetHeight-10)-.5))) if (x*y-($$=1)) Paths[isPathNum-1].Array.push(4-Math.atan2(x-1,y-1)/Math.PI*4); else Paths[isPathNum-1].Array.pop()
@@ -52,10 +52,6 @@ function select() {
     $.lineWidth = _/7/Length_
     PathSwitches.forEach((PathSwitch, i) => {if ($.isPointInStroke(PathSwitch,Math.round((event.clientX-$.canvas.offsetLeft-5)*_/($.canvas.offsetWidth-10)-.5),Math.round((event.clientY-$.canvas.offsetTop-5)*_/($.canvas.offsetHeight-10)-.5))) isPathNum = i == Paths.length ? 0 : i+1})
     return isPathNum
-}
-
-function cease(pl) {
-    return pl.Array.length
 }
 
 function drawSquare() {
@@ -131,7 +127,6 @@ function pickColor(latter,Z) {
     if (window.former) former.background = latter.background
     Color = latter.background = latter.color
     former = latter
-    //if (isPathNum) cease(isPathNum-1)
     isPathNum = Z
     if (Board+Solve) drawSquare()
 }
