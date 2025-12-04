@@ -68,7 +68,7 @@ function drawSquare() {
             $.closePath()
         }
     }
-    try{Paths = Paths.filter(Path => Path.Array.length)}catch(re){alert(re)}finally {alert(Paths)}
+    try{Paths = Paths.filter(Path => Path.Array.length)}catch(re){alert(re)}finally {alert(path+Paths)}
     PathSwitches = []
     Switches = [[],[],[]]
     for (const Path of Paths) drawPaths(Path)
