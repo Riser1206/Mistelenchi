@@ -49,7 +49,7 @@ function clickCanvas() {
     } else if (isPathNum == []) if (select()); else isPathNum = Paths.push({Color:Color,X:X+1,Y:Y+1,Array:[]}); else if (!window.isTest) Board[Y][X] = Solve[Y][X] = Color; else if (Board[Y][X] == "white") Solve[Y][X] = Color
     drawSquare()
     try{cease($$$-1)}catch(re){alert(re)}
-    Euameate.value = JSON.stringify({$$$:$$$,isPathNum:isPathNum,Color:Color,PathSwitches:PathSwitches,Switches:Switches,Paths:Paths,Board:Board,Solve:Solve}, null, 2)
+    Euameate.value = JSON.stringify({isPathNum:isPathNum,Color:Color,PathSwitches:PathSwitches,Switches:Switches,Paths:Paths,Board:Board,Solve:Solve}, null, 2)
 }
 
 function select() {
@@ -58,8 +58,8 @@ function select() {
     return isPathNum
 }
 
-function cease(i) {alert(i+"\n"+JSON.stringify(Paths[i]))
-    //if (!Paths[i].Array.length) Paths.splice(i,1)
+function cease(i) {
+    if (!Paths[i].Array.length) Paths.splice(i,1)
 }
 
 function drawSquare() {
