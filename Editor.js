@@ -104,9 +104,9 @@ function drawPaths(Path) {
     $.lineWidth = _/7/Length_
     $.stroke(PathSwitch)
     if (Path.Array.length) PathSwitches.push(PathSwitch)
-    const Results = ""+Group.includes(R)+Group.includes(G)+Group.includes(B)
+    const Results = ""+Group.includes("red")+Group.includes("gold")+Group.includes("blue")
     const Target = $.strokeStyle
-    const Achromatic = 6 < Object.Color.length
+    const Achromatic = 6 < Path.Color.length
     if (Results == "falsefalsefalse") $.strokeStyle = "Ivory"
     if (Results == "truefalsetrue") $.strokeStyle = Achromatic ? "#7f7f7f" : "Purple"
     if (Results == "truefalsefalse") $.strokeStyle = Achromatic ? "#bfbfbf" : "Red"
@@ -115,7 +115,7 @@ function drawPaths(Path) {
     if (Results == "falsetruetrue") $.strokeStyle = Achromatic ? "#7f7f7f" : "Green"
     if (Results == "falsefalsetrue") $.strokeStyle = Achromatic ? "#bfbfbf" : "Blue"
     if (Results == "truetruetrue") $.strokeStyle = "#3f3f3f"
-    $.lineWidth = _/15/Board.length
+    $.lineWidth = _/15/Length_
     $.stroke()
     //return Target == $.strokeStyle
     if (Paths[isPathNum-1] == Path) {Qnumber.innerText = Group
