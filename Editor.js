@@ -34,7 +34,6 @@ function loadMap(Stage,Set,Length) {
 }
 
 function clickCanvas() {
-    let $$$
     const X = Math.round((event.clientX-$.canvas.offsetLeft-5)*Length_/($.canvas.offsetWidth-10)-.5)
     const Y = Math.round((event.clientY-$.canvas.offsetTop-5)*Length_/($.canvas.offsetHeight-10)-.5)
     if (X == -1 || Y == -1 || X == Length_ || Y == Length_) return
@@ -42,14 +41,11 @@ function clickCanvas() {
         let $$
         for (let y = 0; y < 3; y++) for (let x = 0; x < 3; x++) if ($.isPointInPath(Switches[x][y],Math.round((event.clientX-$.canvas.offsetLeft-5)*_/($.canvas.offsetWidth-10)-.5),Math.round((event.clientY-$.canvas.offsetTop-5)*_/($.canvas.offsetHeight-10)-.5))) if (x*y-($$=1)) Paths[isPathNum-1].Array.push(4-Math.atan2(x-1,y-1)/Math.PI*4); else Paths[isPathNum-1].Array.pop()
         if (!$$) {
-            $$$ = isPathNum
             isPathNum = 0
             select()
         }
     } else if (isPathNum == []) if (select()); else isPathNum = Paths.push({Color:Color,X:X+1,Y:Y+1,Array:[]}); else if (!window.isTest) Board[Y][X] = Solve[Y][X] = Color; else if (Board[Y][X] == "white") Solve[Y][X] = Color
     drawSquare()
-    try{cease($$$-1);Qnumber.innerText = $$$}catch(re){Qnumber.innerText = re}
-    Euameate.value = JSON.stringify({$$$:$$$,isPathNum:isPathNum,Color:Color,PathSwitches:PathSwitches,Switches:Switches,Paths:Paths,Board:Board,Solve:Solve}, null, 2)
 }
 
 function select() {
@@ -58,8 +54,8 @@ function select() {
     return isPathNum
 }
 
-function cease(i) {
-    if (!Paths[i].Array.length) Paths.splice(i,1)
+function cease() {
+    //if (!Paths[i].Array.length) Paths.splice(i,1)
 }
 
 function drawSquare() {
@@ -135,7 +131,7 @@ function pickColor(latter,Z) {
     if (window.former) former.background = latter.background
     Color = latter.background = latter.color
     former = latter
-    if (isPathNum) cease(isPathNum-1)
+    //if (isPathNum) cease(isPathNum-1)
     isPathNum = Z
     if (Board+Solve) drawSquare()
 }
