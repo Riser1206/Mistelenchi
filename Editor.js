@@ -116,9 +116,9 @@ function drawPaths(Path) {
     if (Results == "falsefalsetrue") $.strokeStyle = Achromatic ? "#bfbfbf" : "Blue"
     if (Results == "truetruetrue") $.strokeStyle = "#3f3f3f"
     $.lineWidth = _/15/Length_
-    $.stroke()
+    $.stroke(PathSwitch)
     //return Target == $.strokeStyle
-    if (Paths[isPathNum-1] == Path) {Qnumber.innerText = Group
+    if (Paths[isPathNum-1] == Path) {
         for (let Y = 0; Y < 3; Y++) {
             for (let X = 0; X < 3; X++) {
                 const Z = $.createConicGradient(0, _*(x+X-1.5)/Length_, _*(y+Y-1.5)/Length_)
