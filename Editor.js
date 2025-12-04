@@ -15,7 +15,7 @@ function spurn(message) {
 }
 
 function loadMap(Stage,Set,Length) {
-    isPathNum = 0
+    isPathNum = isPath = 0
     Paths = []
     Board = []
     Solve = []
@@ -34,7 +34,6 @@ function loadMap(Stage,Set,Length) {
 }
 
 function clickCanvas() {
-    isPath
     const X = Math.round((event.clientX-$.canvas.offsetLeft-5)*Length_/($.canvas.offsetWidth-10)-.5)
     const Y = Math.round((event.clientY-$.canvas.offsetTop-5)*Length_/($.canvas.offsetHeight-10)-.5)
     if (X == -1 || Y == -1 || X == Length_ || Y == Length_) return
@@ -44,7 +43,7 @@ function clickCanvas() {
         if (!Z) {
             isPathNum = 0
             select()
- try{Paths = Paths.filter(Path => Path.Array.length);isPath}catch(re){alert(re)}finally {alert(Paths)}
+ //try{Paths = Paths.filter(Path => Path.Array.length);isPath}catch(re){alert(re)}finally {alert(Paths)}
         }
     } else if (isPathNum == []) if (select()); else isPathNum = Paths.push({Color:Color,X:X+1,Y:Y+1,Array:[]}); else if (!window.isTest) Board[Y][X] = Solve[Y][X] = Color; else if (Board[Y][X] == "white") Solve[Y][X] = Color
     drawSquare()
@@ -78,7 +77,7 @@ function drawSquare() {
     Euameate.value = JSON.stringify({isPathNum:isPathNum,Color:Color,PathSwitches:PathSwitches,Switches:Switches,Paths:Paths,Board:Board,Solve:Solve}, null, 2)
 }
 
-function drawPaths(Path) {//
+function drawPaths(Path) {
     let x = Path.X
     let y = Path.Y
     const PathSwitch = new Path2D()
