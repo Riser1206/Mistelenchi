@@ -43,7 +43,7 @@ function clickCanvas() {
         if (!Z) {
             isPathNum = 0
             select()
- try{Paths = Paths.filter(Path => Path.Array.length)}catch(re){alert(re)}finally {alert(Paths)}
+ try{Paths = Paths.filter(Path => Path.Array.length);isPath}catch(re){alert(re)}finally {alert(Paths)}
         }
     } else if (isPathNum == []) if (select()); else isPathNum = Paths.push({Color:Color,X:X+1,Y:Y+1,Array:[]}); else if (!window.isTest) Board[Y][X] = Solve[Y][X] = Color; else if (Board[Y][X] == "white") Solve[Y][X] = Color
     drawSquare()
