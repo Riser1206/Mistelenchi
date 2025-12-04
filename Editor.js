@@ -54,8 +54,8 @@ function select() {
     return isPathNum
 }
 
-function cease() {
-    return!Array
+function cease(pl) {
+    return!pl.Array
 }
 
 function drawSquare() {
