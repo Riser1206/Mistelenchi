@@ -68,7 +68,7 @@ function drawSquare() {
             $.closePath()
         }
     }
-    Paths = Paths.filter($$$ => $$$.Array.length)
+    try{Paths = Paths.filter($$$ => $$$.Array.length)}catch(re){alert(re)}
     PathSwitches = []
     Switches = [[],[],[]]
     for (const Path of Paths) drawPaths(Path)
@@ -76,7 +76,7 @@ function drawSquare() {
     Euameate.value = JSON.stringify({isPathNum:isPathNum,Color:Color,PathSwitches:PathSwitches,Switches:Switches,Paths:Paths,Board:Board,Solve:Solve}, null, 2)
 }
 
-function drawPaths(Path) {//try{}catch(re){alert(re)}
+function drawPaths(Path) {//
     let x = Path.X
     let y = Path.Y
     const PathSwitch = new Path2D()
