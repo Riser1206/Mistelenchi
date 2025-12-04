@@ -160,7 +160,7 @@ function save() {try{
     const a = document.createElement('a')
     a.download = Stage_+'.json'
     a.href = __
-    a.click()}catch(re){alert(re)}
+    a.click()}catch(re){alert(re)}finally {alert(Paths)}
 }
 
 /*JSON.stringify(value, replacer, space)
