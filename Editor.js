@@ -83,6 +83,7 @@ function drawSquare() {
 function drawPaths(Path) {
     let x = Path.X
     let y = Path.Y
+    const Group = [Solve[y-1][x-1]]
     const PathSwitch = new Path2D()
     PathSwitch.moveTo(_*(x-.5)/Length_, _*(y-.5)/Length_)
     for (const pursuit of Path.Array) {
@@ -96,13 +97,14 @@ function drawPaths(Path) {
             case 6: x--; break
             case 7: x--; y--; break
         }
+        Group.push(Solve[y-1][x-1])
         PathSwitch.lineTo(_*(x-.5)/Length_, _*(y-.5)/Length_)
     }
     $.strokeStyle = Path.Color
     $.lineWidth = _/7/Length_
     $.stroke(PathSwitch)
     if (Path.Array.length) PathSwitches.push(PathSwitch)
-    if (Paths[isPathNum-1] == Path) {
+    if (Paths[isPathNum-1] == Path) {Qnumber.innerText = Group
         for (let Y = 0; Y < 3; Y++) {
             for (let X = 0; X < 3; X++) {
                 const Z = $.createConicGradient(0, _*(x+X-1.5)/Length_, _*(y+Y-1.5)/Length_)
