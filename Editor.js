@@ -165,8 +165,8 @@ function Check() {
         }
     }
     let massage = Count(Solve,"번 가로줄에 ")+Count(Trans,"번 세로줄에 ")
-    for (const Path of Paths) if (!hintPaths(Path)) massage += Path.Color+" 라인 불일치\n"
-    alert(massage ? massage : (location.href=`Editor?${Level[1]}?${Level[2]+1}`,"완료!"))
+    for (const Path of Paths) if (!drawPaths(Path)) massage += Path.Color+" 라인 불일치\n"
+    alert(massage ? massage : "완료!")
 }
 
 function Count(Way, Language) {
@@ -175,9 +175,9 @@ function Count(Way, Language) {
     for (let i = 0; i < Length_; i++) {
         for (let j = 0; j < 3; j++) {
             const n = Way[i].filter(item => item === triplet[j]).length
-            if (Set != n) massage += i+1+Language+triplet[j]
-            if (Set < n) massage+=" 초과\n"
-            if (Set > n) massage+=" 부족\n"
+            if (Set_ != n) massage += i+1+Language+triplet[j]
+            if (Set_ < n) massage+=" 초과\n"
+            if (Set_ > n) massage+=" 부족\n"
         }
     }
     return massage
