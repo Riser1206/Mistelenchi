@@ -153,7 +153,7 @@ function pickColor(latter,Z) {
     if (Board+Solve) drawSquare()
 }
 
-function save() {try{
+function Save() {try{
     let __ = URL.createObjectURL(new Blob([JSON.stringify({Set:Set_,Board:Board,Paths:Paths})], { type: 'application/json' }))
     if (window.___) URL.revokeObjectURL(___)
     ___ = __
