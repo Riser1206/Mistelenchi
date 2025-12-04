@@ -57,7 +57,7 @@ function select() {
     return isPathNum
 }
 
-function cease(i) {alert(JSON.stringify(Paths[i]))
+function cease(i) {alert(i+"\n"+JSON.stringify(Paths[i]))
     if (!Paths[i].Array.length) Paths.splice(i,1)
 }
 
