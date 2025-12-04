@@ -185,7 +185,7 @@ function Count(Way, Language) {
 
 function Save() {
     const massage = Check()
-    return alert(massage ? massage : "완료!")
+    if (massage) return alert(massage)
     let __ = URL.createObjectURL(new Blob([JSON.stringify({Set:Set_,Board:Board,Paths:Paths}, null, 2)], { type: 'application/json' }))
     if (window.___) URL.revokeObjectURL(___)
     ___ = __
