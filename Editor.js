@@ -55,7 +55,7 @@ function select() {
 }
 
 function cease(pl) {
-    return!pl.Array
+    return pl.Array.length
 }
 
 function drawSquare() {
