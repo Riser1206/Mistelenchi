@@ -183,14 +183,14 @@ function Count(Way, Language) {
     return massage
 }
 
-function Save() {try{
+function Save() {return Check()
     let __ = URL.createObjectURL(new Blob([JSON.stringify({Set:Set_,Board:Board,Paths:Paths}, null, 2)], { type: 'application/json' }))
     if (window.___) URL.revokeObjectURL(___)
     ___ = __
     const a = document.createElement('a')
     a.download = Stage_+'.json'
     a.href = __
-    a.click()}catch(re){alert(re)}finally {alert(Paths)}
+    a.click()
 }
 
 /*JSON.stringify(value, replacer, space)
