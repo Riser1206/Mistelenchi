@@ -153,14 +153,14 @@ function pickColor(latter,Z) {
     if (Board+Solve) drawSquare()
 }
 
-function save() {
+function save() {try{
     let __ = URL.createObjectURL(new Blob([JSON.stringify({Set:Set_,Board:Board,Paths:Paths})], { type: 'application/json' }))
     if (window.___) URL.revokeObjectURL(___)
     ___ = __
     const a = document.createElement('a')
     a.download = Stage_+'.json'
     a.href = __
-    a.click()
+    a.click()}catch(re){alert(re)}
 }
 
 /*JSON.stringify(value, replacer, space)
