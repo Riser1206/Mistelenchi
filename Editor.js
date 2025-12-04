@@ -184,23 +184,8 @@ function Count(Way, Language) {
 }
 
 function alternate() {
-    //return massage
-}
-
-function Save() {
-    try{const Level = JSON.stringify({Set:Set_,Board:Board,Paths:Paths}, alternate, 2);alert(Level)}catch(re){alert(re)}
-    const massage = Check()
-    if (massage) return alert(massage)
-    let __ = URL.createObjectURL(new Blob([Level], { type: 'application/json' }))
-    if (window.___) URL.revokeObjectURL(___)
-    ___ = __
-    const a = document.createElement('a')
-    a.download = Stage_+'.json'
-    a.href = __
-    a.click()
-}
-
-/*JSON.stringify(value, replacer, space)
+/*
+    JSON.stringify(value, replacer, space)
     switch (latter.background = latter.color) {
         case $0: Color = ""; break
         case R: Color = "R"; break
@@ -220,6 +205,24 @@ try{Paths = Paths.filter(Path => Path.Array.length)}catch(re){alert(re)}finally 
         case "green": Color = "Green"; break
         case "rgb(63, 63, 63)": Color = "Tertiary"; break
     }
+*/
+    //return massage
+}
+
+function Save() {
+    const Level = JSON.stringify({Set:Set_,Board:Board,Paths:Paths}, alternate, 2);alert(Level)
+    const massage = Check()
+    if (massage) return alert(massage)
+    let __ = URL.createObjectURL(new Blob([Level], { type: 'application/json' }))
+    if (window.___) URL.revokeObjectURL(___)
+    ___ = __
+    const a = document.createElement('a')
+    a.download = Stage_+'.json'
+    a.href = __
+    a.click()
+}
+
+/*
     const blob = new Blob([data], { type: 'text/plain' });
     objURL = URL.createObjectURL(blob);
     if (window._) URL.revokeObjectURL(_);
