@@ -7,6 +7,9 @@ Euameate.style.width = innerWidth//ctx
 Euameate.style.fontSize = 9//ctx
 $.lineCap = "round"
 $.lineJoin = "round"
+const R = "red"
+const G = "gold"
+const B = "blue"
 if (innerWidth > innerHeight) spurn("가로 화면입니다. 세로 화면으로 바꿔주세요."); else loadMap(``,1,3)
 
 function spurn(message) {
@@ -104,7 +107,7 @@ function drawPaths(Path) {
     $.lineWidth = _/7/Length_
     $.stroke(PathSwitch)
     if (Path.Array.length) PathSwitches.push(PathSwitch)
-    const Results = ""+Group.includes("red")+Group.includes("gold")+Group.includes("blue")
+    const Results = ""+Group.includes(R)+Group.includes(G)+Group.includes(B)
     const Target = $.strokeStyle
     const Achromatic = 6 < Path.Color.length
     if (Results == "falsefalsefalse") $.strokeStyle = "Ivory"
@@ -151,6 +154,33 @@ function pickColor(latter,Z) {
     if (isPathNum) cease()
     isPathNum = Z
     if (Board+Solve) drawSquare()
+}
+
+function Check() {
+    const Trans = []
+    for (let i = 0; i < Solve.length; i++) {
+        Trans[i] = []
+        for (let j = 0; j < Solve.length; j++) {
+            Trans[i][j] = Solve[j][i]
+        }
+    }
+    let massage = Count(Solve,"번 가로줄에 ")+Count(Trans,"번 세로줄에 ")
+    for (const Path of Paths) if (!hintPaths(Path)) massage += Path.Color+" 라인 불일치\n"
+    alert(massage ? massage : (location.href=`Editor?${Level[1]}?${Level[2]+1}`,"완료!"))
+}
+
+function Count(Way, Language) {
+    let massage = ""
+    const triplet = [R,G,B]
+    for (let i = 0; i < Length_; i++) {
+        for (let j = 0; j < 3; j++) {
+            const n = Way[i].filter(item => item === triplet[j]).length
+            if (Set != n) massage += i+1+Language+triplet[j]
+            if (Set < n) massage+=" 초과\n"
+            if (Set > n) massage+=" 부족\n"
+        }
+    }
+    return massage
 }
 
 function Save() {try{
