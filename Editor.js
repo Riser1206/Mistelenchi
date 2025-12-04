@@ -33,7 +33,7 @@ function loadMap(Stage,Set,Length) {
     drawSquare()
 }
 
-function clickCanvas() {try{Paths.filter()}catch(re){alert(re)}
+function clickCanvas() {try{Paths.filter(cease)}catch(re){alert(re)}
     const X = Math.round((event.clientX-$.canvas.offsetLeft-5)*Length_/($.canvas.offsetWidth-10)-.5)
     const Y = Math.round((event.clientY-$.canvas.offsetTop-5)*Length_/($.canvas.offsetHeight-10)-.5)
     if (X == -1 || Y == -1 || X == Length_ || Y == Length_) return Paths.filter()
