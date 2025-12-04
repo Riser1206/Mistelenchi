@@ -44,7 +44,6 @@ function clickCanvas() {
             cease()
             isPathNum = 0
             select()
- //try{Paths = Paths.filter(Path => Path.Array.length);isPath}catch(re){alert(re)}finally {alert(Paths)}
         }
     } else if (isPathNum == []) if (select()); else isPathNum = Paths.push({Color:Color,X:X+1,Y:Y+1,Array:[]}); else if (!window.isTest) Board[Y][X] = Solve[Y][X] = Color; else if (Board[Y][X] == "white") Solve[Y][X] = Color
     drawSquare()
@@ -74,7 +73,6 @@ function drawSquare() {
             $.closePath()
         }
     }
-    //try{Paths = Paths.filter(Path => Path.Array.length)}catch(re){alert(re)}finally {alert(Paths)}
     PathSwitches = []
     Switches = [[],[],[]]
     for (const Path of Paths) drawPaths(Path)
@@ -157,6 +155,7 @@ function save() {
         case B: Color = "B"; break
         case $1: Color = " "; break
     }
+try{Paths = Paths.filter(Path => Path.Array.length)}catch(re){alert(re)}finally {alert(Paths)}
     if (isPathNum == []) switch (Color) {
         case "rgb(191, 191, 191)": Color = "Primary"; break
         case "red": Color = "Red"; break
