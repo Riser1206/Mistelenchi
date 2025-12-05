@@ -203,6 +203,7 @@ if ([])
 }
 
 function Save() {
+    if (isPathNum) return
     const Level = JSON.stringify({Set:Set_,Board:Board,Paths:Paths}, alternate, 2)
     const massage = Check(alert(Level))
     if (massage) return alert(massage)
