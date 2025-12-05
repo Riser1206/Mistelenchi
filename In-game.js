@@ -15,10 +15,9 @@ function spurn(message, code) {
 
 function loadMap(Q) {
     Qnumber.innerText = `Stage: ${Level[2]}\nSet: ${Set = Q.Set}`
-    Board = Q.Board
+    if (Set*3 == (Board = Q.Board).length) _1.style.display="none"
     Paths = Q.Paths
     if (!Number.isInteger(Set) || Set < 1) return spurn(Set,8)
-    if (Set*3 == Board.length) _1.style.display="none"
     Clear()
 }
 
