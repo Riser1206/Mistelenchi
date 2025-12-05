@@ -83,7 +83,7 @@ function drawSquare() {
     Euameate.value = JSON.stringify({isPathNum:isPathNum,Color:Color,PathSwitches:PathSwitches,Switches:Switches,Paths:Paths,Board:Board,Solve:Solve}, null, 2)//ctx
 }
 
-function drawPaths(Path) {
+function drawPaths(Path,Z) {
     let x = Path.X
     let y = Path.Y
     const Group = [Solve[y-1][x-1]]
@@ -106,7 +106,7 @@ function drawPaths(Path) {
     $.strokeStyle = Path.Color
     $.lineWidth = _/7/Length_
     $.stroke(PathSwitch)
-    if (Path.Array.length) PathSwitches.push(PathSwitch)
+    if (Z && Path.Array.length) PathSwitches.push(PathSwitch)
     const Results = ""+Group.includes(R)+Group.includes(G)+Group.includes(B)
     const Target = $.strokeStyle
     const Achromatic = 6 < Path.Color.length
