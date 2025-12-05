@@ -183,7 +183,7 @@ function Count(Way, Language) {
     return massage
 }
 
-function alternate(key,value) {
+function alternate(key,value) {alert([key,value])
 /*
     JSON.stringify(value, replacer, space)
     switch (latter.background = latter.color) {
