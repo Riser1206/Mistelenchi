@@ -31,9 +31,9 @@ function clickCanvas() {
 
 function Clear() {
     Given = 0
-    Solve = Array(Board.length)
+    Solve = []
     for (let y = 0; y < Board.length; y++) {
-        Solve[y] = Array(Board.length)
+        Solve[y] = []
         for (let x = 0; x < Board.length; x++) {
             if (typeof Board[y][x] != "string") return spurn(typeof Board[y][x],2)
             $.fillStyle = Board[y][x] ? "black" : "white"
