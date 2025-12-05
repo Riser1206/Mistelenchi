@@ -206,7 +206,7 @@ try{Paths = Paths.filter(Path => Path.Array.length)}catch(re){alert(re)}finally 
         case "rgb(63, 63, 63)": Color = "Tertiary"; break
     }
 */
-    return key
+    return value
 }
 
 function Save() {
