@@ -111,8 +111,6 @@ function drawPaths(Path) {
     $.stroke()
     const Results = ""+Group.includes(R)+Group.includes(G)+Group.includes(B)
     const Target = $.strokeStyle
-    x = Path.X
-    y = Path.Y
     $.moveTo(_*(x-.5)/Board.length, _*(y-.5)/Board.length)
     for (const pursuit of Path.Array) {
         switch (pursuit) {
