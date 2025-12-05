@@ -194,24 +194,24 @@ function alternate(key,value) {alert(key+"\n"+value)
         case $1: Color = " "; break
     }
 try{Paths = Paths.filter(Path => Path.Array.length)}catch(re){alert(re)}finally {alert(Paths)}
-    if (isPathNum == []) switch (Color) {
-        case "rgb(191, 191, 191)": Color = "Primary"; break
-        case "red": Color = "Red"; break
-        case "gold": Color = "Gold"; break
-        case "blue": Color = "Blue"; break
-        case "rgb(127, 127, 127)": Color = "Secondary"; break
-        case "purple": Color = "Purple"; break
-        case "orange": Color = "Orange"; break
-        case "green": Color = "Green"; break
-        case "rgb(63, 63, 63)": Color = "Tertiary"; break
-    }
 */
+    if ([]) switch (value) {
+        case "rgb(191, 191, 191)": value = "Primary"; break
+        case R: value = "Red"; break
+        case G: value = "Gold"; break
+        case B: value = "Blue"; break
+        case "rgb(127, 127, 127)": value = "Secondary"; break
+        case "purple": value = "Purple"; break
+        case "orange": value = "Orange"; break
+        case "green": value = "Green"; break
+        case "rgb(63, 63, 63)": value = "Tertiary"; break
+    }
     return value
 }
 
 function Save() {
     const Level = JSON.stringify({Set:Set_,Board:Board,Paths:Paths}, alternate, 2)
-    const massage = Check()
+    const massage = Check(alert(Level))
     if (massage) return alert(massage)
     let __ = URL.createObjectURL(new Blob([Level], { type: 'application/json' }))
     if (window.___) URL.revokeObjectURL(___)
