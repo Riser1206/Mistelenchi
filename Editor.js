@@ -184,7 +184,8 @@ function Count(Way, Language) {
 }
 
 function alternate(key,value) {
-/*
+/*if ([]) 
+try{}catch(re){alert(re)}finally {}
     switch (latter.background = latter.color) {
         case $0: Color = ""; break
         case R: Color = "R"; break
@@ -192,9 +193,8 @@ function alternate(key,value) {
         case B: Color = "B"; break
         case $1: Color = " "; break
     }
-try{}catch(re){alert(re)}finally {}
 */
-    if ([]) switch (value) {
+    switch (value) {
         case "rgb(191, 191, 191)": value = "Primary"; break
         case R: value = "Red"; break
         case G: value = "Gold"; break
