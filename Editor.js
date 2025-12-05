@@ -183,7 +183,7 @@ function Count(Way, Language) {
     return massage
 }
 
-function alternate() {
+function alternate(key,value) {
 /*
     JSON.stringify(value, replacer, space)
     switch (latter.background = latter.color) {
@@ -206,7 +206,7 @@ try{Paths = Paths.filter(Path => Path.Array.length)}catch(re){alert(re)}finally 
         case "rgb(63, 63, 63)": Color = "Tertiary"; break
     }
 */
-    //return massage
+    return key
 }
 
 function Save() {
