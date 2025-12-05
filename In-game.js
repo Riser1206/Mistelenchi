@@ -111,20 +111,6 @@ function drawPaths(Path) {
     $.stroke()
     const Results = ""+Group.includes(R)+Group.includes(G)+Group.includes(B)
     const Target = $.strokeStyle
-    $.moveTo(_*(x-.5)/Board.length, _*(y-.5)/Board.length)
-    for (const pursuit of Path.Array) {
-        switch (pursuit) {
-            case 0: y--; break
-            case 1: x++; y--; break
-            case 2: x++; break
-            case 3: x++; y++; break
-            case 4: y++; break
-            case 5: x--; y++; break
-            case 6: x--; break
-            case 7: x--; y--; break
-        }
-        $.lineTo(_*(x-.5)/Board.length, _*(y-.5)/Board.length)
-    }
     const Achromatic = 6 < Path.Color.length
     if (Results == "falsefalsefalse") $.strokeStyle = "Ivory"
     if (Results == "truefalsetrue") $.strokeStyle = Achromatic ? "#7f7f7f" : "Purple"
