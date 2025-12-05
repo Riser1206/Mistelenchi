@@ -183,7 +183,7 @@ function Count(Way, Language) {
     return massage
 }
 
-function alternate(key,value) {alert([key,value])
+function alternate(key,value) {alert(key+"\n"+value)
 /*
     JSON.stringify(value, replacer, space)
     switch (latter.background = latter.color) {
@@ -210,7 +210,7 @@ try{Paths = Paths.filter(Path => Path.Array.length)}catch(re){alert(re)}finally 
 }
 
 function Save() {
-    const Level = JSON.stringify({Set:Set_,Board:Board,Paths:Paths}, alternate, 2);alert(Level)
+    const Level = JSON.stringify({Set:Set_,Board:Board,Paths:Paths}, alternate, 2)
     const massage = Check()
     if (massage) return alert(massage)
     let __ = URL.createObjectURL(new Blob([Level], { type: 'application/json' }))
