@@ -78,7 +78,7 @@ function drawSquare() {
     }
     PathSwitches = []
     Switches = [[],[],[]]
-    for (const Path of Paths) drawPaths(Path,1)
+    for (const Path of Paths) drawPaths(Path)
     if (isPathNum) drawPaths(Paths[isPathNum-1])
     Euameate.value = JSON.stringify({isPathNum:isPathNum,Color:Color,PathSwitches:PathSwitches,Switches:Switches,Paths:Paths,Board:Board,Solve:Solve}, null, 2)//ctx
 }
@@ -106,7 +106,7 @@ function drawPaths(Path,Z) {
     $.strokeStyle = Path.Color
     $.lineWidth = _/7/Length_
     $.stroke(PathSwitch)
-    if (Z && Path.Array.length) PathSwitches.push(PathSwitch)
+    if (!Z && Path.Array.length) PathSwitches.push(PathSwitch)
     const Results = ""+Group.includes(R)+Group.includes(G)+Group.includes(B)
     const Target = $.strokeStyle
     const Achromatic = 6 < Path.Color.length
@@ -165,7 +165,7 @@ function Check() {
         }
     }
     let massage = Count(Solve,"번 가로줄에 ")+Count(Trans,"번 세로줄에 ")
-    for (const Path of Paths) if (!drawPaths(Path)) massage += Path.Color+" 라인 불일치\n"
+    for (const Path of Paths) if (!drawPaths(Path,1)) massage += Path.Color+" 라인 불일치\n"
     return massage
 }
 
