@@ -183,9 +183,8 @@ function Count(Way, Language) {
     return massage
 }
 
-function alternate(key,value) {alert(key+"\n"+value)
+function alternate(key,value) {
 /*
-    JSON.stringify(value, replacer, space)
     switch (latter.background = latter.color) {
         case $0: Color = ""; break
         case R: Color = "R"; break
@@ -193,7 +192,7 @@ function alternate(key,value) {alert(key+"\n"+value)
         case B: Color = "B"; break
         case $1: Color = " "; break
     }
-try{Paths = Paths.filter(Path => Path.Array.length)}catch(re){alert(re)}finally {alert(Paths)}
+try{}catch(re){alert(re)}finally {}
 */
     if ([]) switch (value) {
         case "rgb(191, 191, 191)": value = "Primary"; break
