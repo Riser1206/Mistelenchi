@@ -128,7 +128,7 @@ try{
 ;;;
 ;;;
 ;;;
-if (1)if (1)if (1)if (1)if (1)if (1)if (1);; else alert(3);; else alert(4);; else alert(5); else alert(6); else alert(7);
+if (1)if (1)if (1)if (1)if (1)if (1)if (1); else alert(3);; else alert(4);; else alert(5); else alert(6); else alert(7);
 }catch(re){alert(re)}finally{}
      //   if (z) return Target == $.strokeStyle
     if (Paths[isPathNum-1] == Path) {
