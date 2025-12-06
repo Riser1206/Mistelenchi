@@ -1,10 +1,10 @@
 const _ = Canva.width = Canva.height = 2500
 const $ = Canva.getContext("2d")
-const Euameate=document.createElement('textarea')//ctx
-document.body.appendChild(Euameate)//ctx
-Euameate.style.height = innerHeight//ctx
-Euameate.style.width = innerWidth//ctx
-Euameate.style.fontSize = 9//ctx
+const Euameate=document.createElement('textarea')//⚠️
+document.body.appendChild(Euameate)//⚠️
+Euameate.style.height = innerHeight//⚠️
+Euameate.style.width = innerWidth//⚠️
+Euameate.style.fontSize = 9//⚠️
 $.lineCap = "round"
 $.lineJoin = "round"
 const R = "red"
@@ -80,7 +80,7 @@ function drawSquare() {
     Switches = [[],[],[]]
     for (const Path of Paths) drawPaths(Path)
     if (isPathNum) drawPaths(Paths[isPathNum-1])
-    Euameate.value = JSON.stringify({isPathNum:isPathNum,Color:Color,PathSwitches:PathSwitches,Switches:Switches,Paths:Paths,Board:Board,Solve:Solve}, null, 2)//ctx
+    Euameate.value = JSON.stringify({isPathNum:isPathNum,Color:Color,PathSwitches:PathSwitches,Switches:Switches,Paths:Paths,Board:Board,Solve:Solve}, null, 2)//⚠️
 }
 
 function drawPaths(Path,z) {
@@ -206,7 +206,7 @@ if ([])
 }
 
 function Save() {
-    if (isPathNum) drawSquare(isPathNum = cease(0))
+    if (isPathNum) drawSquare(isPathNum = cease())
     const Level = JSON.stringify({Set:Set_,Board:Board,Paths:Paths}, alternate, 2)
     const massage = Check(alert(Level))
     if (massage) return alert(massage)
