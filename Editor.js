@@ -83,7 +83,7 @@ function drawSquare() {
     Euameate.value = JSON.stringify({isPathNum:isPathNum,Color:Color,PathSwitches:PathSwitches,Switches:Switches,Paths:Paths,Board:Board,Solve:Solve}, null, 2)//ctx
 }
 
-function drawPaths(Path,Z) {
+function drawPaths(Path,z) {
     let x = Path.X
     let y = Path.Y
     const Group = [Solve[y-1][x-1]]
@@ -120,7 +120,7 @@ function drawPaths(Path,Z) {
     if (Results == "truetruetrue") $.strokeStyle = "#3f3f3f"
     $.lineWidth = _/15/Length_
     $.stroke(PathSwitch)
-    if (!z && Paths[isPathNum-1] == Path) {
+    if (Paths[isPathNum-1] == Path) {
         for (let Y = 0; Y < 3; Y++) {
             for (let X = 0; X < 3; X++) {
                 const Z = $.createConicGradient(0, _*(x+X-1.5)/Length_, _*(y+Y-1.5)/Length_)
