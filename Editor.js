@@ -104,9 +104,11 @@ function drawPaths(Path,z) {
         PathSwitch.lineTo(_*(x-.5)/Length_, _*(y-.5)/Length_)
     }
     $.strokeStyle = Path.Color
-    $.lineWidth = _/7/Length_
-    $.stroke(PathSwitch)
-    if (!z && Path.Array.length) PathSwitches.push(PathSwitch)
+    if (!z) {
+        $.lineWidth = _/7/Length_
+        $.stroke(PathSwitch)
+        if (Path.Array.length) PathSwitches.push(PathSwitch)
+    }
     const Results = ""+Group.includes(R)+Group.includes(G)+Group.includes(B)
     const Target = $.strokeStyle
     const Achromatic = 6 < Path.Color.length
@@ -118,10 +120,11 @@ function drawPaths(Path,z) {
     if (Results == "falsetruetrue") $.strokeStyle = Achromatic ? "#7f7f7f" : "Green"
     if (Results == "falsefalsetrue") $.strokeStyle = Achromatic ? "#bfbfbf" : "Blue"
     if (Results == "truetruetrue") $.strokeStyle = "#3f3f3f"
-    $.lineWidth = _/15/Length_
-    $.stroke(PathSwitch)
+    if (!z) {
+        $.lineWidth = _/15/Length_
+        $.stroke(PathSwitch)
+    }
     if (Paths[isPathNum-1] == Path) {
-        if (z) return z
         for (let Y = 0; Y < 3; Y++) {
             for (let X = 0; X < 3; X++) {
                 const Z = $.createConicGradient(0, _*(x+X-1.5)/Length_, _*(y+Y-1.5)/Length_)
