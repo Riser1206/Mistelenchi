@@ -124,6 +124,7 @@ function drawPaths(Path,z) {
         $.lineWidth = _/15/Length_
         $.stroke(PathSwitch)
     }
+    if (z) return
     if (Paths[isPathNum-1] == Path) {
         for (let Y = 0; Y < 3; Y++) {
             for (let X = 0; X < 3; X++) {
