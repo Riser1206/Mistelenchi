@@ -128,6 +128,7 @@ try{
 ;;;
 ;;;
 ;;;
+else ;
 }catch(re){alert(re)}finally{}
      //   if (z) return Target == $.strokeStyle
     if (Paths[isPathNum-1] == Path) {
