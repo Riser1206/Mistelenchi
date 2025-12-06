@@ -123,7 +123,7 @@ function drawPaths(Path,z) {
     if (!z) {
         $.lineWidth = _/15/Length_
         $.stroke(PathSwitch)
-    } else return Target == $.strokeStyle// if (Path.Array.length)
+    } else return !Path.Array.length || Target == $.strokeStyle
     if (Paths[isPathNum-1] == Path) {
         for (let Y = 0; Y < 3; Y++) {
             for (let X = 0; X < 3; X++) {
