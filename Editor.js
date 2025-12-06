@@ -124,16 +124,16 @@ function drawPaths(Path,Z) {
         for (let Y = 0; Y < 3; Y++) {
             for (let X = 0; X < 3; X++) {
                 const Z = $.createConicGradient(0, _*(x+X-1.5)/Length_, _*(y+Y-1.5)/Length_)
-                Z.addColorStop(0, 'black')
-                Z.addColorStop(1/8, 'white')
-                Z.addColorStop(2/8, 'black')
-                Z.addColorStop(3/8, 'white')
-                Z.addColorStop(4/8, 'black')
-                Z.addColorStop(5/8, 'white')
-                Z.addColorStop(6/8, 'black')
-                Z.addColorStop(7/8, 'white')
-                Z.addColorStop(1, 'black')
-                $.strokeStyle = Z
+                z.addColorStop(0, 'black')
+                z.addColorStop(1/8, 'white')
+                z.addColorStop(2/8, 'black')
+                z.addColorStop(3/8, 'white')
+                z.addColorStop(4/8, 'black')
+                z.addColorStop(5/8, 'white')
+                z.addColorStop(6/8, 'black')
+                z.addColorStop(7/8, 'white')
+                z.addColorStop(1, 'black')
+                $.strokeStyle = z
                 $.fillStyle = Path.Color
                 $.lineWidth = _/37/Length_
                 const Switch = Switches[X][Y] = new Path2D()
