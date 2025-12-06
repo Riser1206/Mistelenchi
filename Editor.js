@@ -120,13 +120,10 @@ function drawPaths(Path,z) {
     if (Results == "falsetruetrue") $.strokeStyle = Achromatic ? "#7f7f7f" : "Green"
     if (Results == "falsefalsetrue") $.strokeStyle = Achromatic ? "#bfbfbf" : "Blue"
     if (Results == "truetruetrue") $.strokeStyle = "#3f3f3f"
-try{
     if (!z) {
         $.lineWidth = _/15/Length_
         $.stroke(PathSwitch)
-    } else return alert('욉 / 왭');// if (Path.Array.length)
-}catch(re){alert(re)}finally{alert('왭 / 욉')}
-     //   if (z) return Target == $.strokeStyle
+    } else return Target == $.strokeStyle// if (Path.Array.length)
     if (Paths[isPathNum-1] == Path) {
         for (let Y = 0; Y < 3; Y++) {
             for (let X = 0; X < 3; X++) {
