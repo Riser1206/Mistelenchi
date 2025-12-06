@@ -124,8 +124,8 @@ try{
     if (!z) {
         $.lineWidth = _/15/Length_
         $.stroke(PathSwitch)
-    }; elseif (Paths) 
-}catch(re){alert(re)}finally {}
+    }; else if (Paths) 
+}catch(re){alert(re)}finally{}
      //   if (z) return Target == $.strokeStyle
     if (Paths[isPathNum-1] == Path) {
         for (let Y = 0; Y < 3; Y++) {
