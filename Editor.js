@@ -123,7 +123,7 @@ function drawPaths(Path,z) {
     if (!z) {
         $.lineWidth = _/15/Length_
         $.stroke(PathSwitch)
-    } else return !Path.Array.length || Target == $.strokeStyle
+    } else return Target == $.strokeStyle
     if (Paths[isPathNum-1] == Path) {
         for (let Y = 0; Y < 3; Y++) {
             for (let X = 0; X < 3; X++) {
@@ -148,7 +148,6 @@ function drawPaths(Path,z) {
             }
         }
     }
-    return Target == $.strokeStyle
 }
 
 function pickColor(latter,Z) {
