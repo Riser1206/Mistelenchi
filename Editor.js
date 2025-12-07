@@ -188,6 +188,7 @@ try{}catch(re){alert(re)}finally {}
 if ([]) cease(),
 */
     switch (value) {
+        case "rgb(127, 127, 127)": value = "Secondary"; break
         case "rgb(191, 191, 191)": value = "Primary"; break
         case R: value = "Red"; break
         case G: value = "Gold"; break
@@ -197,6 +198,7 @@ if ([]) cease(),
         case "orange": value = "Orange"; break
         case "green": value = "Green"; break
         case "rgb(63, 63, 63)": value = "Tertiary"; break
+        case "rgb(127, 127, 127)": value = "Secondary"; break
     }
     return value
 }
