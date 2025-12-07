@@ -200,7 +200,6 @@ try{}catch(re){alert(re)}finally {}return key == "Color" ? value : value[0]
         case "black": return ";"
         default: return value
     }
-    //
 }
 
 function Save() {
