@@ -188,17 +188,17 @@ try{}catch(re){alert(re)}finally {}
 if ([]) cease(),
 */
     switch (value) {
-        case "white": value = " "; break
-        case "rgb(191, 191, 191)": value = "Primary"; break
-        case R: value = "Red"; break
-        case G: value = "Gold"; break
-        case B: value = "Blue"; break
-        case "rgb(127, 127, 127)": value = "Secondary"; break
-        case "purple": value = "Purple"; break
-        case "orange": value = "Orange"; break
-        case "green": value = "Green"; break
-        case "rgb(63, 63, 63)": value = "Tertiary"; break
-        case "black": value = ";"; break
+        case "white": return " "
+        case "rgb(191, 191, 191)": return "Primary"
+        case R: return "Red"
+        case G: return "Gold"
+        case B: return "Blue"
+        case "rgb(127, 127, 127)": return "Secondary"
+        case "purple": return "Purple"
+        case "orange": return "Orange"
+        case "green": return "Green"
+        case "rgb(63, 63, 63)": return "Tertiary"
+        case "black": return ";"
         default: return value
     }
     return key == "Color" ? value : value[0]
