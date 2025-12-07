@@ -155,7 +155,7 @@ function pickColor(latter,Z) {
     if (Board+Solve) drawSquare()
 }
 
-function Check() {
+function Check() {try{alert(Level)}catch(re){alert(re)}finally {}
     const Trans = []
     for (let i = 0; i < Solve.length; i++) {
         Trans[i] = []
@@ -184,7 +184,7 @@ function Count(Way, Language) {
 
 function alternate(key,value) {
 /*
-try{}catch(re){alert(re)}finally {}return key == "Color" ? value : value[0]
+return key == "Color" ? value : value[0]
 */
     switch (value) {
         case "white": return ""
@@ -205,7 +205,7 @@ try{}catch(re){alert(re)}finally {}return key == "Color" ? value : value[0]
 function Save() {
     if (isPathNum) drawSquare(cease(),isPathNum=0)
     const Level = JSON.stringify({Set:Set_,Board:Board,Paths:Paths}, alternate, 2)
-    const massage = Check(alert(Level))
+    const massage = Check(Level)
     if (massage) return alert(massage)
     let __ = URL.createObjectURL(new Blob([Level], { type: 'application/json' }))
     if (window.___) URL.revokeObjectURL(___)
