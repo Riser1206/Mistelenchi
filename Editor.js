@@ -199,6 +199,7 @@ if ([]) cease(),
         case "green": value = "Green"; break
         case "rgb(63, 63, 63)": value = "Tertiary"; break
         case "black": value = ";"; break
+        default: return key
     }
     return key == "Color" ? value : value[0]
 }
