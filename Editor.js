@@ -181,7 +181,7 @@ function Check(Level) {try{alert(Level.Path)}catch(re){alert(re)}//finally {JSON
         }
     }
     let massage = Count(Solve,"번 가로줄에 ")+Count(Trans,"번 세로줄에 ")
-    for (const Path of Paths) if (!drawPaths(Path,1)) massage += Path.Color+" 라인 불일치\n"
+    for (const Path of Paths) if (!drawPaths(Path,1,)) massage += Path.Color+" 라인 불일치\n"
     return massage
 }
 
