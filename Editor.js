@@ -200,7 +200,7 @@ if ([]) cease(),
         case "rgb(63, 63, 63)": value = "Tertiary"; break
         case "black": value = ";"; break
     }
-    return key == ";" ? value[0] : value
+    return key == "Color" ? value : value[0]
 }
 
 function Save() {
