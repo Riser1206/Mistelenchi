@@ -189,7 +189,7 @@ function Count(Way, Language) {
 function alternate(key,value) {
 /*
 try{}catch(re){alert(re)}finally {}
-if ([]) 
+if ([]) cease(),
 */
     switch (value) {
         case "rgb(191, 191, 191)": value = "Primary"; break
@@ -206,7 +206,7 @@ if ([])
 }
 
 function Save() {
-    if (isPathNum) drawSquare(isPathNum = (cease(),0))
+    if (isPathNum) drawSquare(isPathNum = 0)
     const Level = JSON.stringify({Set:Set_,Board:Board,Paths:Paths}, alternate, 2)
     const massage = Check(alert(Level))
     if (massage) return alert(massage)
