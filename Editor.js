@@ -188,7 +188,7 @@ try{}catch(re){alert(re)}finally {}
 if ([]) cease(),
 */
     switch (value) {
-        case "white": value = "White"; break
+        case "white": value = " "; break
         case "rgb(191, 191, 191)": value = "Primary"; break
         case R: value = "Red"; break
         case G: value = "Gold"; break
@@ -198,9 +198,9 @@ if ([]) cease(),
         case "orange": value = "Orange"; break
         case "green": value = "Green"; break
         case "rgb(63, 63, 63)": value = "Tertiary"; break
-        case "black": value = "Black"; break
+        case "black": value = ";"; break
     }
-    return value
+    return key == ";" ? value[0] : value
 }
 
 function Save() {
