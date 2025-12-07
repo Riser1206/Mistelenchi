@@ -1,10 +1,5 @@
 const _ = Canva.width = Canva.height = 2500
 const $ = Canva.getContext("2d")
-const Euameate=document.createElement('textarea')//⚠️
-document.body.appendChild(Euameate)//⚠️
-Euameate.style.height = innerHeight//⚠️
-Euameate.style.width = innerWidth//⚠️
-Euameate.style.fontSize = 9//⚠️
 $.lineCap = "round"
 $.lineJoin = "round"
 const R = "red"
