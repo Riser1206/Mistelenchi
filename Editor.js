@@ -184,8 +184,7 @@ function Count(Way, Language) {
 
 function alternate(key,value) {
 /*
-try{}catch(re){alert(re)}finally {}
-if ([]) cease(),
+try{}catch(re){alert(re)}finally {}return key == "Color" ? value : value[0]
 */
     switch (value) {
         case "white": return " "
@@ -201,7 +200,7 @@ if ([]) cease(),
         case "black": return ";"
         default: return value
     }
-    return key == "Color" ? value : value[0]
+    //
 }
 
 function Save() {
