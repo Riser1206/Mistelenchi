@@ -187,7 +187,7 @@ function alternate(key,value) {
 try{}catch(re){alert(re)}finally {}return key == "Color" ? value : value[0]
 */
     switch (value) {
-        case "white": return " "
+        case "white": return ""
         case "rgb(191, 191, 191)": return "Primary"
         case R: return "Red"
         case G: return "Gold"
@@ -197,7 +197,7 @@ try{}catch(re){alert(re)}finally {}return key == "Color" ? value : value[0]
         case "orange": return "Orange"
         case "green": return "Green"
         case "rgb(63, 63, 63)": return "Tertiary"
-        case "black": return ";"
+        case "black": return " "
         default: return value
     }
 }
