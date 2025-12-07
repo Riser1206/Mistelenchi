@@ -155,7 +155,7 @@ function pickColor(latter,Z) {
     if (Board+Solve) drawSquare()
 }
 
-function Check() {try{alert(Level)}catch(re){alert(re)}finally {}
+function Check(Level) {try{alert(Level)}catch(re){alert(re)}finally {}
     const Trans = []
     for (let i = 0; i < Solve.length; i++) {
         Trans[i] = []
