@@ -172,7 +172,7 @@ function alternate(key,value) {
     }
 }
 
-function Check(Level) {try{alert(Level.Path)}catch(re){alert(re)}finally {JSON.stringify(, alternate, 2)}
+function Check(Level) {try{alert(Level.Path)}catch(re){alert(re)}//finally {JSON.stringify(, alternate, 2)}
     const Trans = []
     for (let i = 0; i < Solve.length; i++) {
         Trans[i] = []
