@@ -155,7 +155,24 @@ function pickColor(latter,Z) {
     if (Board+Solve) drawSquare()
 }
 
-function Check(Level) {try{alert(Level.Path)}catch(re){alert(re)}finally {}
+function alternate(key,value) {
+    switch (value) {
+        case "white": return ""
+        case "rgb(191, 191, 191)": return "Primary"
+        case R: return "Red"
+        case G: return "Gold"
+        case B: return "Blue"
+        case "rgb(127, 127, 127)": return "Secondary"
+        case "purple": return "Purple"
+        case "orange": return "Orange"
+        case "green": return "Green"
+        case "rgb(63, 63, 63)": return "Tertiary"
+        case "black": return " "
+        default: return value
+    }
+}
+
+function Check(Level) {try{alert(Level.Path)}catch(re){alert(re)}finally {JSON.stringify(, alternate, 2)}
     const Trans = []
     for (let i = 0; i < Solve.length; i++) {
         Trans[i] = []
@@ -182,26 +199,9 @@ function Count(Way, Language) {
     return massage
 }
 
-function alternate(key,value) {
-    switch (value) {
-        case "white": return ""
-        case "rgb(191, 191, 191)": return "Primary"
-        case R: return "Red"
-        case G: return "Gold"
-        case B: return "Blue"
-        case "rgb(127, 127, 127)": return "Secondary"
-        case "purple": return "Purple"
-        case "orange": return "Orange"
-        case "green": return "Green"
-        case "rgb(63, 63, 63)": return "Tertiary"
-        case "black": return " "
-        default: return value
-    }
-}
-
 function Save() {
     if (isPathNum) drawSquare(cease(),isPathNum=0)
-    const Level = JSON.stringify({Set:Set_,Board:Board,Paths:Paths}, alternate, 2)
+    const Level = {Set:Set_,Board:Board,Paths:Paths}
     const massage = Check(Level)
     if (massage) return alert(massage)
     let __ = URL.createObjectURL(new Blob([Level], { type: 'application/json' }))
