@@ -155,7 +155,7 @@ function pickColor(latter,Z) {
     if (Board+Solve) drawSquare()
 }
 
-function Check(Level) {try{alert(Level)}catch(re){alert(re)}finally {}
+function Check(Level) {try{alert(Level.Path)}catch(re){alert(re)}finally {}
     const Trans = []
     for (let i = 0; i < Solve.length; i++) {
         Trans[i] = []
@@ -183,9 +183,6 @@ function Count(Way, Language) {
 }
 
 function alternate(key,value) {
-/*
-return key == "Color" ? value : value[0]
-*/
     switch (value) {
         case "white": return ""
         case "rgb(191, 191, 191)": return "Primary"
