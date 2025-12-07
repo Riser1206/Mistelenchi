@@ -172,7 +172,7 @@ function alternate(key,value) {
     }
 }
 
-function Check() {try{alert(Level.Path)}catch(re){alert(re)}finally{alert(re)}
+function Check() {try{}catch(re){alert(re)}finally{}
     const Trans = []
     for (let i = 0; i < Solve.length; i++) {
         Trans[i] = []
@@ -181,7 +181,7 @@ function Check() {try{alert(Level.Path)}catch(re){alert(re)}finally{alert(re)}
         }
     }
     let massage = Count(Solve,"번 가로줄에 ")+Count(Trans,"번 세로줄에 ")
-    for (const Path of Paths) if (!drawPaths(Path,1)) massage += Path.Color+" 라인 불일치\n"
+    for (const Path of Paths) if (!drawPaths(Path,1)) massage += alternate(Path.Color)+" 라인 불일치\n"
     return massage
 }
 
@@ -202,7 +202,7 @@ function Count(Way, Language) {
 function Save() {
     if (isPathNum) drawSquare(cease(),isPathNum=0)
     const Level = JSON.stringify({Set:Set_,Board:Board,Paths:Paths}, alternate, 2)
-    const massage = Check()
+    const massage = Check(alert(Level))
     if (massage) return alert(massage)
     let __ = URL.createObjectURL(new Blob([Level], { type: 'application/json' }))
     if (window.___) URL.revokeObjectURL(___)
