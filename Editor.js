@@ -10,7 +10,7 @@ $.lineJoin = "round"
 const R = "red"
 const G = "gold"
 const B = "blue"
-innerWidth > innerHeight spurn("가로 화면입니다. 세로 화면으로 바꿔주세요.") loadMap(``,1,3)
+innerWidth > innerHeight ? spurn("가로 화면입니다. 세로 화면으로 바꿔주세요.") : loadMap(``,1,3)
 
 function spurn(message) {
     alert(message)
