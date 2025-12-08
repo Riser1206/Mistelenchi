@@ -71,7 +71,6 @@ function drawSquare() {
     Switches = [[],[],[]]
     for (const Path of Paths) drawPaths(Path)
     if (isPathNum) drawPaths(Paths[isPathNum-1])
-    Euameate.value = JSON.stringify({isPathNum:isPathNum,PathSwitches:PathSwitches,Paths:Paths}, null, 2)//⚠️
 }
 
 function drawPaths(Path,z) {
