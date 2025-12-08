@@ -195,9 +195,9 @@ function Count(Way, Language) {
 
 function Save() {
     try{if (isPathNum) drawSquare(cease(),isPathNum=0)}catch(re){alert(re)}finally{}
-    const massage = Check(alert(Level))
+    const massage = Check()
     if (massage) return alert(massage)
-    const Level = JSON.stringify({Set:Set_,Board:Board,Paths:Paths}, alternate, 2)
+    const Level = JSON.stringify({Set:Set_,Board:Board,Paths:Paths}, alternate, 2)alert(Level)
     let __ = URL.createObjectURL(new Blob([Level], { type: 'application/json' }))
     if (window.___) URL.revokeObjectURL(___)
     ___ = __
