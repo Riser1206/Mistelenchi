@@ -1,16 +1,10 @@
 const _ = Canva.width = Canva.height = 2500
 const $ = Canva.getContext("2d")
-$.lineCap = "round"
-$.lineJoin = "round"
+$.lineCap = $.lineJoin = "round"
 const R = "red"
 const G = "gold"
 const B = "blue"
-innerWidth > innerHeight ? spurn("가로 화면입니다. 세로 화면으로 바꿔주세요.") : loadMap(``,1,3)
-
-function spurn(message) {
-    alert(message)
-    history.back()
-}
+innerWidth > innerHeight ? history.back(alert("가로 화면입니다. 세로 화면으로 바꿔주세요.")) : loadMap(``,1,3)
 
 function loadMap(Stage,Set,Length) {
     isPathNum = 0
