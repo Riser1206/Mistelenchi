@@ -167,7 +167,7 @@ function alternate(key,value) {
     }
 }
 
-function Check() {try{}catch(re){alert(re)}finally{}
+function Check() {
     const Trans = []
     for (let i = 0; i < Solve.length; i++) {
         Trans[i] = []
@@ -195,10 +195,10 @@ function Count(Way, Language) {
 }
 
 function Save() {
-    if (isPathNum) drawSquare(cease(),isPathNum=0)
-    const Level = JSON.stringify({Set:Set_,Board:Board,Paths:Paths}, alternate, 2)
+    try{if (isPathNum) drawSquare(cease(),isPathNum=0)}catch(re){alert(re)}finally{}
     const massage = Check(alert(Level))
     if (massage) return alert(massage)
+    const Level = JSON.stringify({Set:Set_,Board:Board,Paths:Paths}, alternate, 2)
     let __ = URL.createObjectURL(new Blob([Level], { type: 'application/json' }))
     if (window.___) URL.revokeObjectURL(___)
     ___ = __
