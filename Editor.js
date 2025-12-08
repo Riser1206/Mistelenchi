@@ -194,7 +194,7 @@ function Count(Way, Language) {
 }
 
 function Save() {
-    try{if (isPathNum) drawSquare(cease(),isPathNum=0)}catch(re){alert(re)}finally{}
+    if (isPathNum) drawSquare(cease(),isPathNum=0)
     const massage = Check()
     if (massage) return alert(massage)
     const Level = JSON.stringify({Set:Set_,Board:Board,Paths:Paths}, alternate, 2)
