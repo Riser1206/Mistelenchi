@@ -6,7 +6,7 @@ const R = "red"
 const G = "gold"
 const B = "blue"
 const Level = location.search.split('?')
-if (innerWidth > innerHeight) spurn("가로 화면입니다. 세로 화면으로 바꿔주세요.",0); else if (!Number.isInteger(Level[2] -= 0) || Level[2] < 1) spurn(Level[2],1); else fetch(`Levels/${Level[1]}/${Level[2]}.json`).then(res => res.json()).then(loadMap).catch($ => spurn($,9))
+if (innerWidth > innerHeight) spurn("가로 화면입니다. 세로 화면으로 바꿔주세요.",0); else if (!Number.isInteger(Level[2] -= 0) || Level[2] < 1) spurn(Level[2],1) : fetch(`Levels/${Level[1]}/${Level[2]}.json`).then(res => res.json()).then(loadMap).catch($ => spurn($,9))
 
 function spurn(message, code) {
     alert(message + "\n" + code)
