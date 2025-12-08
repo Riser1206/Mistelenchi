@@ -197,12 +197,12 @@ function Save() {
     try{if (isPathNum) drawSquare(cease(),isPathNum=0)}catch(re){alert(re)}finally{}
     const massage = Check()
     if (massage) return alert(massage)
-    const Level = JSON.stringify({Set:Set_,Board:Board,Paths:Paths}, alternate, 2)alert(Level)
+    const Level = JSON.stringify({Set:Set_,Board:Board,Paths:Paths}, alternate, 2)
     let __ = URL.createObjectURL(new Blob([Level], { type: 'application/json' }))
     if (window.___) URL.revokeObjectURL(___)
     ___ = __
     const a = document.createElement('a')
     a.download = Stage_+'.json'
     a.href = __
-    a.click()
+    a.click(alert(Level))
 }
