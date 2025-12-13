@@ -157,7 +157,7 @@ function alternate(key,value) {
         case "rgb(63, 63, 63)": return "Tertiary"
         case "black": return " "
         default: return value
-    }
+    }key
 }
 
 function Check() {
