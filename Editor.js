@@ -198,5 +198,5 @@ function Save() {
     const a = document.createElement('a')
     a.download = Stage_+'.json'
     a.href = __
-    a.click(alert(Level))
+    a.click(=)
 }
